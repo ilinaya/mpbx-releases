@@ -1,0 +1,149 @@
+{
+  "breaking": [],
+  "channel": "nightly",
+  "commit": "6be0ec1",
+  "deprecated": [],
+  "distribution": "images",
+  "format": 1,
+  "images": {
+    "MPBX_IMAGE": "ghcr.io/ilinaya/monopbx@sha256:f53c139dd446606f1e2fd847c1d42346ff406c4e5fdd24edd9c2e1c4f79ac748",
+    "MPBX_MEDIA_IMAGE": "ghcr.io/ilinaya/monopbx-media@sha256:6bb40efbed3f8d749cf007d42bd10774d34facb27a3c9a04a0c7851376981e44",
+    "MPBX_RTPENGINE_IMAGE": "ghcr.io/ilinaya/monopbx-rtpengine@sha256:9668daa93b5b944f708236e464995b8f2861d131f0d222ff02bf494654cea0d7"
+  },
+  "notes_url": "https://github.com/ilinaya/mpbx-releases/blob/main/nightly/NOTES.md",
+  "ports": [
+    {
+      "name": "https",
+      "port": 443,
+      "proto": "tcp",
+      "targets": [
+        "vm",
+        "compose"
+      ]
+    },
+    {
+      "name": "acme-http",
+      "port": 80,
+      "proto": "tcp",
+      "targets": [
+        "vm",
+        "compose"
+      ]
+    },
+    {
+      "name": "http",
+      "port": 8080,
+      "proto": "tcp",
+      "targets": [
+        "vm",
+        "compose",
+        "kubernetes"
+      ]
+    },
+    {
+      "name": "sip",
+      "port": 5060,
+      "proto": "udp+tcp",
+      "targets": [
+        "vm",
+        "compose",
+        "kubernetes"
+      ]
+    },
+    {
+      "name": "sips",
+      "port": 5061,
+      "proto": "tcp",
+      "targets": [
+        "vm",
+        "compose",
+        "kubernetes"
+      ]
+    },
+    {
+      "name": "rtp",
+      "proto": "udp",
+      "range": [
+        30000,
+        40000
+      ],
+      "targets": [
+        "vm",
+        "compose"
+      ]
+    },
+    {
+      "name": "rtp-kubernetes",
+      "proto": "udp",
+      "range": [
+        40000,
+        50000
+      ],
+      "targets": [
+        "kubernetes"
+      ]
+    },
+    {
+      "name": "rtpengine-ng",
+      "port": 22222,
+      "proto": "udp",
+      "targets": [
+        "vm",
+        "compose",
+        "kubernetes"
+      ]
+    },
+    {
+      "name": "metrics",
+      "port": 9464,
+      "proto": "tcp",
+      "targets": [
+        "vm",
+        "compose",
+        "kubernetes"
+      ]
+    },
+    {
+      "name": "turn",
+      "port": 3478,
+      "proto": "udp+tcp",
+      "targets": [
+        "vm",
+        "compose"
+      ]
+    },
+    {
+      "name": "turn-relay",
+      "proto": "udp",
+      "range": [
+        49160,
+        49200
+      ],
+      "targets": [
+        "vm",
+        "compose"
+      ]
+    },
+    {
+      "name": "grafana",
+      "port": 3000,
+      "proto": "tcp",
+      "targets": [
+        "vm",
+        "compose"
+      ]
+    }
+  ],
+  "product": "mpbx",
+  "requires": {
+    "clickhouse": "24.8",
+    "postgres": "16",
+    "valkey": "7.2"
+  },
+  "schema": {
+    "clickhouse": 20261107160200,
+    "postgres": 20261126000100
+  },
+  "upgrade_from": [],
+  "version": "1.0.0+20261110035826.6be0ec1"
+}
