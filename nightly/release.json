@@ -1,15 +1,15 @@
 {
   "breaking": [],
   "channel": "nightly",
-  "commit": "beeb995",
+  "commit": "fb00474",
   "deprecated": [],
   "distribution": "images",
   "format": 1,
   "images": {
-    "MPBX_IMAGE": "ghcr.io/ilinaya/monopbx@sha256:b016d61f87130a2c468c7f711e379704b29935342f146184fc6e70a963eb5690",
-    "MPBX_MEDIA_IMAGE": "ghcr.io/ilinaya/monopbx-media@sha256:08d3ef84e81a347e6cd7f6075bf29a2d9720978abf85cac7e3eb9bdafd8e5458",
-    "MPBX_RTPENGINE_IMAGE": "ghcr.io/ilinaya/monopbx-rtpengine@sha256:f2a28b10bdeda4743bac1b532e175d8ec6a442ae435dc63bda6aa5a0e4990a61",
-    "MPBX_UPDATER_IMAGE": "ghcr.io/ilinaya/monopbx-updater@sha256:f7144228fe697b32f0b21160ae3138c0b39cca499db586ec48cd976b7e299e1f"
+    "MPBX_IMAGE": "ghcr.io/ilinaya/monopbx@sha256:1e1a9cc36d5465fe5642b588f8ca54dd8c166c31cb51cf896fa4f58fe184cf9c",
+    "MPBX_MEDIA_IMAGE": "ghcr.io/ilinaya/monopbx-media@sha256:7c34c9cce761bebce21d3ff3e6a9457fb973b8b4bce5c4b11aa7b9ab220d7842",
+    "MPBX_RTPENGINE_IMAGE": "ghcr.io/ilinaya/monopbx-rtpengine@sha256:010aa852f8ec14aad15c15d2fe86b04996e08b57530a90f9bd1c84807191f8c6",
+    "MPBX_UPDATER_IMAGE": "ghcr.io/ilinaya/monopbx-updater@sha256:524ecc3611dc4cb83561db10ee377ff319d58341829e5a9daa3904662fa5fcc6"
   },
   "notes_url": "https://github.com/ilinaya/mpbx-releases/blob/main/nightly/NOTES.md",
   "ports": [
@@ -146,5 +146,5 @@
     "postgres": 20261128000100
   },
   "upgrade_from": [],
-  "version": "1.0.0+20261111054458.beeb995"
+  "version": "1.0.0+20261112073952.fb00474"
 }
