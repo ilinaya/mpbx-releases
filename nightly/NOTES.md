@@ -1,12 +1,12 @@
 # MonoPbx nightly channel
 
-Latest build: `1.0.0+20261112161112.a15eb39` (commit `a15eb39`), published 2026-11-12T16:44:21Z.
+Latest build: `1.0.0+20261112162020.9613cfc` (commit `9613cfc`), published 2026-11-12T16:53:28Z.
 
 Images (by digest):
 
-- MPBX_IMAGE=ghcr.io/ilinaya/monopbx@sha256:b3c3cf6d2e6a3e15eb4f7137bd5963be7e469fd038765f988ca9aaa689934f3b
-- MPBX_RTPENGINE_IMAGE=ghcr.io/ilinaya/monopbx-rtpengine@sha256:383916897a41aa9189eb6083af216e2b4afff15438126373e5463421ec3a1427
-- MPBX_MEDIA_IMAGE=ghcr.io/ilinaya/monopbx-media@sha256:d6cd1dc9685a224202040a1d3993a7a004c992ca9779e1424900ebac18949423
-- MPBX_UPDATER_IMAGE=ghcr.io/ilinaya/monopbx-updater@sha256:43514e040b2630baa7141456145553f23a57861843771deb54ed5366ad5a023f
+- MPBX_IMAGE=ghcr.io/ilinaya/monopbx@sha256:dff40463e5f85b3f6f6e9ab2de548b63a5e1ec0346010bbb287240affca29d39
+- MPBX_RTPENGINE_IMAGE=ghcr.io/ilinaya/monopbx-rtpengine@sha256:2214f37958f9c9e9de9c51db179b87ebd4c238f740d9e110170fd7660c1c9099
+- MPBX_MEDIA_IMAGE=ghcr.io/ilinaya/monopbx-media@sha256:baf737fb64254ccf6431c2ff24a8f94df97c37ca208bb999f27c757730d0d96a
+- MPBX_UPDATER_IMAGE=ghcr.io/ilinaya/monopbx-updater@sha256:3e0e3ea5cf7d90ea0d9999739878118cb5bc51c18083ce1a1cba7cf3945ada0b
 
 A build installs over any older build of the same major version. Check for updates in the console (Admin, Updates).
