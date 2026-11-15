@@ -1,10 +1,66 @@
 # MonoPbx nightly channel: what's new
 
-## 1.0.0+20261115124700.1859804 (2026-11-14)
+## 1.0.0+20261115195754.33fcc19 (2026-11-15)
+
+Export jobs to your own storage, Ask your PBX, proactive health warnings, push-to-talk channels, an AI call assistant, contact-center skills, quality reviews and surveys, reseller partners, eSIMs in MonoPhone and the console, on-device AI and a refreshed look in MonoPhone, and many fixes.
+
+### New
+
+- **Export jobs.** Admin, Connections, Export jobs: copy recordings, voicemail, call history, team chat with its files, transcripts with AI summaries, SMS and channel messages, the audit log, faxes and reports to one of your storage destinations, once or on a schedule. Choose the folder and file names from templates, audio as WAV or Ogg Opus, tables as CSV, JSONL or Parquet, optionally compressed. Every file is checked after upload and each run leaves a manifest of what it wrote. Install-wide jobs are under Admin, System, Backups.
+- **Call the customer of a delivery order.** In the inbox, Call customer on a delivery conversation calls the customer through the PBX, in the console and in MonoPhone.
+- **Ask your PBX.** Contact center, Ask your PBX: ask about your calls in plain language and get the answer as numbers and a chart, with the question that ran shown. Save questions, pin them to the dashboard and have them mailed on a schedule. Department supervisors see only their own departments. Uses your company's own AI model.
+- **Proactive health.** Logs, Health: early warnings for trunks that degrade or keep losing registration, disks filling fast, late backups and drops in call quality, each with what to do and one-click fixes where possible. The dashboard shows the three most important items; system administrators get an install-wide report.
+- **Push-to-talk channels.** Channels for a list of people, a department or a team chat group, with talker, listener and supervisor roles, one speaker at a time, a talk limit, supervisor take-over and optional recordings. Members' phones are woken when someone talks. Talking from MonoPhone comes with the app update that supports it.
+- **Push-to-talk voice notes in chat.** A finished push-to-talk message can be kept as a voice note in the channel's chat group, marked with the channel and time. Chat recordings show a live waveform while you record, and you can pick a place on the map to share.
+- **AI call assistant.** When you do not answer within the set time, the assistant can take the call, ask the caller who they are and why they call, and then put them through with a whisper, take a voicemail, transfer to a colleague or block the call. VIPs, colleagues and your own devices skip it; an executive's human assistant is tried first. It is also a step in call flows. It follows the caller into nine languages, the disclosure line is optional, and Admin, AI, Usage shows the estimated cost per day.
+- **Agent skills.** Calls and routing, Agent skills: named skills with levels per agent and skill requirements per queue, with a coverage report. Agents without a required skill are not rung.
+- **Quality reviews.** Score calls by hand with the same scorecard as the AI, compare manual and AI scores per agent and week, run calibration sessions, and let agents read and acknowledge their own reviews.
+- **Post-call surveys.** Calls and routing, Post-call surveys: send a short satisfaction or recommendation survey by text message after a queue call, answered on a simple page without sign-in. Results per survey, queue and agent, and alerts on low scores.
+- **Wallboard and kiosk widgets.** Kiosk widgets with their own queues and service-level thresholds, and per-user widgets and team queues on the wallboard.
+- **Reseller partners.** Admin, System, Companies, Partners: partners with their own portal to create and manage their companies within a seat allocation, with branding, a usage report and support access that the company approves, declines or revokes on its Support access page.
+- **Company templates.** Admin, System, Companies, Templates: create a company, its first administrator and its whole starting setup from a versioned template in one step.
+- **eSIMs for users.** MonoPhone Settings, My eSIMs and the console's My eSIMs show the eSIMs on your own extensions with the data left, and install one on the phone, by QR code or by activation code. Administrators assign eSIMs to users, send install links, issue them again or revoke them on the new eSIM assignments page.
+- **Automation triggers and limits.** Automations can start from a live call trigger, from their own web address (webhook) or on a schedule, and can be run now by hand. Each company has limits on runs, and administrators are alerted when one is reached.
+- **On-device AI in MonoPhone.** On supported iPhones and Android phones: summaries, suggested replies and Show in my language, with no text leaving the phone and no AI cost on the server.
+- **Liquid Glass look in MonoPhone.** A floating glass tab bar and sheets on the newest iOS and macOS, a classic translucent bar on older iOS, an opaque version with Reduce Transparency, and a Material 3 look on Android.
+- **Android contacts, files and watch.** Colleagues can appear in Android Contacts (Settings, off by default). Recordings, voicemail and chat files can be saved to Files. Wear OS shows presence and unread chats with quick replies, and an On a call widget is available on Android.
+- **Company blocklist in MonoPhone.** Settings, Admin, Blocklist: view, add, change and remove the company's blocked numbers and prefixes from the phone.
+- **Voice one-time codes and translation defaults.** One-time codes can be sent by a voice call that reads the code. AI, AI agents, Live translation sets default caller and agent languages per queue, optionally from the caller's country, and can speak the agent's translated sentences into the call. Transcripts can be read translated into your language.
+
+### Improved
+
+- **Inbox attachments.** The console and MonoPhone say what each channel can send as a file, send other kinds as a link, and hide the file button where a channel takes neither. Videos in the MonoPhone inbox play full screen.
+- **Jira issues from chat.** An issue created from a chat gets an AI summary when call summaries are switched on.
+- **Console navigation.** Admin settings pages are gathered in one Settings area grouped by category (Company, Telephony, Users and security, Integrations, AI, Storage and compliance, System), with an All settings overview. A menu entry with sub-items now only folds and unfolds; its page is the first sub-item. Every page keeps its address.
+- **Notifications in MonoPhone.** Chat and SMS notifications can show the start of the message when your company allows it. Missed calls offer Call back and Message, are grouped, and call notifications show the number and a short Call ended note.
+- **Call screen.** Transfer and Move to another device are under a More button on the MonoPhone call screen, next to Record, Captions and Park. When a call cannot use them they are greyed out with the reason.
+- **Sign-in.** In MonoPhone and the console, passkey and single sign-on are under More sign-in options below the main Sign in, shown only when the PBX offers them, and the last method you used is remembered.
+- **Chat in the console.** Photos or initials everywhere in chat, a compact conversation header with Call and a menu, and Shared shown only when there is something shared. The quiet-hours time zone is a searchable list.
+- **Chat in MonoPhone.** A lean header with only Call and a menu; tap the photo or name for the person's or group's details. Photos that failed to load are tried again, and groups show their picture in the lists.
+- **Create Jira issue.** In the inbox, call details and voicemail details, in MonoPhone and the console, the button shows only when Jira is connected and you may create issues.
+- **Settings in the console.** Settings has five tabs: Profile (where you can now change your photo), Calls and devices, Notifications, Privacy and security, and Language and display. Old addresses still work.
+- **Test connection.** Test on an installed integration now checks an integration in four steps (settings, reachability, read access and AI tools) and gives a hint to fix each failure.
+- **AI knowledge and receptionist.** Knowledge-base limits are company settings, shown with the current use. A website can be crawled again on demand with a list of what changed. Call history shows a quality panel, and a compliance miss can raise an alert.
+- **Hand-over summary.** The web phone and MonoPhone show the AI agent's hand-over note on a ringing and an answered call.
+- **Admin alerts on phones.** Tapping an admin or role alert in MonoPhone opens the matching alert page. Recents shows contact names, and chat forwards keep their images.
+- **API changes: new endpoints.** Ask your PBX, health reports, push-to-talk channels, agent skills, quality reviews, post-call surveys, reseller partners and support access, company templates, eSIM assignments and installs, automation quotas, webhooks and run now, AI knowledge limits, translation defaults per queue, receptionist re-crawl and translated transcripts.
+- **API changes: existing endpoints.** Test connection answers also list the steps. Chat messages carry an optional `ptt` field for push-to-talk voice notes. New chat messages accept `null` for optional fields. All changes are additive; new error codes are listed on the error code pages of the documentation.
+
+### Fixed
+
+- Sending a location in MonoPhone chat failed with a message about file types; it is sent again, and each failed send now says what went wrong for a photo, file, voice note or location. Chat sheets stay above the keyboard.
+- A MonoPhone setup link stopped working without a reason after the device it was for was removed (for example by signing out of the app). The setup page now says why a link stopped working and what to do.
+- MonoPhone Settings, Executive and assistant showed only Could not load on a PBX without that feature. It now says when the PBX needs an update, shows a friendly message when you are neither, and shows the real error otherwise.
+- Admin and supervisor recordings downloaded but did not play in MonoPhone; they now play, whatever the audio format.
+- Admin and role alert notifications did not reach phones and browsers; they arrive again.
+
+## Earlier releases
+
+### 1.0.0+20261115124700.1859804 (2026-11-14)
 
 Live call triggers, custom statuses and a personal blocklist, chat retention with legal hold and export, executives with assistants, door phones, number porting, caller-ID names, an AI admin copilot and a simpler chat and Messages screen in MonoPhone.
 
-### New
+#### New
 
 - **Live call triggers.** Admin, AI, Live call triggers: when a phrase or topic comes up on a live call, alert supervisors, post in chat, send a webhook event, add a CRM note, open a helpdesk ticket, tag the call or show a hint to the person on the call. Six ready-made triggers in nine languages are enabled with one click, and a tester shows what would fire on typed or spoken text. Never stores what was said; needs live assist with a speech provider.
 - **Custom status.** Make a status of your own with a text of up to 60 characters, an emoji, a colour (available, away or busy) and an automatic end (30 minutes, 1 hour, 4 hours, today or this week). Colleagues see it in Team, in presence and in chat headers, and it can carry forwarding rules like any other status. In MonoPhone and the console.
@@ -23,7 +79,7 @@ Live call triggers, custom statuses and a personal blocklist, chat retention wit
 - **Hours for one date.** Office-hours schedules can have different hours for a single date. In MonoPhone, changing Today's hours applies to today only by default.
 - **Password reset by e-mail.** Admin, Users: Send password reset mails a single-use link valid for one day. Also in MonoPhone's admin user page.
 
-### Improved
+#### Improved
 
 - **One kind of chat.** A chat is now a direct message or a group. A group has two plain settings: Who can post (everyone or only admins) and Who can join (invited people only, anyone can ask to join, or anyone in the company). New groups take a name, photo and description. One list with All, Unread, Groups and Direct filters, and error messages that say what went wrong where it happened.
 - **New Messages screen in MonoPhone.** A lean header with only New and a menu, one search field, one row of small filters, Archived chats folded into one row at the top, Mark all as read, and a clear reason when team chat is not available.
@@ -42,7 +98,7 @@ Live call triggers, custom statuses and a personal blocklist, chat retention wit
 - **Dialer campaigns.** A compliance page per campaign shows calling-window checks and the abandoned-call rate; contacts can be edited and imported from a file, and opt-outs imported from CSV.
 - **API changes.** On chat message tasks the field `external_key` is now `external_ref`. Chat lists (mentions, starred messages, threads, the Shared tab, reactions, scheduled messages, reminders) are paged with `cursor` and `next_cursor`; the `before` and `before_seq` parameters were removed. Following threads, starring, chat settings, company chat controls, poll votes, scheduled messages and reminders now require `If-Match` when changed, and their answers carry a `version`. Update scripts and integrations that use these.
 
-### Fixed
+#### Fixed
 
 - SIP trace now captures calls made from MonoPhone and the web phone on installs where the console and the call engine run on separate servers; such traces showed no calls before.
 - Install update in Admin, Updates showed the previous update as already installed and stopped; it now shows the progress of the new one at once.
@@ -52,11 +108,9 @@ Live call triggers, custom statuses and a personal blocklist, chat retention wit
 - MonoPhone: call recordings and voicemail in the Admin and Supervisor sections now play on iPhone and Android, from the loudspeaker, and an error says exactly why a file cannot be played.
 - MonoPhone: a phone set up with a setup code no longer asks for a password sign-in.
 
-### Security
+#### Security
 
 - Security fixes (low): sign-in and account protection, and data separation between companies.
-
-## Earlier releases
 
 ### 1.0.0+20261115010156.3e51443 (2026-11-13)
 
@@ -148,13 +202,13 @@ SIP tracing in the console, chat channels and webhooks, a MonoPhone admin sectio
 
 ---
 
-Latest build: `1.0.0+20261115124700.1859804` (commit `1859804`), published 2026-11-15T13:30:57Z.
+Latest build: `1.0.0+20261115195754.33fcc19` (commit `33fcc19`), published 2026-11-15T21:09:48Z.
 
 Images (by digest):
 
-- MPBX_IMAGE=ghcr.io/ilinaya/monopbx@sha256:ab79044dccb3101e6d1ba51d8ff6605eea1a59bfd0c5f14a5e3666eb19f466f4
-- MPBX_RTPENGINE_IMAGE=ghcr.io/ilinaya/monopbx-rtpengine@sha256:d3282e303dee15992979beef993cb36bcdc5be709691743faa603d610a4da7c7
-- MPBX_MEDIA_IMAGE=ghcr.io/ilinaya/monopbx-media@sha256:32ec9c96b36cffc652394b76e795f5bc474c2dd6ce0cf7acc145899e0bd60c24
-- MPBX_UPDATER_IMAGE=ghcr.io/ilinaya/monopbx-updater@sha256:04e4b45697608afb9dbd72f0d9fb86313f0021e820a07cc8572fdefcbaf52b35
+- MPBX_IMAGE=ghcr.io/ilinaya/monopbx@sha256:57e8c13ab17d9965244a0badb03e34683c2c2b19654a2131d353fad107947f75
+- MPBX_RTPENGINE_IMAGE=ghcr.io/ilinaya/monopbx-rtpengine@sha256:2650ffbbae1e861880622ee1de2b31bcee18c84457be56a1f1dcf2498dc3b6b2
+- MPBX_MEDIA_IMAGE=ghcr.io/ilinaya/monopbx-media@sha256:2b545816f72fe0a984cbf46cce0f3663846bc6e545faaa76f2f77f70f87dcf55
+- MPBX_UPDATER_IMAGE=ghcr.io/ilinaya/monopbx-updater@sha256:030e8bd2044638a718c536b32bb34f5429641c4c31188ac56278598cc7f1f7c8
 
 A build installs over any older build of the same major version. Check for updates in the console (Admin, Updates).
