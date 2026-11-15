@@ -1,10 +1,68 @@
 # MonoPbx nightly channel: what's new
 
-## 1.0.0+20261115010156.3e51443 (2026-11-13)
+## 1.0.0+20261115124700.1859804 (2026-11-14)
+
+Live call triggers, custom statuses and a personal blocklist, chat retention with legal hold and export, executives with assistants, door phones, number porting, caller-ID names, an AI admin copilot and a simpler chat and Messages screen in MonoPhone.
+
+### New
+
+- **Live call triggers.** Admin, AI, Live call triggers: when a phrase or topic comes up on a live call, alert supervisors, post in chat, send a webhook event, add a CRM note, open a helpdesk ticket, tag the call or show a hint to the person on the call. Six ready-made triggers in nine languages are enabled with one click, and a tester shows what would fire on typed or spoken text. Never stores what was said; needs live assist with a speech provider.
+- **Custom status.** Make a status of your own with a text of up to 60 characters, an emoji, a colour (available, away or busy) and an automatic end (30 minutes, 1 hour, 4 hours, today or this week). Colleagues see it in Team, in presence and in chat headers, and it can carry forwarding rules like any other status. In MonoPhone and the console.
+- **Blocklist for calls and SMS.** Block or silence a number, a prefix or withheld numbers, for calls, SMS or both, optionally until a set time. A blocked caller hears rejected, busy or not in service; a silenced call goes straight to voicemail. Block from Recents or Contacts. Each user's list is their own.
+- **Executives and assistants.** Admin, Calls and routing, Executives and assistants: an assistant screens the calls of an executive (outside callers only, or every caller), with a private line of numbers that always ring the executive. Assistants can set the executive's Do not disturb and forwarding when allowed.
+- **Door phones.** Admin, Calls and routing, Door phones: SIP door stations ring people inside, show a still image of the camera and open the door with a key press in the call or a relay, also from the Open button in MonoPhone. An office-hours schedule decides when they ring.
+- **Chat retention, legal hold and export.** Admin, Chat retention: a company retention period with the shortest and longest period a chat may set, and whether group owners and admins may set their own. Place a legal hold on a chat or a person (nothing is deleted while it lasts) and export a chat as PDF, JSON or ZIP with its attachments. Members see the period in force and any hold in the console and in MonoPhone.
+- **Number porting.** Admin, Calls and routing, DIDs, Number porting: keep a port request in one place (numbers, account at the old carrier, the signed letter of authorisation, dates and carrier answers) with reminders. On the confirmed date the numbers join the chosen trunk by themselves.
+- **Caller-ID names.** Admin, Calls and routing, DIDs, Caller names: the name each of your numbers shows on outgoing calls, and names for incoming outside callers looked up in the directory, company contacts and other sources.
+- **Recording policies and card-payment pause.** Admin, Recording: policies per company, site, extension, user, queue, number or trunk, with never, on demand and a percentage of calls. Pausing for a card payment can also hide the keys pressed while the recording is paused.
+- **Storage compliance.** Admin, Backups, Storage status: one page for the backup state, extra backup copies on other storage destinations with their own schedule and retention, write-once storage and legal hold, signed manifests that prove a backup is unchanged, and alerts when a backup fails or is late. Also in MonoPhone's admin status.
+- **AI admin copilot.** AI, Admin copilot in the console, and Settings, Admin, Copilot in MonoPhone: configure and troubleshoot the PBX in plain language. It looks things up with your permissions, shows every change as a preview before you apply it, logs it in the audit log and undoes a whole change set in one step. Uses your company's own AI model.
+- **PBX updates in MonoPhone.** Settings, Admin, PBX updates: the installed version, Check for updates, the What's new notes of every newer version, and Install update with progress, for administrators with the matching permission.
+- **Rich chat notifications.** Chat notifications on iPhone, iPad, Mac and Android show the sender's name and photo and are grouped per chat. Notifications never carry the message text through the push service.
+- **Better browser notifications.** Answer or decline a ringing call and reply to a chat message from the browser notification; one counted notification per chat and per SMS conversation; the sender's initials as the icon; admin alerts named by kind that open the right page. On iPhone and iPad, Safari shows how to add the web phone to the Home Screen.
+- **Hours for one date.** Office-hours schedules can have different hours for a single date. In MonoPhone, changing Today's hours applies to today only by default.
+- **Password reset by e-mail.** Admin, Users: Send password reset mails a single-use link valid for one day. Also in MonoPhone's admin user page.
+
+### Improved
+
+- **One kind of chat.** A chat is now a direct message or a group. A group has two plain settings: Who can post (everyone or only admins) and Who can join (invited people only, anyone can ask to join, or anyone in the company). New groups take a name, photo and description. One list with All, Unread, Groups and Direct filters, and error messages that say what went wrong where it happened.
+- **New Messages screen in MonoPhone.** A lean header with only New and a menu, one search field, one row of small filters, Archived chats folded into one row at the top, Mark all as read, and a clear reason when team chat is not available.
+- **Admin and Supervisor menus in MonoPhone.** Both sections now open a side menu from the menu button or an edge swipe, with grouped entries, badges for counts and Back to MonoPhone at the bottom. Tablets show the Supervisor menu as a side list.
+- **Contact and call details in MonoPhone.** Actions are shown as tiles that wrap instead of being cut, list rows keep only the Call button and open the details on tap, colleague and contact details list recent calls with that person, and About shows the version with Check for updates on one tile. MonoPhone also works better with older PBX versions.
+- **Finish setup box.** While setup steps remain, a box at the top of the admin home shows how many are left and continues with the next one. It can be collapsed, or hidden for the whole company.
+- **Call flow editor.** A palette of components grouped by kind sits next to the canvas. Remove a node with its ×, the Delete key or Delete node (with a confirmation when it has connections, and undo), and a click on a node opens its properties.
+- **Call pull is clearer.** Dialling `*85` when there is no call to pull now says "No call to pull" instead of reporting an unknown feature code, and MonoPhone shows the pull button only when one of your calls can be pulled.
+- **Integrations page.** Admin, Integrations shows a searchable list next to the details of the selected integration: what it does, the data it reads and writes, its permissions and settings. The install form puts required fields first and masks stored secrets.
+- **Single sign-on.** While single sign-on is required, accounts without a system role are given no password, and the sign-in pages say so. Accounts created on first sign-in get an extension from a range you choose, SAML group claims can also set the department, and identity providers with ECDSA keys are supported.
+- **Sites.** A new phone joins its user's site, or the site whose network it is provisioned from. A site you choose by hand is kept.
+- **Web phone ringing and closing.** Outgoing calls in the web phone play a ringback tone until answered (or the network's own tones), the ring volume can be set, and an × closes the phone. During a call it asks whether to keep the call in the background or hang up, and never hangs up by itself.
+- **MonoPhone polish.** Opening the Admin section asks only for your passkey when you have one, with no separate password. Chat and SMS headers show the other person's photo or the group picture, Team shows a colleague's custom status emoji on their photo, and keypad tones moved to Advanced settings.
+- **BI feed ready out of the box.** Admin, BI feed: the feed is set up by the installer and the updater, so you only create a BI user; no server settings to edit.
+- **Toll-fraud limits per calling profile.** Calling profiles can set their own limit on simultaneous international calls and calls per hour at night.
+- **Dialer campaigns.** A compliance page per campaign shows calling-window checks and the abandoned-call rate; contacts can be edited and imported from a file, and opt-outs imported from CSV.
+- **API changes.** On chat message tasks the field `external_key` is now `external_ref`. Chat lists (mentions, starred messages, threads, the Shared tab, reactions, scheduled messages, reminders) are paged with `cursor` and `next_cursor`; the `before` and `before_seq` parameters were removed. Following threads, starring, chat settings, company chat controls, poll votes, scheduled messages and reminders now require `If-Match` when changed, and their answers carry a `version`. Update scripts and integrations that use these.
+
+### Fixed
+
+- SIP trace now captures calls made from MonoPhone and the web phone on installs where the console and the call engine run on separate servers; such traces showed no calls before.
+- Install update in Admin, Updates showed the previous update as already installed and stopped; it now shows the progress of the new one at once.
+- MonoPhone: Make default now switches the line, the keypad and outgoing calls to that account at once and is remembered at the next start. It is shown only when the phone has more than one account.
+- Backups failed on installs updated to the version with sites; they run again.
+- Profile photos uploaded from MonoPhone showed as broken images in the console.
+- MonoPhone: call recordings and voicemail in the Admin and Supervisor sections now play on iPhone and Android, from the loudspeaker, and an error says exactly why a file cannot be played.
+- MonoPhone: a phone set up with a setup code no longer asks for a password sign-in.
+
+### Security
+
+- Security fixes (low): sign-in and account protection, and data separation between companies.
+
+## Earlier releases
+
+### 1.0.0+20261115010156.3e51443 (2026-11-13)
 
 SIP tracing in the console, chat channels and webhooks, a MonoPhone admin section, toll-fraud protection, storage destinations, live captions and calls that recover by themselves. After updating, calls to high-risk destinations and premium numbers are refused until an administrator allows them (see Toll-fraud protection).
 
-### New
+#### New
 
 - **SIP trace.** Admin, Logs, SIP trace: trace one extension, trunk or number, or a caller, called number or address, for a set time and with limits on calls, messages and size. Watch the messages live as a ladder diagram, open any message in full, search, and download a pcap file per call or for the whole trace.
 - **Readable SIP events.** Admin, Logs, SIP events: each line opens into the request and every response. A sign-in challenge and its retry are shown as one line, and a reason code explains in plain words why a call failed. Links start a trace of the extension or the peer, or open the call. SIP events now also name the trunk.
@@ -41,7 +99,7 @@ SIP tracing in the console, chat channels and webhooks, a MonoPhone admin sectio
 - **Managed Android phones.** Mobile device management can set MonoPhone's server address (and lock it), the sign-in e-mail or domain, require a passkey and turn off the device contacts book.
 - **SIP trace with audio.** Admin, Logs, SIP trace: a trace can also capture the call audio, with limits per call and per trace, and the pcap files then carry the audio next to the SIP messages (where the install stores recordings). Refused registrations and messages now carry a reason code in SIP events too.
 
-### Improved
+#### Improved
 
 - **Contacts and Recents in MonoPhone.** A Message button on each colleague opens the chat, contacts have a Text action when SMS is set up, and Recents shows full numbers and opens call details (call, video, message or text, add to contacts, favourite, copy). MonoPhone also shows a microphone level during calls and plays audio clips inside inbox messages.
 - **Single sign-on and SCIM.** A new Sign-in policy in Admin, Single sign-on can require single sign-on for the company (a break-glass administrator sign-in is kept and you cannot lock yourself out) and create accounts on first sign-in with a department, role and licence limit. A directory group can be mapped to administer one department; adding or removing a mapping now updates current members at once, SAML group claims can grant roles, and API keys of a removed user are revoked. Departments now lists each department's administrators.
@@ -64,7 +122,7 @@ SIP tracing in the console, chat channels and webhooks, a MonoPhone admin sectio
 - **Privacy requests include live captions.** A person's privacy export and erasure now cover saved live-caption transcripts.
 - **Setup guide API.** In the setup guide steps the field `key` is now `step`, and changing a step or hiding the guide requires `If-Match`.
 
-### Fixed
+#### Fixed
 
 - MonoPhone: pasting into the dialer number field works on iOS, Android and macOS. An empty dialer offers "Paste number", and pasted text is cleaned up (spaces, dashes, brackets, call prefixes, other digit styles, an extension); text that is not a number is refused with a hint.
 - MonoPhone: tapping a setup link while the app was closed opened the sign-in screen and did nothing; it now signs in.
@@ -83,20 +141,20 @@ SIP tracing in the console, chat channels and webhooks, a MonoPhone admin sectio
 - Simultaneous changes to hotel rooms and guests no longer overwrite each other.
 - Deleting a company now also deletes its SIP events right away.
 
-### Security
+#### Security
 
 - Security fixes (medium): connecting and disconnecting an online store integration is checked more strictly, and disconnecting now also revokes the PBX's access at the store.
 - Security fixes (medium): connections to company storage destinations are checked more strictly.
 
 ---
 
-Latest build: `1.0.0+20261115010156.3e51443` (commit `3e51443`), published 2026-11-15T02:22:49Z.
+Latest build: `1.0.0+20261115124700.1859804` (commit `1859804`), published 2026-11-15T13:30:57Z.
 
 Images (by digest):
 
-- MPBX_IMAGE=ghcr.io/ilinaya/monopbx@sha256:f3f3eaa4fada702ed7a8f87609137bba8d613288ad73d211c79da0edd5eb5eec
-- MPBX_RTPENGINE_IMAGE=ghcr.io/ilinaya/monopbx-rtpengine@sha256:9c2188bc27ae052fb924985487e2397ab38c86615a06184009c752dd979fa18b
-- MPBX_MEDIA_IMAGE=ghcr.io/ilinaya/monopbx-media@sha256:02e2aa98a107b619ac57ce11a2353ebee9cb34bd530db38aabac609a4a97196d
-- MPBX_UPDATER_IMAGE=ghcr.io/ilinaya/monopbx-updater@sha256:b0fc56b60494922618008ddb5340cb9ca42aebf8fed951ea96d1f8cb076f39dc
+- MPBX_IMAGE=ghcr.io/ilinaya/monopbx@sha256:ab79044dccb3101e6d1ba51d8ff6605eea1a59bfd0c5f14a5e3666eb19f466f4
+- MPBX_RTPENGINE_IMAGE=ghcr.io/ilinaya/monopbx-rtpengine@sha256:d3282e303dee15992979beef993cb36bcdc5be709691743faa603d610a4da7c7
+- MPBX_MEDIA_IMAGE=ghcr.io/ilinaya/monopbx-media@sha256:32ec9c96b36cffc652394b76e795f5bc474c2dd6ce0cf7acc145899e0bd60c24
+- MPBX_UPDATER_IMAGE=ghcr.io/ilinaya/monopbx-updater@sha256:04e4b45697608afb9dbd72f0d9fb86313f0021e820a07cc8572fdefcbaf52b35
 
 A build installs over any older build of the same major version. Check for updates in the console (Admin, Updates).
