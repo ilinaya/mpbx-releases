@@ -4,6 +4,26 @@
   "releases": [
     {
       "channel": "nightly",
+      "commit": "5ef8def",
+      "date": "2026-11-15",
+      "locales": {},
+      "release": "2026-11-15-2",
+      "sections": [
+        {
+          "items": [
+            "**Updating from this morning's version works again.** The previous update was refused on installs that had taken this morning's update (\"the database is newer than the target\"). Nothing was changed by the refused attempt; this update installs normally.",
+            "**One invitation sets up up to 10 phones.** A setup QR code, link or code can now be used up to 10 times while it is valid; each use sets up its own device. Signing out on one phone no longer ends the invitation. Ending it is still possible: an administrator revokes it, the user is removed, or the user answers \"That wasn't me\". The console shows how many more devices the current invitation can set up, and an invitation used 10 times says so clearly.",
+            "**Platform clean-ups** from the follow-up list, including storage export resume and setup preferences used across the console and the app."
+          ],
+          "kind": "fixed"
+        }
+      ],
+      "security": null,
+      "summary": "A corrective update: installs that took the morning update can update again, and one invitation now sets up several phones.",
+      "version": "1.0.0+20261115224006.5ef8def"
+    },
+    {
+      "channel": "nightly",
       "commit": "33fcc19",
       "date": "2026-11-15",
       "locales": {},

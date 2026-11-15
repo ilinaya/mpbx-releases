@@ -1,10 +1,22 @@
 # MonoPbx nightly channel: what's new
 
-## 1.0.0+20261115195754.33fcc19 (2026-11-15)
+## 1.0.0+20261115224006.5ef8def (2026-11-15)
+
+A corrective update: installs that took the morning update can update again, and one invitation now sets up several phones.
+
+### Fixed
+
+- **Updating from this morning's version works again.** The previous update was refused on installs that had taken this morning's update ("the database is newer than the target"). Nothing was changed by the refused attempt; this update installs normally.
+- **One invitation sets up up to 10 phones.** A setup QR code, link or code can now be used up to 10 times while it is valid; each use sets up its own device. Signing out on one phone no longer ends the invitation. Ending it is still possible: an administrator revokes it, the user is removed, or the user answers "That wasn't me". The console shows how many more devices the current invitation can set up, and an invitation used 10 times says so clearly.
+- **Platform clean-ups** from the follow-up list, including storage export resume and setup preferences used across the console and the app.
+
+## Earlier releases
+
+### 1.0.0+20261115195754.33fcc19 (2026-11-15)
 
 Export jobs to your own storage, Ask your PBX, proactive health warnings, push-to-talk channels, an AI call assistant, contact-center skills, quality reviews and surveys, reseller partners, eSIMs in MonoPhone and the console, on-device AI and a refreshed look in MonoPhone, and many fixes.
 
-### New
+#### New
 
 - **Export jobs.** Admin, Connections, Export jobs: copy recordings, voicemail, call history, team chat with its files, transcripts with AI summaries, SMS and channel messages, the audit log, faxes and reports to one of your storage destinations, once or on a schedule. Choose the folder and file names from templates, audio as WAV or Ogg Opus, tables as CSV, JSONL or Parquet, optionally compressed. Every file is checked after upload and each run leaves a manifest of what it wrote. Install-wide jobs are under Admin, System, Backups.
 - **Call the customer of a delivery order.** In the inbox, Call customer on a delivery conversation calls the customer through the PBX, in the console and in MonoPhone.
@@ -27,7 +39,7 @@ Export jobs to your own storage, Ask your PBX, proactive health warnings, push-t
 - **Company blocklist in MonoPhone.** Settings, Admin, Blocklist: view, add, change and remove the company's blocked numbers and prefixes from the phone.
 - **Voice one-time codes and translation defaults.** One-time codes can be sent by a voice call that reads the code. AI, AI agents, Live translation sets default caller and agent languages per queue, optionally from the caller's country, and can speak the agent's translated sentences into the call. Transcripts can be read translated into your language.
 
-### Improved
+#### Improved
 
 - **Inbox attachments.** The console and MonoPhone say what each channel can send as a file, send other kinds as a link, and hide the file button where a channel takes neither. Videos in the MonoPhone inbox play full screen.
 - **Jira issues from chat.** An issue created from a chat gets an AI summary when call summaries are switched on.
@@ -46,15 +58,13 @@ Export jobs to your own storage, Ask your PBX, proactive health warnings, push-t
 - **API changes: new endpoints.** Ask your PBX, health reports, push-to-talk channels, agent skills, quality reviews, post-call surveys, reseller partners and support access, company templates, eSIM assignments and installs, automation quotas, webhooks and run now, AI knowledge limits, translation defaults per queue, receptionist re-crawl and translated transcripts.
 - **API changes: existing endpoints.** Test connection answers also list the steps. Chat messages carry an optional `ptt` field for push-to-talk voice notes. New chat messages accept `null` for optional fields. All changes are additive; new error codes are listed on the error code pages of the documentation.
 
-### Fixed
+#### Fixed
 
 - Sending a location in MonoPhone chat failed with a message about file types; it is sent again, and each failed send now says what went wrong for a photo, file, voice note or location. Chat sheets stay above the keyboard.
 - A MonoPhone setup link stopped working without a reason after the device it was for was removed (for example by signing out of the app). The setup page now says why a link stopped working and what to do.
 - MonoPhone Settings, Executive and assistant showed only Could not load on a PBX without that feature. It now says when the PBX needs an update, shows a friendly message when you are neither, and shows the real error otherwise.
 - Admin and supervisor recordings downloaded but did not play in MonoPhone; they now play, whatever the audio format.
 - Admin and role alert notifications did not reach phones and browsers; they arrive again.
-
-## Earlier releases
 
 ### 1.0.0+20261115124700.1859804 (2026-11-14)
 
@@ -202,13 +212,13 @@ SIP tracing in the console, chat channels and webhooks, a MonoPhone admin sectio
 
 ---
 
-Latest build: `1.0.0+20261115195754.33fcc19` (commit `33fcc19`), published 2026-11-15T21:09:48Z.
+Latest build: `1.0.0+20261115224006.5ef8def` (commit `5ef8def`), published 2026-11-15T23:15:36Z.
 
 Images (by digest):
 
-- MPBX_IMAGE=ghcr.io/ilinaya/monopbx@sha256:57e8c13ab17d9965244a0badb03e34683c2c2b19654a2131d353fad107947f75
-- MPBX_RTPENGINE_IMAGE=ghcr.io/ilinaya/monopbx-rtpengine@sha256:2650ffbbae1e861880622ee1de2b31bcee18c84457be56a1f1dcf2498dc3b6b2
-- MPBX_MEDIA_IMAGE=ghcr.io/ilinaya/monopbx-media@sha256:2b545816f72fe0a984cbf46cce0f3663846bc6e545faaa76f2f77f70f87dcf55
-- MPBX_UPDATER_IMAGE=ghcr.io/ilinaya/monopbx-updater@sha256:030e8bd2044638a718c536b32bb34f5429641c4c31188ac56278598cc7f1f7c8
+- MPBX_IMAGE=ghcr.io/ilinaya/monopbx@sha256:f82f61dc90c3ac6ec51bf01442c4719852b549301a15b173e8d2bbd09b9b3f0a
+- MPBX_RTPENGINE_IMAGE=ghcr.io/ilinaya/monopbx-rtpengine@sha256:2a97afc8bd2243e9dd2c14860399feae9ca8bdf5655421374d23705f155b8ce0
+- MPBX_MEDIA_IMAGE=ghcr.io/ilinaya/monopbx-media@sha256:842fbddae3240ac36fa68af09002b8671855f79846c035ac8f784512d2e280de
+- MPBX_UPDATER_IMAGE=ghcr.io/ilinaya/monopbx-updater@sha256:0544b3fb19814b8f8d19dc1be744c3bc4de17971fbff2ee950ff85afe66bf956
 
 A build installs over any older build of the same major version. Check for updates in the console (Admin, Updates).
