@@ -4,6 +4,49 @@
   "releases": [
     {
       "channel": "nightly",
+      "commit": "86ed40b",
+      "date": "2026-11-17",
+      "locales": {},
+      "release": "2026-11-17",
+      "sections": [
+        {
+          "items": [
+            "**Automations v2.** A new visual designer (Admin, Automations) with a palette of steps, typed forms, an expression editor and a trigger picker. New steps cover logic, approvals and notifications, messaging, integrations, calendar and data tables, and placing calls. Every automation keeps a run history and can be tested from the designer before it goes live.",
+            "**AI steps and budgets.** Automations can use AI to read, summarise and write text and to make AI-driven calls. Set spending budgets so AI use stays within a limit you choose.",
+            "**Template gallery.** 18 ready-made automations (Admin, Automations, Templates) install in a few clicks and can be exported and shared in the new template format.",
+            "**AI call assistant and call screening.** The assistant answers and screens incoming calls and shows the caller's reason live. It is available in the MonoPhone app (a live screening screen, a Live Activity on iPhone, an Android notification and a screened calls history), on Apple Watch, the Mac and Windows apps and the web console. A \"My assistant\" card on the app home screen sets it up in three taps. Administrators control it with a company policy (Admin, Call assistant).",
+            "**Guided setup, steps 5 to 18.** The setup guide now walks through the rest of a new installation, with ready templates, direct links to each page and hints for network and NAT settings.",
+            "**Meetings and several click-to-call widgets.** Run meetings with your company's own keys, and create more than one click-to-call widget, each with its own target, number, opening hours, languages and analytics (Admin, Meetings and Widgets).",
+            "**Legal hold and active/standby failover.** Place users or data under legal hold so nothing is deleted, across recordings, chats and call history. A standby server can take over automatically if the main one fails.",
+            "**Customer timeline and AI agents that do work.** A single timeline shows every call, chat and note for a customer (Customers). AI agents can record outcomes, pause recording while card details are spoken, and prepare quotes.",
+            "**Internet-down survival.** If the office internet connection drops, calls between local phones and over backup routes keep working. A new page shows the status and what to prepare.",
+            "**Latin America and Mexico first.** Mexican numbers, language and common local providers are now the default starting point, and a migration assistant helps move from another system. New guides cover programmable voice and SMS.",
+            "**Contact centre.** Agent scheduling, a preview dialer card, national do-not-call lists and consent tracking, and customer details shown to the agent when a call arrives.",
+            "**Google Drive and Gmail in chats.** Share Drive files and email threads in chat conversations.",
+            "**Push-to-talk on iPhone.** Push-to-talk now works through Apple's own framework, with iOS controls, more Shortcuts actions and Android quick tiles for push-to-talk and the call assistant."
+          ],
+          "kind": "new"
+        },
+        {
+          "items": [
+            "**Presence and door phones.** Custom statuses are shown correctly to other phones, door phones support digest sign-in, and the share of connections reserved for SIP is configurable."
+          ],
+          "kind": "improved"
+        },
+        {
+          "items": [
+            "**MonoPhone for Android no longer crashes when it is opened** on release builds.",
+            "**Several wording fixes** in the console menus and in a few translated texts."
+          ],
+          "kind": "fixed"
+        }
+      ],
+      "security": null,
+      "summary": "Automations get a full designer, AI steps and ready-made templates; the AI call assistant reaches every app; setup, meetings, failover and the Android app are better.",
+      "version": "1.0.0+20261117104623.86ed40b"
+    },
+    {
+      "channel": "nightly",
       "commit": "5ef8def",
       "date": "2026-11-15",
       "locales": {},

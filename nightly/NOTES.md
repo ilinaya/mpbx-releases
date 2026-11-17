@@ -1,16 +1,45 @@
 # MonoPbx nightly channel: what's new
 
-## 1.0.0+20261115224006.5ef8def (2026-11-15)
+## 1.0.0+20261117104623.86ed40b (2026-11-17)
+
+Automations get a full designer, AI steps and ready-made templates; the AI call assistant reaches every app; setup, meetings, failover and the Android app are better.
+
+### New
+
+- **Automations v2.** A new visual designer (Admin, Automations) with a palette of steps, typed forms, an expression editor and a trigger picker. New steps cover logic, approvals and notifications, messaging, integrations, calendar and data tables, and placing calls. Every automation keeps a run history and can be tested from the designer before it goes live.
+- **AI steps and budgets.** Automations can use AI to read, summarise and write text and to make AI-driven calls. Set spending budgets so AI use stays within a limit you choose.
+- **Template gallery.** 18 ready-made automations (Admin, Automations, Templates) install in a few clicks and can be exported and shared in the new template format.
+- **AI call assistant and call screening.** The assistant answers and screens incoming calls and shows the caller's reason live. It is available in the MonoPhone app (a live screening screen, a Live Activity on iPhone, an Android notification and a screened calls history), on Apple Watch, the Mac and Windows apps and the web console. A "My assistant" card on the app home screen sets it up in three taps. Administrators control it with a company policy (Admin, Call assistant).
+- **Guided setup, steps 5 to 18.** The setup guide now walks through the rest of a new installation, with ready templates, direct links to each page and hints for network and NAT settings.
+- **Meetings and several click-to-call widgets.** Run meetings with your company's own keys, and create more than one click-to-call widget, each with its own target, number, opening hours, languages and analytics (Admin, Meetings and Widgets).
+- **Legal hold and active/standby failover.** Place users or data under legal hold so nothing is deleted, across recordings, chats and call history. A standby server can take over automatically if the main one fails.
+- **Customer timeline and AI agents that do work.** A single timeline shows every call, chat and note for a customer (Customers). AI agents can record outcomes, pause recording while card details are spoken, and prepare quotes.
+- **Internet-down survival.** If the office internet connection drops, calls between local phones and over backup routes keep working. A new page shows the status and what to prepare.
+- **Latin America and Mexico first.** Mexican numbers, language and common local providers are now the default starting point, and a migration assistant helps move from another system. New guides cover programmable voice and SMS.
+- **Contact centre.** Agent scheduling, a preview dialer card, national do-not-call lists and consent tracking, and customer details shown to the agent when a call arrives.
+- **Google Drive and Gmail in chats.** Share Drive files and email threads in chat conversations.
+- **Push-to-talk on iPhone.** Push-to-talk now works through Apple's own framework, with iOS controls, more Shortcuts actions and Android quick tiles for push-to-talk and the call assistant.
+
+### Improved
+
+- **Presence and door phones.** Custom statuses are shown correctly to other phones, door phones support digest sign-in, and the share of connections reserved for SIP is configurable.
+
+### Fixed
+
+- **MonoPhone for Android no longer crashes when it is opened** on release builds.
+- **Several wording fixes** in the console menus and in a few translated texts.
+
+## Earlier releases
+
+### 1.0.0+20261115224006.5ef8def (2026-11-15)
 
 A corrective update: installs that took the morning update can update again, and one invitation now sets up several phones.
 
-### Fixed
+#### Fixed
 
 - **Updating from this morning's version works again.** The previous update was refused on installs that had taken this morning's update ("the database is newer than the target"). Nothing was changed by the refused attempt; this update installs normally.
 - **One invitation sets up up to 10 phones.** A setup QR code, link or code can now be used up to 10 times while it is valid; each use sets up its own device. Signing out on one phone no longer ends the invitation. Ending it is still possible: an administrator revokes it, the user is removed, or the user answers "That wasn't me". The console shows how many more devices the current invitation can set up, and an invitation used 10 times says so clearly.
 - **Platform clean-ups** from the follow-up list, including storage export resume and setup preferences used across the console and the app.
-
-## Earlier releases
 
 ### 1.0.0+20261115195754.33fcc19 (2026-11-15)
 
@@ -212,13 +241,13 @@ SIP tracing in the console, chat channels and webhooks, a MonoPhone admin sectio
 
 ---
 
-Latest build: `1.0.0+20261115224006.5ef8def` (commit `5ef8def`), published 2026-11-15T23:15:36Z.
+Latest build: `1.0.0+20261117104623.86ed40b` (commit `86ed40b`), published 2026-11-17T11:25:21Z.
 
 Images (by digest):
 
-- MPBX_IMAGE=ghcr.io/ilinaya/monopbx@sha256:f82f61dc90c3ac6ec51bf01442c4719852b549301a15b173e8d2bbd09b9b3f0a
-- MPBX_RTPENGINE_IMAGE=ghcr.io/ilinaya/monopbx-rtpengine@sha256:2a97afc8bd2243e9dd2c14860399feae9ca8bdf5655421374d23705f155b8ce0
-- MPBX_MEDIA_IMAGE=ghcr.io/ilinaya/monopbx-media@sha256:842fbddae3240ac36fa68af09002b8671855f79846c035ac8f784512d2e280de
-- MPBX_UPDATER_IMAGE=ghcr.io/ilinaya/monopbx-updater@sha256:0544b3fb19814b8f8d19dc1be744c3bc4de17971fbff2ee950ff85afe66bf956
+- MPBX_IMAGE=ghcr.io/ilinaya/monopbx@sha256:059733364ed137747f41784e6ec8e8571bd509f6798e7a6f47ec150556db0de7
+- MPBX_RTPENGINE_IMAGE=ghcr.io/ilinaya/monopbx-rtpengine@sha256:adfae29f00eb7fe78fe9a0be24c47d043e10f94ace398820cda773b2db08a02d
+- MPBX_MEDIA_IMAGE=ghcr.io/ilinaya/monopbx-media@sha256:9e71b0c120a259de8047278efdea0502950f589b2465c05af17e07b41b605be1
+- MPBX_UPDATER_IMAGE=ghcr.io/ilinaya/monopbx-updater@sha256:90f1de5aaad15caef3c3fb0dcee72931c5271429de222058841ed7104e18ad4d
 
 A build installs over any older build of the same major version. Check for updates in the console (Admin, Updates).
