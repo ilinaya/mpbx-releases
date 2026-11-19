@@ -1,10 +1,25 @@
 # MonoPbx nightly channel: what's new
 
-## 1.0.0+20261119042855.8db9720 (2026-11-18)
+## 1.0.0+20261119052924.36e9e95 (2026-11-19)
+
+Updates from the console now bring the whole release, not only the new software images.
+
+### Improved
+
+- **Complete updates from the console.** Updating from the console now also installs the release's server tools and configuration files, not only the new images. Your settings and your own files are kept, the download is checked before anything changes, and a failed step puts the previous version back. Fixes that live in the server configuration now reach every server through a normal update.
+- **Disk space after updating.** The first update from the console now also applies the 7-day limit for the analytics database's internal diagnostic logs on servers installed earlier, and clears old ones before checking free space.
+
+### Fixed
+
+- **Calls between desk phones and the web phone** are covered by stronger automatic checks of the audio in both directions.
+
+## Earlier releases
+
+### 1.0.0+20261119042855.8db9720 (2026-11-18)
 
 A redesigned MonoPhone app and web console, SIP that works on restricted networks, more control over the call assistant, new automation steps for CRM, WhatsApp and calendars, and safer editing in the API.
 
-### New
+#### New
 
 - **A redesigned MonoPhone app.** The app now has four tabs: **Calls**, **Messages**, **People** and **Keypad**. Calls and voicemail share one list (All, Missed, Voicemail), People holds your team, the company phonebook and your own contacts with favourites and a VIP switch, and your photo at the top opens **Me**, where every personal setting is grouped by what you want to do. Phone numbers are written the way people in your country write them.
 - **A new call screen.** A waiting or held call stays visible at the top, the controls sit in a tidy grid, a small icon shows the connection quality, and tablets show the caller's card beside the call.
@@ -47,7 +62,7 @@ A redesigned MonoPhone app and web console, SIP that works on restricted network
 - **MonoPhone sign-in and forms.** First sign-in leads with **Scan QR code**. Forms have labels above fields and are grouped into sections, the Me page is reorganised by what you want to do, pages show skeleton placeholders while loading, there are new dialogs, the supervisor pages follow the redesign, and one icon set is used everywhere. Call assistant counters show on the assistant pages.
 - **Redesigned Apple Watch and Wear OS apps.** Both have Calls (recent calls and voicemail, with All, Missed and Voicemail on Apple Watch), People, Keypad and Me. Numbers are formatted like on the phone, Me offers Available, Busy and Do not disturb, and "Ready" shows only when something needs fixing. Apple Watch shows a compact call-waiting card and a slim held-call row, and both watches follow larger text sizes.
 
-### Improved
+#### Improved
 
 - **Licence sign-up in the setup wizard is checked end to end.** Signing up, confirming your e-mail, signing in and receiving the trial licence with its end date are now tested automatically on every build, against a real licence service.
 - **Console lists and forms everywhere.** Settings pages (Security, Recording, Logging, Transcription limits, Storage, Backups, Companies, AI settings, Integrations) share the sticky **Save bar**, and many more pages (Calling profiles, Door phones, Hotel, Hot desking, Park slots, Shared voicemail, Phonebook, Executives, Backups, Legal holds, Languages, Support, Export jobs, Partners, Companies, Device extras and others) use the shared list with search, filters, a "..." row menu, empty and error states, and cards on phones. Forms that sat beside a list now open in a dialog.
@@ -70,7 +85,7 @@ A redesigned MonoPhone app and web console, SIP that works on restricted network
 - **A distinct success colour.** Successful and enabled states use their own colour, separate from call-green.
 - **A stricter, more accurate API description.** The API document now states the length, range and pattern limits the server enforces, and documents more responses (for example a 201 on first save and 429 on chat routes). For API users: optional query parameters are no longer nullable (a null used to be sent as the text "null"), and a storage destination requires a name.
 
-### Fixed
+#### Fixed
 
 - **Disk filling up over time.** The analytics database kept its own internal diagnostic logs forever, which could fill a small server's disk and block upgrades. It now keeps them for 7 days, and an upgrade clears old ones before it checks for free space.
 - **File dialogs closing.** Choosing a file again, or cancelling the file chooser, no longer closes the whole dialog (a second contacts import lost its dialog).
@@ -87,14 +102,12 @@ A redesigned MonoPhone app and web console, SIP that works on restricted network
 - **Partner routes** now answer errors in the same format as every other route.
 - **Fax received label** showed a raw key instead of its name; it is translated in all nine languages.
 
-### Security
+#### Security
 
 - Security fixes (low): the certificate of an incoming secure trunk call is now also checked for revocation (OCSP).
 - Security fixes (low): the browser extension's sign-in no longer asks for control over other people's calls.
 - Security fixes (low): video-link tokens are stored only as a hash, expire quickly and are rate limited, and a web chat widget can require a captcha.
 - Security fixes (low): the e-mail library is updated to fix several published advisories (STARTTLS handling, message formatting and panics), and other dependencies are updated, including a web networking library.
-
-## Earlier releases
 
 ### 1.0.0+20261117104623.86ed40b (2026-11-17)
 
@@ -335,14 +348,14 @@ SIP tracing in the console, chat channels and webhooks, a MonoPhone admin sectio
 
 ---
 
-Latest build: `1.0.0+20261119042855.8db9720` (commit `8db9720`), published 2026-11-19T05:21:10Z.
+Latest build: `1.0.0+20261119052924.36e9e95` (commit `36e9e95`), published 2026-11-19T06:06:28Z.
 
 Images (by digest):
 
-- MPBX_IMAGE=ghcr.io/ilinaya/monopbx@sha256:738cb7b6c90f2ef03492735a7bc3d6752a82f08ed9fce242bb9cd91a0e8f096b
-- MPBX_RTPENGINE_IMAGE=ghcr.io/ilinaya/monopbx-rtpengine@sha256:cf42c0b3e58c7f298d3da662f8689e248eeea369948dd4751e26253cc4bfada7
-- MPBX_MEDIA_IMAGE=ghcr.io/ilinaya/monopbx-media@sha256:de260a4656142defa3a7b549f96507b03f7da9b25e4fb51c9f31bbd94554b523
-- MPBX_UPDATER_IMAGE=ghcr.io/ilinaya/monopbx-updater@sha256:c75ed5ea1aaee8714e1f01d2928a700034279f1d9765aa9ff99b680575205432
-- MPBX_OPENVPN_IMAGE=ghcr.io/ilinaya/monopbx-openvpn@sha256:c11370c7bac11803b207dfb2cc226703dad1c3b2ab345f3e409d57c77cf6b4d3
+- MPBX_IMAGE=ghcr.io/ilinaya/monopbx@sha256:9dbc736056c97c8b97825a4d72cfe76cdee3a40b86dbbd0d3704ba3613eaaeae
+- MPBX_RTPENGINE_IMAGE=ghcr.io/ilinaya/monopbx-rtpengine@sha256:932f28d4a1f2a8f77e884a5ab829a26a57c2b1b697ce9bc023cec664adc305a2
+- MPBX_MEDIA_IMAGE=ghcr.io/ilinaya/monopbx-media@sha256:4b37ad5738a595647fd0feeb78534289e4627b0c22b6752819d2a94449f65171
+- MPBX_UPDATER_IMAGE=ghcr.io/ilinaya/monopbx-updater@sha256:2eb5ce4a1226dc51428c236cefc99f70cc3458c0490066c1f041ffbb6d44992c
+- MPBX_OPENVPN_IMAGE=ghcr.io/ilinaya/monopbx-openvpn@sha256:e98b6c4d215755123fb6e941bb654e498165353af4848698e949e07ccd1f3cad
 
 A build installs over any older build of the same major version. Check for updates in the console (Admin, Updates).

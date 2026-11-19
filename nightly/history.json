@@ -4,6 +4,31 @@
   "releases": [
     {
       "channel": "nightly",
+      "commit": "36e9e95",
+      "date": "2026-11-19",
+      "locales": {},
+      "release": "2026-11-19",
+      "sections": [
+        {
+          "items": [
+            "**Complete updates from the console.** Updating from the console now also installs the release's server tools and configuration files, not only the new images. Your settings and your own files are kept, the download is checked before anything changes, and a failed step puts the previous version back. Fixes that live in the server configuration now reach every server through a normal update.",
+            "**Disk space after updating.** The first update from the console now also applies the 7-day limit for the analytics database's internal diagnostic logs on servers installed earlier, and clears old ones before checking free space."
+          ],
+          "kind": "improved"
+        },
+        {
+          "items": [
+            "**Calls between desk phones and the web phone** are covered by stronger automatic checks of the audio in both directions."
+          ],
+          "kind": "fixed"
+        }
+      ],
+      "security": null,
+      "summary": "Updates from the console now bring the whole release, not only the new software images.",
+      "version": "1.0.0+20261119052924.36e9e95"
+    },
+    {
+      "channel": "nightly",
       "commit": "8db9720",
       "date": "2026-11-18",
       "locales": {},
