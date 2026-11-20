@@ -4,6 +4,61 @@
   "releases": [
     {
       "channel": "nightly",
+      "commit": "33f9626",
+      "date": "2026-11-20",
+      "locales": {},
+      "release": "2026-11-20",
+      "sections": [
+        {
+          "items": [
+            "**MonoPhone works offline.** Recent chats, contacts and call history are kept in an encrypted cache on the phone, so you can read them without a connection. Messages you write while offline wait in an outbox and are sent when the connection returns. A slim strip at the top shows when you are offline.",
+            "**Chat: voice note transcripts.** Voice notes in chats, text messages and channels can be turned into text, on demand or automatically when your administrator enables it.",
+            "**Chat: who reacted.** Each person has one reaction per message, and you can see who reacted with which emoji.",
+            "**Chat: pins, edits and search.** Pin up to three messages in a conversation, edit your own message for 15 minutes (earlier versions are kept in the history), and search inside a chat or across all chats, with highlighted matches. Long messages are supported.",
+            "**Chat: drafts.** An unsent message is kept per chat, and the Messages list shows \"Draft:\" next to it.",
+            "**Chat: video messages and round video notes.** Send video clips (MP4 or MOV) with a preview picture, or tap the microphone button to switch to the camera and record a round video note that plays in place.",
+            "**Chat: live location.** Share your live location for 15 minutes, 1 hour or 8 hours. The card shows a moving pin and the time left, and you can stop sharing at any time.",
+            "**Chat: street maps and documents.** Shared places open on a street map, and documents show inside the conversation with a \"Save to Google Drive\" option.",
+            "**Share into MonoPhone from other apps.** Use Share in another app and pick MonoPhone to send text, photos, videos, audio and documents to a chat or a colleague, with a progress indicator and a retry for each file.",
+            "**GIFs and stickers.** Teams can send GIFs and stickers from the company's own GIPHY key. This is off by default: an administrator turns it on and enters the key in Admin, Settings, Company, GIFs and stickers, and can choose the content rating.",
+            "**WhatsApp-like conversations.** Chats, texts and the inbox share one familiar conversation layout in the app and, at phone width, in the web console.",
+            "**MonoPbx Voice: Plan & usage and Numbers.** Available when enabled by your provider. See your minutes bundle and usage, buy minutes and phone numbers, and choose monthly or annual billing, in the console and in the account portal (Voice and numbers). Bundles have a monthly minutes allowance. After it is used, pay-as-you-go rates apply or calls are refused, depending on your setting.",
+            "**New pricing calculator.** Choose Cloud or Self-hosted, then users or simultaneous calls, a minutes bundle, phone numbers, and monthly or annual billing, and see the price before you buy.",
+            "**MonoPbx Cloud: annual billing.** Pay for a year at once at a lower price than twelve monthly payments, chosen when you create the cloud server.",
+            "**Open console from your account.** A button in the account portal signs you in to the console of your server.",
+            "**Admin and Supervisor in MonoPhone.** Every Admin and Supervisor screen now follows one page layout, so lists, filters and actions are in the same place everywhere.",
+            "**Wear OS call controls.** Hold, transfer, call waiting, swap and keypad on the watch, and numbers shown in phone format."
+          ],
+          "kind": "new"
+        },
+        {
+          "items": [
+            "**Calmer app feedback.** MonoPhone shows one short message above the tab bar and one status strip instead of many hints. The keypad no longer shows line buttons.",
+            "**People.** Favourites tab and a details page for each person in the app and the console.",
+            "**My status in the console** looks like the one in the app, and the trial notice takes less room.",
+            "**Calls from the console** start on the browser phone, or ask which device to call from, instead of ringing all your devices. Home and Admin are easier to use at phone width.",
+            "**Web phone** keypad and call screen follow the MonoPhone design.",
+            "**Version and build** are shown in What's new and in the app's About page.",
+            "**Licence checkout** shows one clear payment result and returns to the same tab.",
+            "**Cloud servers** can run on Google Cloud, with backups, monitoring and a staged update channel.",
+            "**Cancellations.** Cancellations take effect at the end of the paid period; unused minutes don't carry over."
+          ],
+          "kind": "improved"
+        },
+        {
+          "items": [
+            "**Translations.** Several texts in the console and the app were corrected in all supported languages.",
+            "**MonoPhone connection on restricted networks.** Secure connections that do not announce a protocol now reach the website normally, and sharing the secure port with other services is optional."
+          ],
+          "kind": "fixed"
+        }
+      ],
+      "security": null,
+      "summary": "Much richer team chat in MonoPhone, MonoPhone that keeps working offline, redesigned Admin and Supervisor screens, and MonoPbx Voice and Cloud plans you can manage and pay for in the console and the account portal.",
+      "version": "1.0.0+20261120021735.33f9626"
+    },
+    {
+      "channel": "nightly",
       "commit": "36e9e95",
       "date": "2026-11-19",
       "locales": {},

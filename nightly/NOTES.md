@@ -1,19 +1,60 @@
 # MonoPbx nightly channel: what's new
 
-## 1.0.0+20261119052924.36e9e95 (2026-11-19)
+## 1.0.0+20261120021735.33f9626 (2026-11-20)
+
+Much richer team chat in MonoPhone, MonoPhone that keeps working offline, redesigned Admin and Supervisor screens, and MonoPbx Voice and Cloud plans you can manage and pay for in the console and the account portal.
+
+### New
+
+- **MonoPhone works offline.** Recent chats, contacts and call history are kept in an encrypted cache on the phone, so you can read them without a connection. Messages you write while offline wait in an outbox and are sent when the connection returns. A slim strip at the top shows when you are offline.
+- **Chat: voice note transcripts.** Voice notes in chats, text messages and channels can be turned into text, on demand or automatically when your administrator enables it.
+- **Chat: who reacted.** Each person has one reaction per message, and you can see who reacted with which emoji.
+- **Chat: pins, edits and search.** Pin up to three messages in a conversation, edit your own message for 15 minutes (earlier versions are kept in the history), and search inside a chat or across all chats, with highlighted matches. Long messages are supported.
+- **Chat: drafts.** An unsent message is kept per chat, and the Messages list shows "Draft:" next to it.
+- **Chat: video messages and round video notes.** Send video clips (MP4 or MOV) with a preview picture, or tap the microphone button to switch to the camera and record a round video note that plays in place.
+- **Chat: live location.** Share your live location for 15 minutes, 1 hour or 8 hours. The card shows a moving pin and the time left, and you can stop sharing at any time.
+- **Chat: street maps and documents.** Shared places open on a street map, and documents show inside the conversation with a "Save to Google Drive" option.
+- **Share into MonoPhone from other apps.** Use Share in another app and pick MonoPhone to send text, photos, videos, audio and documents to a chat or a colleague, with a progress indicator and a retry for each file.
+- **GIFs and stickers.** Teams can send GIFs and stickers from the company's own GIPHY key. This is off by default: an administrator turns it on and enters the key in Admin, Settings, Company, GIFs and stickers, and can choose the content rating.
+- **WhatsApp-like conversations.** Chats, texts and the inbox share one familiar conversation layout in the app and, at phone width, in the web console.
+- **MonoPbx Voice: Plan & usage and Numbers.** Available when enabled by your provider. See your minutes bundle and usage, buy minutes and phone numbers, and choose monthly or annual billing, in the console and in the account portal (Voice and numbers). Bundles have a monthly minutes allowance. After it is used, pay-as-you-go rates apply or calls are refused, depending on your setting.
+- **New pricing calculator.** Choose Cloud or Self-hosted, then users or simultaneous calls, a minutes bundle, phone numbers, and monthly or annual billing, and see the price before you buy.
+- **MonoPbx Cloud: annual billing.** Pay for a year at once at a lower price than twelve monthly payments, chosen when you create the cloud server.
+- **Open console from your account.** A button in the account portal signs you in to the console of your server.
+- **Admin and Supervisor in MonoPhone.** Every Admin and Supervisor screen now follows one page layout, so lists, filters and actions are in the same place everywhere.
+- **Wear OS call controls.** Hold, transfer, call waiting, swap and keypad on the watch, and numbers shown in phone format.
+
+### Improved
+
+- **Calmer app feedback.** MonoPhone shows one short message above the tab bar and one status strip instead of many hints. The keypad no longer shows line buttons.
+- **People.** Favourites tab and a details page for each person in the app and the console.
+- **My status in the console** looks like the one in the app, and the trial notice takes less room.
+- **Calls from the console** start on the browser phone, or ask which device to call from, instead of ringing all your devices. Home and Admin are easier to use at phone width.
+- **Web phone** keypad and call screen follow the MonoPhone design.
+- **Version and build** are shown in What's new and in the app's About page.
+- **Licence checkout** shows one clear payment result and returns to the same tab.
+- **Cloud servers** can run on Google Cloud, with backups, monitoring and a staged update channel.
+- **Cancellations.** Cancellations take effect at the end of the paid period; unused minutes don't carry over.
+
+### Fixed
+
+- **Translations.** Several texts in the console and the app were corrected in all supported languages.
+- **MonoPhone connection on restricted networks.** Secure connections that do not announce a protocol now reach the website normally, and sharing the secure port with other services is optional.
+
+## Earlier releases
+
+### 1.0.0+20261119052924.36e9e95 (2026-11-19)
 
 Updates from the console now bring the whole release, not only the new software images.
 
-### Improved
+#### Improved
 
 - **Complete updates from the console.** Updating from the console now also installs the release's server tools and configuration files, not only the new images. Your settings and your own files are kept, the download is checked before anything changes, and a failed step puts the previous version back. Fixes that live in the server configuration now reach every server through a normal update.
 - **Disk space after updating.** The first update from the console now also applies the 7-day limit for the analytics database's internal diagnostic logs on servers installed earlier, and clears old ones before checking free space.
 
-### Fixed
+#### Fixed
 
 - **Calls between desk phones and the web phone** are covered by stronger automatic checks of the audio in both directions.
-
-## Earlier releases
 
 ### 1.0.0+20261119042855.8db9720 (2026-11-18)
 
@@ -348,14 +389,14 @@ SIP tracing in the console, chat channels and webhooks, a MonoPhone admin sectio
 
 ---
 
-Latest build: `1.0.0+20261119052924.36e9e95` (commit `36e9e95`), published 2026-11-19T06:06:28Z.
+Latest build: `1.0.0+20261120021735.33f9626` (commit `33f9626`), published 2026-11-20T03:30:00Z.
 
 Images (by digest):
 
-- MPBX_IMAGE=ghcr.io/ilinaya/monopbx@sha256:9dbc736056c97c8b97825a4d72cfe76cdee3a40b86dbbd0d3704ba3613eaaeae
-- MPBX_RTPENGINE_IMAGE=ghcr.io/ilinaya/monopbx-rtpengine@sha256:932f28d4a1f2a8f77e884a5ab829a26a57c2b1b697ce9bc023cec664adc305a2
-- MPBX_MEDIA_IMAGE=ghcr.io/ilinaya/monopbx-media@sha256:4b37ad5738a595647fd0feeb78534289e4627b0c22b6752819d2a94449f65171
-- MPBX_UPDATER_IMAGE=ghcr.io/ilinaya/monopbx-updater@sha256:2eb5ce4a1226dc51428c236cefc99f70cc3458c0490066c1f041ffbb6d44992c
-- MPBX_OPENVPN_IMAGE=ghcr.io/ilinaya/monopbx-openvpn@sha256:e98b6c4d215755123fb6e941bb654e498165353af4848698e949e07ccd1f3cad
+- MPBX_IMAGE=ghcr.io/ilinaya/monopbx@sha256:9b148c856ce89b02588182a90a8b65ed1777f7ee51a162ae9ead51b39d90bfdc
+- MPBX_RTPENGINE_IMAGE=ghcr.io/ilinaya/monopbx-rtpengine@sha256:c4ec8118afd14737a09a5c51ada698c9b5003546f90da7718f1ce74b148b368d
+- MPBX_MEDIA_IMAGE=ghcr.io/ilinaya/monopbx-media@sha256:c820ef22cff1503e6f46bd782ccc37138646d03f0adb767be91d8074eb8237be
+- MPBX_UPDATER_IMAGE=ghcr.io/ilinaya/monopbx-updater@sha256:304648ff4d96e1d5e6ca92d12027aae6716e66024d4721c2c571f70a5e1a8515
+- MPBX_OPENVPN_IMAGE=ghcr.io/ilinaya/monopbx-openvpn@sha256:1b4f3c24334b0f25f5ac97b9da3c614fe0b4ee22d291745ba8739d11bbddc2ee
 
 A build installs over any older build of the same major version. Check for updates in the console (Admin, Updates).
