@@ -4,6 +4,55 @@
   "releases": [
     {
       "channel": "nightly",
+      "commit": "3918fe8",
+      "date": "2026-11-21",
+      "locales": {},
+      "release": "2026-11-21-3",
+      "sections": [
+        {
+          "items": [
+            "**MonoPbx Voice packs, no pay as you go.** Choose the regional minute packs you need as a checklist, in any combination; each pack can be held once. The console (Numbers, MonoPbx Voice, Plan and usage), the account page and the pricing calculator show the ticked packs and their total. Calls to destinations that no pack covers, or after a pack's minutes are used up, are refused with a short announcement instead of being charged. Removing a pack stops it at the end of the current period, with no refund.",
+            "**Push-to-talk widgets.** Add a push-to-talk widget to the iPhone Home Screen for one channel or several, with a Talk button per channel, the member count and who is talking. Apple Watch has push-to-talk complications and a Smart Stack widget that open the channel directly.",
+            "**Messages on Apple Watch.** Read your chats with unread badges, see photos and the first page of PDF files, play and record voice notes, reply with dictation, Scribble, emoji or quick replies, react and start a new chat. Chat notifications on the watch offer Reply, thumbs-up and Mark read.",
+            "**Calls on Apple Watch.** Search people by name or extension and call them, call back from the watch, and see whether a call goes through the watch or the iPhone.",
+            "**Push-to-talk on Apple Watch over mobile data.** A watch with mobile data or Wi-Fi can use push-to-talk without the iPhone nearby. It is woken for new talk and shows its connection (Wi-Fi, mobile data or via iPhone) and reconnects on its own.",
+            "**Monthly transcription quota.** Set a monthly limit of transcription minutes for the company in Admin, AI, Transcription. Recordings, voicemail, voice notes and live captions count towards it. Administrators are warned at 80 % and mailed at 100 %; new transcriptions then wait until the next month or a higher limit, and nothing is deleted. Admin, AI budgets shows the use per source.",
+            "**Speaker labels for mono recordings.** An optional company setting labels the speakers in transcripts of mono recordings.",
+            "**Update check settings for every install.** Admin, Updates, Update check settings now works on every kind of install: switch the update check on or off and choose the channel, stored per install. Settings fixed in the server environment are shown as locked."
+          ],
+          "kind": "new"
+        },
+        {
+          "items": [
+            "**Selecting messages in MonoPhone** works like in common messengers: a long press selects a message, taps add more messages, files, photos and voice notes, and the bar offers Forward, Copy, Delete and Share. With one message selected you also get Reply, Pin, reactions and Info. In the console, Forward starts the same selection.",
+            "**Sharing to MonoPhone on iPhone** suggests your recent chats in the share sheet, and you can send a share to up to ten chats or people at once. Files are uploaded once; a chat that could not receive the share is named with a retry. Android has the same multi-chat share screen.",
+            "**Voicemail transcripts** count towards the new transcription quota, so transcription costs stay predictable.",
+            "**Call readiness** in MonoPhone now simply says whether push notifications are Working or Not working, with tips under \"Calls not ringing?\".",
+            "**MonoPhone on macOS** uses the system glass look on macOS 26.",
+            "**Fraud protection for MonoPbx Voice** stops voice for the company at once when unusual calling is detected and alerts your provider, who can resume it."
+          ],
+          "kind": "improved"
+        },
+        {
+          "items": [
+            "**Push-to-talk** no longer stays on \"Connecting…\" after joining a channel. A channel that cannot be reached shows the reason and a Try again button, Leave works at any time, and a channel you left shows Join.",
+            "**Apple Watch** no longer breaks the line of a held call row on the larger watch sizes."
+          ],
+          "kind": "fixed"
+        },
+        {
+          "items": [
+            "Security fixes (medium): AI catalogue updates are accepted only when they are signed with a trusted key, and unsigned catalogues are refused."
+          ],
+          "kind": "security"
+        }
+      ],
+      "security": "medium",
+      "summary": "Simpler MonoPbx Voice packs, reliable push-to-talk with new widgets, messages and calls on Apple Watch, a monthly transcription quota and update settings for every install.",
+      "version": "1.0.0+20261121164815.3918fe8"
+    },
+    {
+      "channel": "nightly",
       "commit": "93f668d",
       "date": "2026-11-21",
       "locales": {},

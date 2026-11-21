@@ -1,10 +1,45 @@
 # MonoPbx nightly channel: what's new
 
-## 1.0.0+20261121064912.93f668d (2026-11-21)
+## 1.0.0+20261121164815.3918fe8 (2026-11-21)
+
+Simpler MonoPbx Voice packs, reliable push-to-talk with new widgets, messages and calls on Apple Watch, a monthly transcription quota and update settings for every install.
+
+### New
+
+- **MonoPbx Voice packs, no pay as you go.** Choose the regional minute packs you need as a checklist, in any combination; each pack can be held once. The console (Numbers, MonoPbx Voice, Plan and usage), the account page and the pricing calculator show the ticked packs and their total. Calls to destinations that no pack covers, or after a pack's minutes are used up, are refused with a short announcement instead of being charged. Removing a pack stops it at the end of the current period, with no refund.
+- **Push-to-talk widgets.** Add a push-to-talk widget to the iPhone Home Screen for one channel or several, with a Talk button per channel, the member count and who is talking. Apple Watch has push-to-talk complications and a Smart Stack widget that open the channel directly.
+- **Messages on Apple Watch.** Read your chats with unread badges, see photos and the first page of PDF files, play and record voice notes, reply with dictation, Scribble, emoji or quick replies, react and start a new chat. Chat notifications on the watch offer Reply, thumbs-up and Mark read.
+- **Calls on Apple Watch.** Search people by name or extension and call them, call back from the watch, and see whether a call goes through the watch or the iPhone.
+- **Push-to-talk on Apple Watch over mobile data.** A watch with mobile data or Wi-Fi can use push-to-talk without the iPhone nearby. It is woken for new talk and shows its connection (Wi-Fi, mobile data or via iPhone) and reconnects on its own.
+- **Monthly transcription quota.** Set a monthly limit of transcription minutes for the company in Admin, AI, Transcription. Recordings, voicemail, voice notes and live captions count towards it. Administrators are warned at 80 % and mailed at 100 %; new transcriptions then wait until the next month or a higher limit, and nothing is deleted. Admin, AI budgets shows the use per source.
+- **Speaker labels for mono recordings.** An optional company setting labels the speakers in transcripts of mono recordings.
+- **Update check settings for every install.** Admin, Updates, Update check settings now works on every kind of install: switch the update check on or off and choose the channel, stored per install. Settings fixed in the server environment are shown as locked.
+
+### Improved
+
+- **Selecting messages in MonoPhone** works like in common messengers: a long press selects a message, taps add more messages, files, photos and voice notes, and the bar offers Forward, Copy, Delete and Share. With one message selected you also get Reply, Pin, reactions and Info. In the console, Forward starts the same selection.
+- **Sharing to MonoPhone on iPhone** suggests your recent chats in the share sheet, and you can send a share to up to ten chats or people at once. Files are uploaded once; a chat that could not receive the share is named with a retry. Android has the same multi-chat share screen.
+- **Voicemail transcripts** count towards the new transcription quota, so transcription costs stay predictable.
+- **Call readiness** in MonoPhone now simply says whether push notifications are Working or Not working, with tips under "Calls not ringing?".
+- **MonoPhone on macOS** uses the system glass look on macOS 26.
+- **Fraud protection for MonoPbx Voice** stops voice for the company at once when unusual calling is detected and alerts your provider, who can resume it.
+
+### Fixed
+
+- **Push-to-talk** no longer stays on "Connecting…" after joining a channel. A channel that cannot be reached shows the reason and a Try again button, Leave works at any time, and a channel you left shows Join.
+- **Apple Watch** no longer breaks the line of a held call row on the larger watch sizes.
+
+### Security
+
+- Security fixes (medium): AI catalogue updates are accepted only when they are signed with a trusted key, and unsigned catalogues are refused.
+
+## Earlier releases
+
+### 1.0.0+20261121064912.93f668d (2026-11-21)
 
 Voicemail on by default, bringing your own numbers from the account page, clearer console pages, and more reliable call readiness and licence check-ins.
 
-### New
+#### New
 
 - **Voicemail on by default.** New extensions get a personal mailbox automatically, whether they are added in the console, by CSV import, by user provisioning, by single sign-on or by configuration as code. Administrators can still switch this off in Admin, Voicemail defaults. Companies that never changed this setting have it turned on with the update. Existing extensions keep what they have.
 - **Turn on voicemail in the console.** The extension page and the user page have a Voicemail card: turn voicemail on, switch it off again, set e-mail delivery, retention and the message limit, reset the PIN and manage greetings.
@@ -13,7 +48,7 @@ Voicemail on by default, bringing your own numbers from the account page, cleare
 - **Cancel a number port request.** Cancel a port request from the account page or from the console (Numbers, MonoPbx Voice, Port requests) while it can still be withdrawn. Requests already sent to the carrier show "Cancellation requested" until the carrier confirms.
 - **MonoPbx Cloud server sizing.** Cloud servers show their size and recent use of memory, disk and load, with advice when the server is getting full and a one-click request for a larger server where the provider supports it.
 
-### Improved
+#### Improved
 
 - **Turning MonoPbx Voice off** now also stops your minute bundles from renewing at the end of the current period. There is no refund for the running period.
 - **MonoPbx Cloud backups** start at staggered times so that cloud servers do not all back up in the same minute, and a server that has not received its backup plan gets it again automatically.
@@ -24,12 +59,10 @@ Voicemail on by default, bringing your own numbers from the account page, cleare
 - **Voicemail settings in MonoPhone** are always reachable from Calls, Voicemail. If you have no mailbox yet, the app explains this and lets you, or asks your administrator to, turn voicemail on.
 - **MonoPhone** offers a ringtone choice on iOS and Android and shows the caller's name and company on incoming calls.
 
-### Fixed
+#### Fixed
 
 - **Call readiness** in MonoPhone no longer keeps showing an old push service error after the service has recovered, and the wake-up rate now counts calls that reached the phone over its live connection.
 - **Licence check-ins** keep working after the licence service is restored from a backup. Servers are no longer mistaken for copies of another server in that case.
-
-## Earlier releases
 
 ### 1.0.0+20261121015022.0e64a05 (2026-11-21)
 
@@ -459,14 +492,14 @@ SIP tracing in the console, chat channels and webhooks, a MonoPhone admin sectio
 
 ---
 
-Latest build: `1.0.0+20261121064912.93f668d` (commit `93f668d`), published 2026-11-21T08:19:51Z.
+Latest build: `1.0.0+20261121164815.3918fe8` (commit `3918fe8`), published 2026-11-21T17:24:09Z.
 
 Images (by digest):
 
-- MPBX_IMAGE=ghcr.io/ilinaya/monopbx@sha256:4ba9c15552beae331e87059e59f2897ec501804e286795842eb6c9640ac6b303
-- MPBX_RTPENGINE_IMAGE=ghcr.io/ilinaya/monopbx-rtpengine@sha256:29d60b69b8b811ddf0d7e621540ca4d51e37b56f2b6e1204e81cac63ea2bd96a
-- MPBX_MEDIA_IMAGE=ghcr.io/ilinaya/monopbx-media@sha256:3513ebf708d30e3bd39bea1f30bc28122296fb58a6a8038db285a90ce8a35117
-- MPBX_UPDATER_IMAGE=ghcr.io/ilinaya/monopbx-updater@sha256:b80cec358cfc865f52f2f88fd821b4fe19941ddde170b01252ac03739a974a9b
-- MPBX_OPENVPN_IMAGE=ghcr.io/ilinaya/monopbx-openvpn@sha256:329282d0e7e91b8258eb74635ce2bb188fb240dc233d1c9ed64c08ba566baa02
+- MPBX_IMAGE=ghcr.io/ilinaya/monopbx@sha256:0f6e0bc7653c4e5d0fe09697aab9387aaa4201b2ac8ac51c9c18b1b8aebd0e3f
+- MPBX_RTPENGINE_IMAGE=ghcr.io/ilinaya/monopbx-rtpengine@sha256:ae2990f9e3834f7b9470d656cd28c31f532f78415a3b59e0f74591a324af756d
+- MPBX_MEDIA_IMAGE=ghcr.io/ilinaya/monopbx-media@sha256:913e13af1bafc3fecbd4d873f7a3831674b5f00113f8dff15ca185c61d851fcd
+- MPBX_UPDATER_IMAGE=ghcr.io/ilinaya/monopbx-updater@sha256:4010f2a54ee14d95054cd70bcb6871e9b231e1962ab32920ad403b9b4c0de61a
+- MPBX_OPENVPN_IMAGE=ghcr.io/ilinaya/monopbx-openvpn@sha256:96c307b8a045a5efc70b72f85de755cbaf34f0bcbecb7cd82cefefcfc32cb054
 
 A build installs over any older build of the same major version. Check for updates in the console (Admin, Updates).

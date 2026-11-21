@@ -1,61 +1,67 @@
 {
   "breaking": [],
-  "bundle_file": "bundles/mpbx-bundle-20261121064912-93f668d.tar.gz",
-  "bundle_sha256": "02bdbdcce12c7a992ae65801a8c2b154fe354866aa6655786a15eade5a4e3bd2",
+  "bundle_file": "bundles/mpbx-bundle-20261121164815-3918fe8.tar.gz",
+  "bundle_sha256": "8c4e97802e237e58569882ff4c36a6aecd48969354b24013e7ff09ab05d57608",
   "channel": "nightly",
-  "commit": "93f668d",
+  "commit": "3918fe8",
   "deprecated": [],
   "format": 1,
   "images": {
-    "MPBX_IMAGE": "ghcr.io/ilinaya/monopbx@sha256:4ba9c15552beae331e87059e59f2897ec501804e286795842eb6c9640ac6b303",
-    "MPBX_MEDIA_IMAGE": "ghcr.io/ilinaya/monopbx-media@sha256:3513ebf708d30e3bd39bea1f30bc28122296fb58a6a8038db285a90ce8a35117",
-    "MPBX_OPENVPN_IMAGE": "ghcr.io/ilinaya/monopbx-openvpn@sha256:329282d0e7e91b8258eb74635ce2bb188fb240dc233d1c9ed64c08ba566baa02",
-    "MPBX_RTPENGINE_IMAGE": "ghcr.io/ilinaya/monopbx-rtpengine@sha256:29d60b69b8b811ddf0d7e621540ca4d51e37b56f2b6e1204e81cac63ea2bd96a",
-    "MPBX_UPDATER_IMAGE": "ghcr.io/ilinaya/monopbx-updater@sha256:b80cec358cfc865f52f2f88fd821b4fe19941ddde170b01252ac03739a974a9b"
+    "MPBX_IMAGE": "ghcr.io/ilinaya/monopbx@sha256:0f6e0bc7653c4e5d0fe09697aab9387aaa4201b2ac8ac51c9c18b1b8aebd0e3f",
+    "MPBX_MEDIA_IMAGE": "ghcr.io/ilinaya/monopbx-media@sha256:913e13af1bafc3fecbd4d873f7a3831674b5f00113f8dff15ca185c61d851fcd",
+    "MPBX_OPENVPN_IMAGE": "ghcr.io/ilinaya/monopbx-openvpn@sha256:96c307b8a045a5efc70b72f85de755cbaf34f0bcbecb7cd82cefefcfc32cb054",
+    "MPBX_RTPENGINE_IMAGE": "ghcr.io/ilinaya/monopbx-rtpengine@sha256:ae2990f9e3834f7b9470d656cd28c31f532f78415a3b59e0f74591a324af756d",
+    "MPBX_UPDATER_IMAGE": "ghcr.io/ilinaya/monopbx-updater@sha256:4010f2a54ee14d95054cd70bcb6871e9b231e1962ab32920ad403b9b4c0de61a"
   },
   "notes": {
     "channel": "nightly",
-    "commit": "93f668d",
+    "commit": "3918fe8",
     "date": "2026-11-21",
     "locales": {},
-    "markdown": "Voicemail on by default, bringing your own numbers from the account page, clearer console pages, and more reliable\ncall readiness and licence check-ins.\n\n## New\n\n- **Voicemail on by default.** New extensions get a personal mailbox automatically, whether they are added in the\n  console, by CSV import, by user provisioning, by single sign-on or by configuration as code. Administrators can still\n  switch this off in Admin, Voicemail defaults. Companies that never changed this setting have it turned on with the\n  update. Existing extensions keep what they have.\n- **Turn on voicemail in the console.** The extension page and the user page have a Voicemail card: turn voicemail on,\n  switch it off again, set e-mail delivery, retention and the message limit, reset the PIN and manage greetings.\n- **Turn on voicemail for many extensions at once.** Select users or extensions and choose Turn on voicemail, or use\n  Admin, Voicemail defaults, \"Create mailboxes for existing extensions without one\". The console shows the count first,\n  then the progress, and reports what was created.\n- **Bring a number.** Request to move your existing numbers to MonoPbx Voice from the account page: enter the numbers\n  and the current provider's details, upload the signed authorisation and an optional bill, and follow the request's\n  status. Available when MonoPbx Voice is enabled by your provider.\n- **Cancel a number port request.** Cancel a port request from the account page or from the console (Numbers, MonoPbx\n  Voice, Port requests) while it can still be withdrawn. Requests already sent to the carrier show \"Cancellation\n  requested\" until the carrier confirms.\n- **MonoPbx Cloud server sizing.** Cloud servers show their size and recent use of memory, disk and load, with advice\n  when the server is getting full and a one-click request for a larger server where the provider supports it.\n\n## Improved\n\n- **Turning MonoPbx Voice off** now also stops your minute bundles from renewing at the end of the current period.\n  There is no refund for the running period.\n- **MonoPbx Cloud backups** start at staggered times so that cloud servers do not all back up in the same minute, and a\n  server that has not received its backup plan gets it again automatically.\n- **Audit log** shows the names of people, extensions, devices and API keys instead of identifiers, with shorter times\n  and all filters in the filter bar.\n- **User search** in the console finds users by name in either order, e-mail address or extension number.\n- **Live calls** shows a clear message when no calls are in progress.\n- **Status** buttons are at the top of your settings page, and the inbox uses the same filter bar as other pages.\n- **Voicemail settings in MonoPhone** are always reachable from Calls, Voicemail. If you have no mailbox yet, the app\n  explains this and lets you, or asks your administrator to, turn voicemail on.\n- **MonoPhone** offers a ringtone choice on iOS and Android and shows the caller's name and company on incoming calls.\n\n## Fixed\n\n- **Call readiness** in MonoPhone no longer keeps showing an old push service error after the service has recovered,\n  and the wake-up rate now counts calls that reached the phone over its live connection.\n- **Licence check-ins** keep working after the licence service is restored from a backup. Servers are no longer\n  mistaken for copies of another server in that case.\n",
-    "release": "2026-11-21-2",
+    "markdown": "Simpler MonoPbx Voice packs, reliable push-to-talk with new widgets, messages and calls on Apple Watch, a monthly\ntranscription quota and update settings for every install.\n\n## New\n\n- **MonoPbx Voice packs, no pay as you go.** Choose the regional minute packs you need as a checklist, in any\n  combination; each pack can be held once. The console (Numbers, MonoPbx Voice, Plan and usage), the account page and\n  the pricing calculator show the ticked packs and their total. Calls to destinations that no pack covers, or after a\n  pack's minutes are used up, are refused with a short announcement instead of being charged. Removing a pack stops it\n  at the end of the current period, with no refund.\n- **Push-to-talk widgets.** Add a push-to-talk widget to the iPhone Home Screen for one channel or several, with a Talk\n  button per channel, the member count and who is talking. Apple Watch has push-to-talk complications and a Smart Stack\n  widget that open the channel directly.\n- **Messages on Apple Watch.** Read your chats with unread badges, see photos and the first page of PDF files, play and\n  record voice notes, reply with dictation, Scribble, emoji or quick replies, react and start a new chat. Chat\n  notifications on the watch offer Reply, thumbs-up and Mark read.\n- **Calls on Apple Watch.** Search people by name or extension and call them, call back from the watch, and see whether\n  a call goes through the watch or the iPhone.\n- **Push-to-talk on Apple Watch over mobile data.** A watch with mobile data or Wi-Fi can use push-to-talk without the\n  iPhone nearby. It is woken for new talk and shows its connection (Wi-Fi, mobile data or via iPhone) and reconnects\n  on its own.\n- **Monthly transcription quota.** Set a monthly limit of transcription minutes for the company in Admin, AI,\n  Transcription. Recordings, voicemail, voice notes and live captions count towards it. Administrators are warned at\n  80 % and mailed at 100 %; new transcriptions then wait until the next month or a higher limit, and nothing is\n  deleted. Admin, AI budgets shows the use per source.\n- **Speaker labels for mono recordings.** An optional company setting labels the speakers in transcripts of mono\n  recordings.\n- **Update check settings for every install.** Admin, Updates, Update check settings now works on every kind of\n  install: switch the update check on or off and choose the channel, stored per install. Settings fixed in the server\n  environment are shown as locked.\n\n## Improved\n\n- **Selecting messages in MonoPhone** works like in common messengers: a long press selects a message, taps add more\n  messages, files, photos and voice notes, and the bar offers Forward, Copy, Delete and Share. With one message\n  selected you also get Reply, Pin, reactions and Info. In the console, Forward starts the same selection.\n- **Sharing to MonoPhone on iPhone** suggests your recent chats in the share sheet, and you can send a share to up to\n  ten chats or people at once. Files are uploaded once; a chat that could not receive the share is named with a retry.\n  Android has the same multi-chat share screen.\n- **Voicemail transcripts** count towards the new transcription quota, so transcription costs stay predictable.\n- **Call readiness** in MonoPhone now simply says whether push notifications are Working or Not working, with tips\n  under \"Calls not ringing?\".\n- **MonoPhone on macOS** uses the system glass look on macOS 26.\n- **Fraud protection for MonoPbx Voice** stops voice for the company at once when unusual calling is detected and\n  alerts your provider, who can resume it.\n\n## Fixed\n\n- **Push-to-talk** no longer stays on \"Connecting…\" after joining a channel. A channel that cannot be reached shows the\n  reason and a Try again button, Leave works at any time, and a channel you left shows Join.\n- **Apple Watch** no longer breaks the line of a held call row on the larger watch sizes.\n\n## Security\n\n- Security fixes (medium): AI catalogue updates are accepted only when they are signed with a trusted key, and unsigned\n  catalogues are refused.\n",
+    "release": "2026-11-21-3",
     "sections": [
       {
         "items": [
-          "**Voicemail on by default.** New extensions get a personal mailbox automatically, whether they are added in the console, by CSV import, by user provisioning, by single sign-on or by configuration as code. Administrators can still switch this off in Admin, Voicemail defaults. Companies that never changed this setting have it turned on with the update. Existing extensions keep what they have.",
-          "**Turn on voicemail in the console.** The extension page and the user page have a Voicemail card: turn voicemail on, switch it off again, set e-mail delivery, retention and the message limit, reset the PIN and manage greetings.",
-          "**Turn on voicemail for many extensions at once.** Select users or extensions and choose Turn on voicemail, or use Admin, Voicemail defaults, \"Create mailboxes for existing extensions without one\". The console shows the count first, then the progress, and reports what was created.",
-          "**Bring a number.** Request to move your existing numbers to MonoPbx Voice from the account page: enter the numbers and the current provider's details, upload the signed authorisation and an optional bill, and follow the request's status. Available when MonoPbx Voice is enabled by your provider.",
-          "**Cancel a number port request.** Cancel a port request from the account page or from the console (Numbers, MonoPbx Voice, Port requests) while it can still be withdrawn. Requests already sent to the carrier show \"Cancellation requested\" until the carrier confirms.",
-          "**MonoPbx Cloud server sizing.** Cloud servers show their size and recent use of memory, disk and load, with advice when the server is getting full and a one-click request for a larger server where the provider supports it."
+          "**MonoPbx Voice packs, no pay as you go.** Choose the regional minute packs you need as a checklist, in any combination; each pack can be held once. The console (Numbers, MonoPbx Voice, Plan and usage), the account page and the pricing calculator show the ticked packs and their total. Calls to destinations that no pack covers, or after a pack's minutes are used up, are refused with a short announcement instead of being charged. Removing a pack stops it at the end of the current period, with no refund.",
+          "**Push-to-talk widgets.** Add a push-to-talk widget to the iPhone Home Screen for one channel or several, with a Talk button per channel, the member count and who is talking. Apple Watch has push-to-talk complications and a Smart Stack widget that open the channel directly.",
+          "**Messages on Apple Watch.** Read your chats with unread badges, see photos and the first page of PDF files, play and record voice notes, reply with dictation, Scribble, emoji or quick replies, react and start a new chat. Chat notifications on the watch offer Reply, thumbs-up and Mark read.",
+          "**Calls on Apple Watch.** Search people by name or extension and call them, call back from the watch, and see whether a call goes through the watch or the iPhone.",
+          "**Push-to-talk on Apple Watch over mobile data.** A watch with mobile data or Wi-Fi can use push-to-talk without the iPhone nearby. It is woken for new talk and shows its connection (Wi-Fi, mobile data or via iPhone) and reconnects on its own.",
+          "**Monthly transcription quota.** Set a monthly limit of transcription minutes for the company in Admin, AI, Transcription. Recordings, voicemail, voice notes and live captions count towards it. Administrators are warned at 80 % and mailed at 100 %; new transcriptions then wait until the next month or a higher limit, and nothing is deleted. Admin, AI budgets shows the use per source.",
+          "**Speaker labels for mono recordings.** An optional company setting labels the speakers in transcripts of mono recordings.",
+          "**Update check settings for every install.** Admin, Updates, Update check settings now works on every kind of install: switch the update check on or off and choose the channel, stored per install. Settings fixed in the server environment are shown as locked."
         ],
         "kind": "new"
       },
       {
         "items": [
-          "**Turning MonoPbx Voice off** now also stops your minute bundles from renewing at the end of the current period. There is no refund for the running period.",
-          "**MonoPbx Cloud backups** start at staggered times so that cloud servers do not all back up in the same minute, and a server that has not received its backup plan gets it again automatically.",
-          "**Audit log** shows the names of people, extensions, devices and API keys instead of identifiers, with shorter times and all filters in the filter bar.",
-          "**User search** in the console finds users by name in either order, e-mail address or extension number.",
-          "**Live calls** shows a clear message when no calls are in progress.",
-          "**Status** buttons are at the top of your settings page, and the inbox uses the same filter bar as other pages.",
-          "**Voicemail settings in MonoPhone** are always reachable from Calls, Voicemail. If you have no mailbox yet, the app explains this and lets you, or asks your administrator to, turn voicemail on.",
-          "**MonoPhone** offers a ringtone choice on iOS and Android and shows the caller's name and company on incoming calls."
+          "**Selecting messages in MonoPhone** works like in common messengers: a long press selects a message, taps add more messages, files, photos and voice notes, and the bar offers Forward, Copy, Delete and Share. With one message selected you also get Reply, Pin, reactions and Info. In the console, Forward starts the same selection.",
+          "**Sharing to MonoPhone on iPhone** suggests your recent chats in the share sheet, and you can send a share to up to ten chats or people at once. Files are uploaded once; a chat that could not receive the share is named with a retry. Android has the same multi-chat share screen.",
+          "**Voicemail transcripts** count towards the new transcription quota, so transcription costs stay predictable.",
+          "**Call readiness** in MonoPhone now simply says whether push notifications are Working or Not working, with tips under \"Calls not ringing?\".",
+          "**MonoPhone on macOS** uses the system glass look on macOS 26.",
+          "**Fraud protection for MonoPbx Voice** stops voice for the company at once when unusual calling is detected and alerts your provider, who can resume it."
         ],
         "kind": "improved"
       },
       {
         "items": [
-          "**Call readiness** in MonoPhone no longer keeps showing an old push service error after the service has recovered, and the wake-up rate now counts calls that reached the phone over its live connection.",
-          "**Licence check-ins** keep working after the licence service is restored from a backup. Servers are no longer mistaken for copies of another server in that case."
+          "**Push-to-talk** no longer stays on \"Connecting…\" after joining a channel. A channel that cannot be reached shows the reason and a Try again button, Leave works at any time, and a channel you left shows Join.",
+          "**Apple Watch** no longer breaks the line of a held call row on the larger watch sizes."
         ],
         "kind": "fixed"
+      },
+      {
+        "items": [
+          "Security fixes (medium): AI catalogue updates are accepted only when they are signed with a trusted key, and unsigned catalogues are refused."
+        ],
+        "kind": "security"
       }
     ],
-    "security": null,
-    "summary": "Voicemail on by default, bringing your own numbers from the account page, clearer console pages, and more reliable call readiness and licence check-ins.",
-    "version": "1.0.0+20261121064912.93f668d"
+    "security": "medium",
+    "summary": "Simpler MonoPbx Voice packs, reliable push-to-talk with new widgets, messages and calls on Apple Watch, a monthly transcription quota and update settings for every install.",
+    "version": "1.0.0+20261121164815.3918fe8"
   },
   "notes_url": "https://github.com/ilinaya/mpbx-releases/blob/main/nightly/NOTES.md",
   "ports": [
@@ -189,8 +195,8 @@
   },
   "schema": {
     "clickhouse": 20270118400100,
-    "postgres": 20270131400100
+    "postgres": 20270201100100
   },
   "upgrade_from": [],
-  "version": "1.0.0+20261121064912.93f668d"
+  "version": "1.0.0+20261121164815.3918fe8"
 }
