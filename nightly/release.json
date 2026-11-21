@@ -1,75 +1,61 @@
 {
   "breaking": [],
-  "bundle_file": "bundles/mpbx-bundle-20261121015022-0e64a05.tar.gz",
-  "bundle_sha256": "a307483f9a2728aacea31fd3e14cedc88c2b8da6dfe45449a57385a79886c7db",
+  "bundle_file": "bundles/mpbx-bundle-20261121064912-93f668d.tar.gz",
+  "bundle_sha256": "02bdbdcce12c7a992ae65801a8c2b154fe354866aa6655786a15eade5a4e3bd2",
   "channel": "nightly",
-  "commit": "0e64a05",
+  "commit": "93f668d",
   "deprecated": [],
   "format": 1,
   "images": {
-    "MPBX_IMAGE": "ghcr.io/ilinaya/monopbx@sha256:a5f7ac2b946f02141eee671a5346339f8e4e891a6cdf541d0b1e2e159b039d70",
-    "MPBX_MEDIA_IMAGE": "ghcr.io/ilinaya/monopbx-media@sha256:2cf8c084f9ba81247b6a4fe7f549f74f1cb3e8031da977e8eb2d2f66af772f1f",
-    "MPBX_OPENVPN_IMAGE": "ghcr.io/ilinaya/monopbx-openvpn@sha256:624529376249e8133974a71bf3d81ae73adea0b46fa3164394e1a62de3d6f763",
-    "MPBX_RTPENGINE_IMAGE": "ghcr.io/ilinaya/monopbx-rtpengine@sha256:fefd114a27f4a9be0f3fc1c38eef1b83bc04053ca0df8ba835577b3e7539da72",
-    "MPBX_UPDATER_IMAGE": "ghcr.io/ilinaya/monopbx-updater@sha256:95b019d0faaf52778be4cfa8162ab25047a45d7e96d3a87717c1be24380afff4"
+    "MPBX_IMAGE": "ghcr.io/ilinaya/monopbx@sha256:4ba9c15552beae331e87059e59f2897ec501804e286795842eb6c9640ac6b303",
+    "MPBX_MEDIA_IMAGE": "ghcr.io/ilinaya/monopbx-media@sha256:3513ebf708d30e3bd39bea1f30bc28122296fb58a6a8038db285a90ce8a35117",
+    "MPBX_OPENVPN_IMAGE": "ghcr.io/ilinaya/monopbx-openvpn@sha256:329282d0e7e91b8258eb74635ce2bb188fb240dc233d1c9ed64c08ba566baa02",
+    "MPBX_RTPENGINE_IMAGE": "ghcr.io/ilinaya/monopbx-rtpengine@sha256:29d60b69b8b811ddf0d7e621540ca4d51e37b56f2b6e1204e81cac63ea2bd96a",
+    "MPBX_UPDATER_IMAGE": "ghcr.io/ilinaya/monopbx-updater@sha256:b80cec358cfc865f52f2f88fd821b4fe19941ddde170b01252ac03739a974a9b"
   },
   "notes": {
     "channel": "nightly",
-    "commit": "0e64a05",
+    "commit": "93f668d",
     "date": "2026-11-21",
     "locales": {},
-    "markdown": "Forwarding in chat, a default push-to-talk channel, easier MonoPhone sign-in for users, voicemail settings in the app,\nbetter live captions, and subscriptions you can see and manage in one place.\n\n## New\n\n- **Chat: select and forward.** Select several messages and forward them to other chats or straight to a colleague,\n  in MonoPhone and the console. Order and attachments are kept and each message shows \"Forwarded\". Live locations\n  cannot be forwarded, because they belong to the person sharing them.\n- **Push-to-talk channel \"Everyone\".** Every company gets a default push-to-talk channel with everyone who has an\n  extension, joined automatically on their devices. People who join or leave the company join or leave the channel.\n- **Push-to-talk channels in the console.** Create and manage channels and their members in Admin, Messaging,\n  Push-to-talk.\n- **Add the MonoPhone app from the extension page.** Send a sign-in link or show a QR code for the extension. No MAC\n  address, no new device and no new SIP password are needed.\n- **Voicemail settings in MonoPhone.** Calls, Voicemail now opens your greetings, voicemail PIN, e-mail delivery and\n  transcription settings directly.\n- **Favourites in your order.** Drag favourites into the order you want in People, Favourites. The order is shared\n  with MonoPhone and your other devices.\n- **Alert e-mails.** Toll-fraud, spending and MonoPbx Voice alerts can be e-mailed to administrators who opt in, in\n  their own language, with a limit on how often they are sent.\n- **Subscriptions and billing.** See your running subscriptions, renewals and payments in the console and the account\n  portal. Prices shown include tax.\n- **MonoPbx Voice.** Available when enabled by your provider. New permissions for the voice plan and for numbers, a\n  switch to turn the service on or off, one payment card shared with your licence, and requests to bring your own\n  numbers (number porting).\n- **MonoPbx Cloud backups.** Cloud servers back up to cloud storage without any storage key on the server. An\n  administrator can show the backup key to keep it safe.\n- **MMS files.** Incoming MMS pictures can be received with a per-provider application key, and files sent over SMPP\n  arrive as text with a download link that expires.\n- **Liquid Glass on iOS 26.** MonoPhone uses the system's glass look for its tab bar and toolbars on iOS 26.\n- **Google AI example.** The AI setup guide now shows how to use Gemini and Google Cloud Speech.\n\n## Improved\n\n- **Live captions** remember your language, start faster and recover more reliably after network changes.\n- **Chat videos** start playing at once while they load, and round video notes can be turned into text.\n- **Live location sharing** updates every 10 to 30 seconds, can be stopped from the Android notification, and stops\n  when you sign out. The console shows a read-only card.\n- **Sign-in links** show \"Signing you in...\" while the app or console finishes signing in.\n- **MonoPhone design.** Me, the four tabs, call screens, people, messages and sign-in follow the new design more\n  closely. Hints under settings are never cut off in long languages.\n- **Colours.** Busy and Do not disturb are shown in amber, not red. Green and red are used only for calls and\n  hanging up, in the app and the console.\n- **SIP domains.** Each SIP account belongs to one domain, which is also its sign-in realm, so phones on your own SIP\n  domain register cleanly.\n- **AI assistant tools** can read more of your settings, and company-wide limits and confirmation steps protect\n  changes.\n\n## Fixed\n\n- **Licence check after a restart.** A server that restarts no longer risks being reported as running on another\n  server.\n- **Language of system messages.** Security notices and announcements in Messages show in each reader's language.\n- **Admin menu on foldable iPhones.** The Admin and Supervisor menu now lays out correctly on both screens and in\n  every hinge position.\n\n## Security\n\n- Security fixes (high): sign-in protection for connected AI assistants was strengthened, and changes made through\n  them now require the latest version of a setting. Update soon.\n",
-    "release": "2026-11-21",
+    "markdown": "Voicemail on by default, bringing your own numbers from the account page, clearer console pages, and more reliable\ncall readiness and licence check-ins.\n\n## New\n\n- **Voicemail on by default.** New extensions get a personal mailbox automatically, whether they are added in the\n  console, by CSV import, by user provisioning, by single sign-on or by configuration as code. Administrators can still\n  switch this off in Admin, Voicemail defaults. Companies that never changed this setting have it turned on with the\n  update. Existing extensions keep what they have.\n- **Turn on voicemail in the console.** The extension page and the user page have a Voicemail card: turn voicemail on,\n  switch it off again, set e-mail delivery, retention and the message limit, reset the PIN and manage greetings.\n- **Turn on voicemail for many extensions at once.** Select users or extensions and choose Turn on voicemail, or use\n  Admin, Voicemail defaults, \"Create mailboxes for existing extensions without one\". The console shows the count first,\n  then the progress, and reports what was created.\n- **Bring a number.** Request to move your existing numbers to MonoPbx Voice from the account page: enter the numbers\n  and the current provider's details, upload the signed authorisation and an optional bill, and follow the request's\n  status. Available when MonoPbx Voice is enabled by your provider.\n- **Cancel a number port request.** Cancel a port request from the account page or from the console (Numbers, MonoPbx\n  Voice, Port requests) while it can still be withdrawn. Requests already sent to the carrier show \"Cancellation\n  requested\" until the carrier confirms.\n- **MonoPbx Cloud server sizing.** Cloud servers show their size and recent use of memory, disk and load, with advice\n  when the server is getting full and a one-click request for a larger server where the provider supports it.\n\n## Improved\n\n- **Turning MonoPbx Voice off** now also stops your minute bundles from renewing at the end of the current period.\n  There is no refund for the running period.\n- **MonoPbx Cloud backups** start at staggered times so that cloud servers do not all back up in the same minute, and a\n  server that has not received its backup plan gets it again automatically.\n- **Audit log** shows the names of people, extensions, devices and API keys instead of identifiers, with shorter times\n  and all filters in the filter bar.\n- **User search** in the console finds users by name in either order, e-mail address or extension number.\n- **Live calls** shows a clear message when no calls are in progress.\n- **Status** buttons are at the top of your settings page, and the inbox uses the same filter bar as other pages.\n- **Voicemail settings in MonoPhone** are always reachable from Calls, Voicemail. If you have no mailbox yet, the app\n  explains this and lets you, or asks your administrator to, turn voicemail on.\n- **MonoPhone** offers a ringtone choice on iOS and Android and shows the caller's name and company on incoming calls.\n\n## Fixed\n\n- **Call readiness** in MonoPhone no longer keeps showing an old push service error after the service has recovered,\n  and the wake-up rate now counts calls that reached the phone over its live connection.\n- **Licence check-ins** keep working after the licence service is restored from a backup. Servers are no longer\n  mistaken for copies of another server in that case.\n",
+    "release": "2026-11-21-2",
     "sections": [
       {
         "items": [
-          "**Chat: select and forward.** Select several messages and forward them to other chats or straight to a colleague, in MonoPhone and the console. Order and attachments are kept and each message shows \"Forwarded\". Live locations cannot be forwarded, because they belong to the person sharing them.",
-          "**Push-to-talk channel \"Everyone\".** Every company gets a default push-to-talk channel with everyone who has an extension, joined automatically on their devices. People who join or leave the company join or leave the channel.",
-          "**Push-to-talk channels in the console.** Create and manage channels and their members in Admin, Messaging, Push-to-talk.",
-          "**Add the MonoPhone app from the extension page.** Send a sign-in link or show a QR code for the extension. No MAC address, no new device and no new SIP password are needed.",
-          "**Voicemail settings in MonoPhone.** Calls, Voicemail now opens your greetings, voicemail PIN, e-mail delivery and transcription settings directly.",
-          "**Favourites in your order.** Drag favourites into the order you want in People, Favourites. The order is shared with MonoPhone and your other devices.",
-          "**Alert e-mails.** Toll-fraud, spending and MonoPbx Voice alerts can be e-mailed to administrators who opt in, in their own language, with a limit on how often they are sent.",
-          "**Subscriptions and billing.** See your running subscriptions, renewals and payments in the console and the account portal. Prices shown include tax.",
-          "**MonoPbx Voice.** Available when enabled by your provider. New permissions for the voice plan and for numbers, a switch to turn the service on or off, one payment card shared with your licence, and requests to bring your own numbers (number porting).",
-          "**MonoPbx Cloud backups.** Cloud servers back up to cloud storage without any storage key on the server. An administrator can show the backup key to keep it safe.",
-          "**MMS files.** Incoming MMS pictures can be received with a per-provider application key, and files sent over SMPP arrive as text with a download link that expires.",
-          "**Liquid Glass on iOS 26.** MonoPhone uses the system's glass look for its tab bar and toolbars on iOS 26.",
-          "**Google AI example.** The AI setup guide now shows how to use Gemini and Google Cloud Speech."
+          "**Voicemail on by default.** New extensions get a personal mailbox automatically, whether they are added in the console, by CSV import, by user provisioning, by single sign-on or by configuration as code. Administrators can still switch this off in Admin, Voicemail defaults. Companies that never changed this setting have it turned on with the update. Existing extensions keep what they have.",
+          "**Turn on voicemail in the console.** The extension page and the user page have a Voicemail card: turn voicemail on, switch it off again, set e-mail delivery, retention and the message limit, reset the PIN and manage greetings.",
+          "**Turn on voicemail for many extensions at once.** Select users or extensions and choose Turn on voicemail, or use Admin, Voicemail defaults, \"Create mailboxes for existing extensions without one\". The console shows the count first, then the progress, and reports what was created.",
+          "**Bring a number.** Request to move your existing numbers to MonoPbx Voice from the account page: enter the numbers and the current provider's details, upload the signed authorisation and an optional bill, and follow the request's status. Available when MonoPbx Voice is enabled by your provider.",
+          "**Cancel a number port request.** Cancel a port request from the account page or from the console (Numbers, MonoPbx Voice, Port requests) while it can still be withdrawn. Requests already sent to the carrier show \"Cancellation requested\" until the carrier confirms.",
+          "**MonoPbx Cloud server sizing.** Cloud servers show their size and recent use of memory, disk and load, with advice when the server is getting full and a one-click request for a larger server where the provider supports it."
         ],
         "kind": "new"
       },
       {
         "items": [
-          "**Live captions** remember your language, start faster and recover more reliably after network changes.",
-          "**Chat videos** start playing at once while they load, and round video notes can be turned into text.",
-          "**Live location sharing** updates every 10 to 30 seconds, can be stopped from the Android notification, and stops when you sign out. The console shows a read-only card.",
-          "**Sign-in links** show \"Signing you in...\" while the app or console finishes signing in.",
-          "**MonoPhone design.** Me, the four tabs, call screens, people, messages and sign-in follow the new design more closely. Hints under settings are never cut off in long languages.",
-          "**Colours.** Busy and Do not disturb are shown in amber, not red. Green and red are used only for calls and hanging up, in the app and the console.",
-          "**SIP domains.** Each SIP account belongs to one domain, which is also its sign-in realm, so phones on your own SIP domain register cleanly.",
-          "**AI assistant tools** can read more of your settings, and company-wide limits and confirmation steps protect changes."
+          "**Turning MonoPbx Voice off** now also stops your minute bundles from renewing at the end of the current period. There is no refund for the running period.",
+          "**MonoPbx Cloud backups** start at staggered times so that cloud servers do not all back up in the same minute, and a server that has not received its backup plan gets it again automatically.",
+          "**Audit log** shows the names of people, extensions, devices and API keys instead of identifiers, with shorter times and all filters in the filter bar.",
+          "**User search** in the console finds users by name in either order, e-mail address or extension number.",
+          "**Live calls** shows a clear message when no calls are in progress.",
+          "**Status** buttons are at the top of your settings page, and the inbox uses the same filter bar as other pages.",
+          "**Voicemail settings in MonoPhone** are always reachable from Calls, Voicemail. If you have no mailbox yet, the app explains this and lets you, or asks your administrator to, turn voicemail on.",
+          "**MonoPhone** offers a ringtone choice on iOS and Android and shows the caller's name and company on incoming calls."
         ],
         "kind": "improved"
       },
       {
         "items": [
-          "**Licence check after a restart.** A server that restarts no longer risks being reported as running on another server.",
-          "**Language of system messages.** Security notices and announcements in Messages show in each reader's language.",
-          "**Admin menu on foldable iPhones.** The Admin and Supervisor menu now lays out correctly on both screens and in every hinge position."
+          "**Call readiness** in MonoPhone no longer keeps showing an old push service error after the service has recovered, and the wake-up rate now counts calls that reached the phone over its live connection.",
+          "**Licence check-ins** keep working after the licence service is restored from a backup. Servers are no longer mistaken for copies of another server in that case."
         ],
         "kind": "fixed"
-      },
-      {
-        "items": [
-          "Security fixes (high): sign-in protection for connected AI assistants was strengthened, and changes made through them now require the latest version of a setting. Update soon."
-        ],
-        "kind": "security"
       }
     ],
-    "security": "high",
-    "summary": "Forwarding in chat, a default push-to-talk channel, easier MonoPhone sign-in for users, voicemail settings in the app, better live captions, and subscriptions you can see and manage in one place.",
-    "version": "1.0.0+20261121015022.0e64a05"
+    "security": null,
+    "summary": "Voicemail on by default, bringing your own numbers from the account page, clearer console pages, and more reliable call readiness and licence check-ins.",
+    "version": "1.0.0+20261121064912.93f668d"
   },
   "notes_url": "https://github.com/ilinaya/mpbx-releases/blob/main/nightly/NOTES.md",
   "ports": [
@@ -203,8 +189,8 @@
   },
   "schema": {
     "clickhouse": 20270118400100,
-    "postgres": 20270130700100
+    "postgres": 20270131400100
   },
   "upgrade_from": [],
-  "version": "1.0.0+20261121015022.0e64a05"
+  "version": "1.0.0+20261121064912.93f668d"
 }

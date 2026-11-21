@@ -4,6 +4,49 @@
   "releases": [
     {
       "channel": "nightly",
+      "commit": "93f668d",
+      "date": "2026-11-21",
+      "locales": {},
+      "release": "2026-11-21-2",
+      "sections": [
+        {
+          "items": [
+            "**Voicemail on by default.** New extensions get a personal mailbox automatically, whether they are added in the console, by CSV import, by user provisioning, by single sign-on or by configuration as code. Administrators can still switch this off in Admin, Voicemail defaults. Companies that never changed this setting have it turned on with the update. Existing extensions keep what they have.",
+            "**Turn on voicemail in the console.** The extension page and the user page have a Voicemail card: turn voicemail on, switch it off again, set e-mail delivery, retention and the message limit, reset the PIN and manage greetings.",
+            "**Turn on voicemail for many extensions at once.** Select users or extensions and choose Turn on voicemail, or use Admin, Voicemail defaults, \"Create mailboxes for existing extensions without one\". The console shows the count first, then the progress, and reports what was created.",
+            "**Bring a number.** Request to move your existing numbers to MonoPbx Voice from the account page: enter the numbers and the current provider's details, upload the signed authorisation and an optional bill, and follow the request's status. Available when MonoPbx Voice is enabled by your provider.",
+            "**Cancel a number port request.** Cancel a port request from the account page or from the console (Numbers, MonoPbx Voice, Port requests) while it can still be withdrawn. Requests already sent to the carrier show \"Cancellation requested\" until the carrier confirms.",
+            "**MonoPbx Cloud server sizing.** Cloud servers show their size and recent use of memory, disk and load, with advice when the server is getting full and a one-click request for a larger server where the provider supports it."
+          ],
+          "kind": "new"
+        },
+        {
+          "items": [
+            "**Turning MonoPbx Voice off** now also stops your minute bundles from renewing at the end of the current period. There is no refund for the running period.",
+            "**MonoPbx Cloud backups** start at staggered times so that cloud servers do not all back up in the same minute, and a server that has not received its backup plan gets it again automatically.",
+            "**Audit log** shows the names of people, extensions, devices and API keys instead of identifiers, with shorter times and all filters in the filter bar.",
+            "**User search** in the console finds users by name in either order, e-mail address or extension number.",
+            "**Live calls** shows a clear message when no calls are in progress.",
+            "**Status** buttons are at the top of your settings page, and the inbox uses the same filter bar as other pages.",
+            "**Voicemail settings in MonoPhone** are always reachable from Calls, Voicemail. If you have no mailbox yet, the app explains this and lets you, or asks your administrator to, turn voicemail on.",
+            "**MonoPhone** offers a ringtone choice on iOS and Android and shows the caller's name and company on incoming calls."
+          ],
+          "kind": "improved"
+        },
+        {
+          "items": [
+            "**Call readiness** in MonoPhone no longer keeps showing an old push service error after the service has recovered, and the wake-up rate now counts calls that reached the phone over its live connection.",
+            "**Licence check-ins** keep working after the licence service is restored from a backup. Servers are no longer mistaken for copies of another server in that case."
+          ],
+          "kind": "fixed"
+        }
+      ],
+      "security": null,
+      "summary": "Voicemail on by default, bringing your own numbers from the account page, clearer console pages, and more reliable call readiness and licence check-ins.",
+      "version": "1.0.0+20261121064912.93f668d"
+    },
+    {
+      "channel": "nightly",
       "commit": "0e64a05",
       "date": "2026-11-21",
       "locales": {},
