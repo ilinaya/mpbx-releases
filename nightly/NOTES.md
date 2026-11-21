@@ -1,10 +1,53 @@
 # MonoPbx nightly channel: what's new
 
-## 1.0.0+20261120021735.33f9626 (2026-11-20)
+## 1.0.0+20261121015022.0e64a05 (2026-11-21)
+
+Forwarding in chat, a default push-to-talk channel, easier MonoPhone sign-in for users, voicemail settings in the app, better live captions, and subscriptions you can see and manage in one place.
+
+### New
+
+- **Chat: select and forward.** Select several messages and forward them to other chats or straight to a colleague, in MonoPhone and the console. Order and attachments are kept and each message shows "Forwarded". Live locations cannot be forwarded, because they belong to the person sharing them.
+- **Push-to-talk channel "Everyone".** Every company gets a default push-to-talk channel with everyone who has an extension, joined automatically on their devices. People who join or leave the company join or leave the channel.
+- **Push-to-talk channels in the console.** Create and manage channels and their members in Admin, Messaging, Push-to-talk.
+- **Add the MonoPhone app from the extension page.** Send a sign-in link or show a QR code for the extension. No MAC address, no new device and no new SIP password are needed.
+- **Voicemail settings in MonoPhone.** Calls, Voicemail now opens your greetings, voicemail PIN, e-mail delivery and transcription settings directly.
+- **Favourites in your order.** Drag favourites into the order you want in People, Favourites. The order is shared with MonoPhone and your other devices.
+- **Alert e-mails.** Toll-fraud, spending and MonoPbx Voice alerts can be e-mailed to administrators who opt in, in their own language, with a limit on how often they are sent.
+- **Subscriptions and billing.** See your running subscriptions, renewals and payments in the console and the account portal. Prices shown include tax.
+- **MonoPbx Voice.** Available when enabled by your provider. New permissions for the voice plan and for numbers, a switch to turn the service on or off, one payment card shared with your licence, and requests to bring your own numbers (number porting).
+- **MonoPbx Cloud backups.** Cloud servers back up to cloud storage without any storage key on the server. An administrator can show the backup key to keep it safe.
+- **MMS files.** Incoming MMS pictures can be received with a per-provider application key, and files sent over SMPP arrive as text with a download link that expires.
+- **Liquid Glass on iOS 26.** MonoPhone uses the system's glass look for its tab bar and toolbars on iOS 26.
+- **Google AI example.** The AI setup guide now shows how to use Gemini and Google Cloud Speech.
+
+### Improved
+
+- **Live captions** remember your language, start faster and recover more reliably after network changes.
+- **Chat videos** start playing at once while they load, and round video notes can be turned into text.
+- **Live location sharing** updates every 10 to 30 seconds, can be stopped from the Android notification, and stops when you sign out. The console shows a read-only card.
+- **Sign-in links** show "Signing you in..." while the app or console finishes signing in.
+- **MonoPhone design.** Me, the four tabs, call screens, people, messages and sign-in follow the new design more closely. Hints under settings are never cut off in long languages.
+- **Colours.** Busy and Do not disturb are shown in amber, not red. Green and red are used only for calls and hanging up, in the app and the console.
+- **SIP domains.** Each SIP account belongs to one domain, which is also its sign-in realm, so phones on your own SIP domain register cleanly.
+- **AI assistant tools** can read more of your settings, and company-wide limits and confirmation steps protect changes.
+
+### Fixed
+
+- **Licence check after a restart.** A server that restarts no longer risks being reported as running on another server.
+- **Language of system messages.** Security notices and announcements in Messages show in each reader's language.
+- **Admin menu on foldable iPhones.** The Admin and Supervisor menu now lays out correctly on both screens and in every hinge position.
+
+### Security
+
+- Security fixes (high): sign-in protection for connected AI assistants was strengthened, and changes made through them now require the latest version of a setting. Update soon.
+
+## Earlier releases
+
+### 1.0.0+20261120021735.33f9626 (2026-11-20)
 
 Much richer team chat in MonoPhone, MonoPhone that keeps working offline, redesigned Admin and Supervisor screens, and MonoPbx Voice and Cloud plans you can manage and pay for in the console and the account portal.
 
-### New
+#### New
 
 - **MonoPhone works offline.** Recent chats, contacts and call history are kept in an encrypted cache on the phone, so you can read them without a connection. Messages you write while offline wait in an outbox and are sent when the connection returns. A slim strip at the top shows when you are offline.
 - **Chat: voice note transcripts.** Voice notes in chats, text messages and channels can be turned into text, on demand or automatically when your administrator enables it.
@@ -24,7 +67,7 @@ Much richer team chat in MonoPhone, MonoPhone that keeps working offline, redesi
 - **Admin and Supervisor in MonoPhone.** Every Admin and Supervisor screen now follows one page layout, so lists, filters and actions are in the same place everywhere.
 - **Wear OS call controls.** Hold, transfer, call waiting, swap and keypad on the watch, and numbers shown in phone format.
 
-### Improved
+#### Improved
 
 - **Calmer app feedback.** MonoPhone shows one short message above the tab bar and one status strip instead of many hints. The keypad no longer shows line buttons.
 - **People.** Favourites tab and a details page for each person in the app and the console.
@@ -36,12 +79,10 @@ Much richer team chat in MonoPhone, MonoPhone that keeps working offline, redesi
 - **Cloud servers** can run on Google Cloud, with backups, monitoring and a staged update channel.
 - **Cancellations.** Cancellations take effect at the end of the paid period; unused minutes don't carry over.
 
-### Fixed
+#### Fixed
 
 - **Translations.** Several texts in the console and the app were corrected in all supported languages.
 - **MonoPhone connection on restricted networks.** Secure connections that do not announce a protocol now reach the website normally, and sharing the secure port with other services is optional.
-
-## Earlier releases
 
 ### 1.0.0+20261119052924.36e9e95 (2026-11-19)
 
@@ -389,14 +430,14 @@ SIP tracing in the console, chat channels and webhooks, a MonoPhone admin sectio
 
 ---
 
-Latest build: `1.0.0+20261120021735.33f9626` (commit `33f9626`), published 2026-11-20T03:30:00Z.
+Latest build: `1.0.0+20261121015022.0e64a05` (commit `0e64a05`), published 2026-11-21T03:32:04Z.
 
 Images (by digest):
 
-- MPBX_IMAGE=ghcr.io/ilinaya/monopbx@sha256:9b148c856ce89b02588182a90a8b65ed1777f7ee51a162ae9ead51b39d90bfdc
-- MPBX_RTPENGINE_IMAGE=ghcr.io/ilinaya/monopbx-rtpengine@sha256:c4ec8118afd14737a09a5c51ada698c9b5003546f90da7718f1ce74b148b368d
-- MPBX_MEDIA_IMAGE=ghcr.io/ilinaya/monopbx-media@sha256:c820ef22cff1503e6f46bd782ccc37138646d03f0adb767be91d8074eb8237be
-- MPBX_UPDATER_IMAGE=ghcr.io/ilinaya/monopbx-updater@sha256:304648ff4d96e1d5e6ca92d12027aae6716e66024d4721c2c571f70a5e1a8515
-- MPBX_OPENVPN_IMAGE=ghcr.io/ilinaya/monopbx-openvpn@sha256:1b4f3c24334b0f25f5ac97b9da3c614fe0b4ee22d291745ba8739d11bbddc2ee
+- MPBX_IMAGE=ghcr.io/ilinaya/monopbx@sha256:a5f7ac2b946f02141eee671a5346339f8e4e891a6cdf541d0b1e2e159b039d70
+- MPBX_RTPENGINE_IMAGE=ghcr.io/ilinaya/monopbx-rtpengine@sha256:fefd114a27f4a9be0f3fc1c38eef1b83bc04053ca0df8ba835577b3e7539da72
+- MPBX_MEDIA_IMAGE=ghcr.io/ilinaya/monopbx-media@sha256:2cf8c084f9ba81247b6a4fe7f549f74f1cb3e8031da977e8eb2d2f66af772f1f
+- MPBX_UPDATER_IMAGE=ghcr.io/ilinaya/monopbx-updater@sha256:95b019d0faaf52778be4cfa8162ab25047a45d7e96d3a87717c1be24380afff4
+- MPBX_OPENVPN_IMAGE=ghcr.io/ilinaya/monopbx-openvpn@sha256:624529376249e8133974a71bf3d81ae73adea0b46fa3164394e1a62de3d6f763
 
 A build installs over any older build of the same major version. Check for updates in the console (Admin, Updates).
