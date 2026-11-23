@@ -1,10 +1,62 @@
 # MonoPbx nightly channel: what's new
 
-## 1.0.0+20261121164815.3918fe8 (2026-11-21)
+## 1.0.0+20261123104026.20d5c26 (2026-11-23)
+
+Much wider desk and DECT phone support with a phone directory, remote management and many new phone features, Twilio-compatible call scripts, custom AI prompts, business locations and a dispatchable location for 911 and 112 calls. **Upgrade note:** the phone directory is now on by default. If your desk phones use it, allow 636/tcp (LDAPS) from the phones' networks to the server.
+
+### New
+
+- **Every Yealink desk family and the W-series DECT kits.** Provisioning recognises all current Yealink desk phones (including expansion modules) and the W-series DECT bases and handsets such as the W60B, with the right time zone and daylight saving time and the base's web login.
+- **Every current Grandstream family.** GXP, GRP, GXV, WP, the DP75x DECT bases and the HT analogue adapters are provisioned with time zone, language, codecs, line keys and the phone book.
+- **More phone vendors.** New templates for Gigaset Pro DECT (N510, N670, N870), Cisco IP DECT 110/210, Panasonic, Mitel, Alcatel-Lucent Enterprise, Akuvox and Avaya J100.
+- **A unique web password for every phone.** Each provisioned phone gets its own web page password instead of a shared default.
+- **Reveal credentials.** Devices has a Reveal credentials action for the SIP account, the phone web page and the phone directory, protected by a fresh sign-in check.
+- **Phone directory on desk phones.** A read-only company directory (LDAP over TLS) is provisioned on desk phones and is on by default. Work e-mail addresses stay hidden from phones unless you switch them on.
+- **Remote phone management (TR-069).** A company switch (off by default) lets MonoPbx manage supporting phones remotely: status, parameters, reboot and resync actions, bulk actions and firmware jobs.
+- **Re-enrolment after a factory reset.** A phone that was reset to factory settings waits in a re-enrolment queue so an administrator can hand it its configuration again.
+- **Phone-screen apps.** Desk phones with an XML browser get MonoPbx apps on the phone screen, reachable from a free line key.
+- **Voicemail key and message lamp everywhere.** The voicemail key and the message waiting lamp work on every supported desk phone and DECT handset, including phones that never subscribe for message alerts.
+- **Texts between phones.** Desk and DECT phones can text each other, and their texts reach MonoPhone chat and SMS.
+- **Do not disturb and forwarding stay in sync** between the phone and MonoPbx, and forward dial codes work from desk phones.
+- **More desk phone features:** the connected caller's name after a transfer, distinctive ring tones, BLF pickup, a record key, keep-alive for phones behind NAT, intercom auto-answer, a second registrar for failover, the company certificate authority, and Opus as an opt-in codec.
+- **Twilio-compatible call scripts.** Calls created through the Twilio-compatible API can run TwiML, including live updates, status callbacks, Dial actions, Say voices and remote Play media. Compiled flows keep their prompts in the prompt library.
+- **Custom AI prompts.** Tailor the instructions for AI answers per company, feature and channel, with a preview.
+- **AI answers on delivery orders.** Customers writing about a delivery order can get an AI reply in the order thread.
+- **Business locations on calls.** Inbound calls are tagged with the business location of the number that was called.
+- **911 and 112 calls with a dispatchable location.** Calls to 911, 112 and other public safety numbers carry the caller's registered location to trunks that support it, and administrators are alerted when a location is missing.
+- **Call quality thresholds** are now a company setting.
+- **Callback order.** Queue callbacks can call the agent first or the customer first; customer first plays a short announcement while the agent is connected.
+- **Push-to-talk on the Keypad.** MonoPhone shows a push-to-talk pill on the Keypad for quick access to your channels.
+
+### Improved
+
+- **Smart callback:** a "yes" reply on WhatsApp books the callback at any step of the flow.
+- **Click-to-call** keeps the audio path of your device when the call is answered.
+- **Call supervision** (listen, whisper, barge) continues after a server restart.
+- **CRM and Jira call logs** include a link to the recording in the console.
+- **The browser extension** refreshes order cards when a shop order changes.
+- **Clinic integrations** use one set of safety rules that cannot be edited away.
+- **Fanvil, Snom, Poly, Cisco and Htek** provisioning was checked again, with better model detection and resync.
+- **Test builds of MonoPhone** receive calls through their own push channel.
+- **Voice fraud protection** now also e-mails the account owner when voice is stopped.
+
+### Fixed
+
+- **Provisioning behind the HTTPS front** no longer refuses phones as plain HTTP.
+- **Apple Watch push-to-talk** wakes correctly for listening, and the call label no longer clips.
+- **Links on the error code pages** open the right pages.
+
+### Security
+
+- Security improvements (medium): each phone has its own web password, phone credentials are shown only after a fresh sign-in check, and queue callbacks have per-number and per-hour limits with alerts.
+
+## Earlier releases
+
+### 1.0.0+20261121164815.3918fe8 (2026-11-21)
 
 Simpler MonoPbx Voice packs, reliable push-to-talk with new widgets, messages and calls on Apple Watch, a monthly transcription quota and update settings for every install.
 
-### New
+#### New
 
 - **MonoPbx Voice packs, no pay as you go.** Choose the regional minute packs you need as a checklist, in any combination; each pack can be held once. The console (Numbers, MonoPbx Voice, Plan and usage), the account page and the pricing calculator show the ticked packs and their total. Calls to destinations that no pack covers, or after a pack's minutes are used up, are refused with a short announcement instead of being charged. Removing a pack stops it at the end of the current period, with no refund.
 - **Push-to-talk widgets.** Add a push-to-talk widget to the iPhone Home Screen for one channel or several, with a Talk button per channel, the member count and who is talking. Apple Watch has push-to-talk complications and a Smart Stack widget that open the channel directly.
@@ -15,7 +67,7 @@ Simpler MonoPbx Voice packs, reliable push-to-talk with new widgets, messages an
 - **Speaker labels for mono recordings.** An optional company setting labels the speakers in transcripts of mono recordings.
 - **Update check settings for every install.** Admin, Updates, Update check settings now works on every kind of install: switch the update check on or off and choose the channel, stored per install. Settings fixed in the server environment are shown as locked.
 
-### Improved
+#### Improved
 
 - **Selecting messages in MonoPhone** works like in common messengers: a long press selects a message, taps add more messages, files, photos and voice notes, and the bar offers Forward, Copy, Delete and Share. With one message selected you also get Reply, Pin, reactions and Info. In the console, Forward starts the same selection.
 - **Sharing to MonoPhone on iPhone** suggests your recent chats in the share sheet, and you can send a share to up to ten chats or people at once. Files are uploaded once; a chat that could not receive the share is named with a retry. Android has the same multi-chat share screen.
@@ -24,16 +76,14 @@ Simpler MonoPbx Voice packs, reliable push-to-talk with new widgets, messages an
 - **MonoPhone on macOS** uses the system glass look on macOS 26.
 - **Fraud protection for MonoPbx Voice** stops voice for the company at once when unusual calling is detected and alerts your provider, who can resume it.
 
-### Fixed
+#### Fixed
 
 - **Push-to-talk** no longer stays on "Connecting…" after joining a channel. A channel that cannot be reached shows the reason and a Try again button, Leave works at any time, and a channel you left shows Join.
 - **Apple Watch** no longer breaks the line of a held call row on the larger watch sizes.
 
-### Security
+#### Security
 
 - Security fixes (medium): AI catalogue updates are accepted only when they are signed with a trusted key, and unsigned catalogues are refused.
-
-## Earlier releases
 
 ### 1.0.0+20261121064912.93f668d (2026-11-21)
 
@@ -492,14 +542,14 @@ SIP tracing in the console, chat channels and webhooks, a MonoPhone admin sectio
 
 ---
 
-Latest build: `1.0.0+20261121164815.3918fe8` (commit `3918fe8`), published 2026-11-21T17:24:09Z.
+Latest build: `1.0.0+20261123104026.20d5c26` (commit `20d5c26`), published 2026-11-23T11:44:02Z.
 
 Images (by digest):
 
-- MPBX_IMAGE=ghcr.io/ilinaya/monopbx@sha256:0f6e0bc7653c4e5d0fe09697aab9387aaa4201b2ac8ac51c9c18b1b8aebd0e3f
-- MPBX_RTPENGINE_IMAGE=ghcr.io/ilinaya/monopbx-rtpengine@sha256:ae2990f9e3834f7b9470d656cd28c31f532f78415a3b59e0f74591a324af756d
-- MPBX_MEDIA_IMAGE=ghcr.io/ilinaya/monopbx-media@sha256:913e13af1bafc3fecbd4d873f7a3831674b5f00113f8dff15ca185c61d851fcd
-- MPBX_UPDATER_IMAGE=ghcr.io/ilinaya/monopbx-updater@sha256:4010f2a54ee14d95054cd70bcb6871e9b231e1962ab32920ad403b9b4c0de61a
-- MPBX_OPENVPN_IMAGE=ghcr.io/ilinaya/monopbx-openvpn@sha256:96c307b8a045a5efc70b72f85de755cbaf34f0bcbecb7cd82cefefcfc32cb054
+- MPBX_IMAGE=ghcr.io/ilinaya/monopbx@sha256:1e3f7963717c73fba726494fc8bf12807e749c09c4a40f4b9c2ea87c4061afc3
+- MPBX_RTPENGINE_IMAGE=ghcr.io/ilinaya/monopbx-rtpengine@sha256:3a18014b6c81c19adaead7f10c7c4f4a253bdcc647616d2018af293e84b5339e
+- MPBX_MEDIA_IMAGE=ghcr.io/ilinaya/monopbx-media@sha256:a1865499e98f3aa6c4c4f0f2750fc4c1c018aa7dc74e6c80318a27c05500c44e
+- MPBX_UPDATER_IMAGE=ghcr.io/ilinaya/monopbx-updater@sha256:226e720d504c4165cc702f7cef7ba72a3e7c38fdfb7a33f5e002140de46d65de
+- MPBX_OPENVPN_IMAGE=ghcr.io/ilinaya/monopbx-openvpn@sha256:b0566464f9e7488d429866dfc6e43eb139a9a8dadc84183aa7b741378a6d335e
 
 A build installs over any older build of the same major version. Check for updates in the console (Admin, Updates).

@@ -4,6 +4,72 @@
   "releases": [
     {
       "channel": "nightly",
+      "commit": "20d5c26",
+      "date": "2026-11-23",
+      "locales": {},
+      "release": "2026-11-23",
+      "sections": [
+        {
+          "items": [
+            "**Every Yealink desk family and the W-series DECT kits.** Provisioning recognises all current Yealink desk phones (including expansion modules) and the W-series DECT bases and handsets such as the W60B, with the right time zone and daylight saving time and the base's web login.",
+            "**Every current Grandstream family.** GXP, GRP, GXV, WP, the DP75x DECT bases and the HT analogue adapters are provisioned with time zone, language, codecs, line keys and the phone book.",
+            "**More phone vendors.** New templates for Gigaset Pro DECT (N510, N670, N870), Cisco IP DECT 110/210, Panasonic, Mitel, Alcatel-Lucent Enterprise, Akuvox and Avaya J100.",
+            "**A unique web password for every phone.** Each provisioned phone gets its own web page password instead of a shared default.",
+            "**Reveal credentials.** Devices has a Reveal credentials action for the SIP account, the phone web page and the phone directory, protected by a fresh sign-in check.",
+            "**Phone directory on desk phones.** A read-only company directory (LDAP over TLS) is provisioned on desk phones and is on by default. Work e-mail addresses stay hidden from phones unless you switch them on.",
+            "**Remote phone management (TR-069).** A company switch (off by default) lets MonoPbx manage supporting phones remotely: status, parameters, reboot and resync actions, bulk actions and firmware jobs.",
+            "**Re-enrolment after a factory reset.** A phone that was reset to factory settings waits in a re-enrolment queue so an administrator can hand it its configuration again.",
+            "**Phone-screen apps.** Desk phones with an XML browser get MonoPbx apps on the phone screen, reachable from a free line key.",
+            "**Voicemail key and message lamp everywhere.** The voicemail key and the message waiting lamp work on every supported desk phone and DECT handset, including phones that never subscribe for message alerts.",
+            "**Texts between phones.** Desk and DECT phones can text each other, and their texts reach MonoPhone chat and SMS.",
+            "**Do not disturb and forwarding stay in sync** between the phone and MonoPbx, and forward dial codes work from desk phones.",
+            "**More desk phone features:** the connected caller's name after a transfer, distinctive ring tones, BLF pickup, a record key, keep-alive for phones behind NAT, intercom auto-answer, a second registrar for failover, the company certificate authority, and Opus as an opt-in codec.",
+            "**Twilio-compatible call scripts.** Calls created through the Twilio-compatible API can run TwiML, including live updates, status callbacks, Dial actions, Say voices and remote Play media. Compiled flows keep their prompts in the prompt library.",
+            "**Custom AI prompts.** Tailor the instructions for AI answers per company, feature and channel, with a preview.",
+            "**AI answers on delivery orders.** Customers writing about a delivery order can get an AI reply in the order thread.",
+            "**Business locations on calls.** Inbound calls are tagged with the business location of the number that was called.",
+            "**911 and 112 calls with a dispatchable location.** Calls to 911, 112 and other public safety numbers carry the caller's registered location to trunks that support it, and administrators are alerted when a location is missing.",
+            "**Call quality thresholds** are now a company setting.",
+            "**Callback order.** Queue callbacks can call the agent first or the customer first; customer first plays a short announcement while the agent is connected.",
+            "**Push-to-talk on the Keypad.** MonoPhone shows a push-to-talk pill on the Keypad for quick access to your channels."
+          ],
+          "kind": "new"
+        },
+        {
+          "items": [
+            "**Smart callback:** a \"yes\" reply on WhatsApp books the callback at any step of the flow.",
+            "**Click-to-call** keeps the audio path of your device when the call is answered.",
+            "**Call supervision** (listen, whisper, barge) continues after a server restart.",
+            "**CRM and Jira call logs** include a link to the recording in the console.",
+            "**The browser extension** refreshes order cards when a shop order changes.",
+            "**Clinic integrations** use one set of safety rules that cannot be edited away.",
+            "**Fanvil, Snom, Poly, Cisco and Htek** provisioning was checked again, with better model detection and resync.",
+            "**Test builds of MonoPhone** receive calls through their own push channel.",
+            "**Voice fraud protection** now also e-mails the account owner when voice is stopped."
+          ],
+          "kind": "improved"
+        },
+        {
+          "items": [
+            "**Provisioning behind the HTTPS front** no longer refuses phones as plain HTTP.",
+            "**Apple Watch push-to-talk** wakes correctly for listening, and the call label no longer clips.",
+            "**Links on the error code pages** open the right pages."
+          ],
+          "kind": "fixed"
+        },
+        {
+          "items": [
+            "Security improvements (medium): each phone has its own web password, phone credentials are shown only after a fresh sign-in check, and queue callbacks have per-number and per-hour limits with alerts."
+          ],
+          "kind": "security"
+        }
+      ],
+      "security": "medium",
+      "summary": "Much wider desk and DECT phone support with a phone directory, remote management and many new phone features, Twilio-compatible call scripts, custom AI prompts, business locations and a dispatchable location for 911 and 112 calls. **Upgrade note:** the phone directory is now on by default. If your desk phones use it, allow 636/tcp (LDAPS) from the phones' networks to the server.",
+      "version": "1.0.0+20261123104026.20d5c26"
+    },
+    {
+      "channel": "nightly",
       "commit": "3918fe8",
       "date": "2026-11-21",
       "locales": {},
