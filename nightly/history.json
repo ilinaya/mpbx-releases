@@ -4,6 +4,36 @@
   "releases": [
     {
       "channel": "nightly",
+      "commit": "d6234b4",
+      "date": "2026-11-23",
+      "locales": {},
+      "release": "2026-11-23-2",
+      "sections": [
+        {
+          "items": [
+            "**Leave push-to-talk from the Keypad.** When you are in a push-to-talk channel, the pill on the MonoPhone Keypad has a Leave button next to the channel name.",
+            "**Quieter push-to-talk channel page.** Past voice messages are hidden by default; Show recent messages opens them, and MonoPhone remembers your choice for each channel.",
+            "**Revealing phone credentials** in Devices no longer asks you to sign in again. The permission to see device secrets decides who can reveal them; every reveal is still recorded in the audit log.",
+            "**Phone address always available.** Administrators allowed to see device secrets find the phone's provisioning address, with a Copy button and its login when one is needed, in the phone's settings on the desk phones page and in Reveal credentials, for every provisioned phone. Others are offered Regenerate to get a new address.",
+            "**Desk phones page.** The desk phone time and codec settings and the vendor redirect servers now sit in a collapsed Advanced section, which remembers whether you opened it.",
+            "**Yealink phones behind NAT.** Provisioned Yealink desk phones and DECT bases now turn on rport, and DECT handsets also send a NAT keep-alive, so calls keep working behind routers."
+          ],
+          "kind": "improved"
+        },
+        {
+          "items": [
+            "**Some desk phones and DECT bases (for example the Yealink W60B) registered but could not place calls.** Calls stayed on \"calling\" with no sound because the phone did not answer the call sign-in request. These phones now get a sign-in request they understand.",
+            "**Click-to-call** no longer sends an extra update to your own phone once the other party is connected."
+          ],
+          "kind": "fixed"
+        }
+      ],
+      "security": null,
+      "summary": "Calls from DECT bases such as the Yealink W60B, an easier push-to-talk pill in MonoPhone and a tidier desk phones page.",
+      "version": "1.0.0+20261123195331.d6234b4"
+    },
+    {
+      "channel": "nightly",
       "commit": "20d5c26",
       "date": "2026-11-23",
       "locales": {},

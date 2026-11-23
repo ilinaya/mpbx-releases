@@ -1,10 +1,30 @@
 # MonoPbx nightly channel: what's new
 
-## 1.0.0+20261123104026.20d5c26 (2026-11-23)
+## 1.0.0+20261123195331.d6234b4 (2026-11-23)
+
+Calls from DECT bases such as the Yealink W60B, an easier push-to-talk pill in MonoPhone and a tidier desk phones page.
+
+### Improved
+
+- **Leave push-to-talk from the Keypad.** When you are in a push-to-talk channel, the pill on the MonoPhone Keypad has a Leave button next to the channel name.
+- **Quieter push-to-talk channel page.** Past voice messages are hidden by default; Show recent messages opens them, and MonoPhone remembers your choice for each channel.
+- **Revealing phone credentials** in Devices no longer asks you to sign in again. The permission to see device secrets decides who can reveal them; every reveal is still recorded in the audit log.
+- **Phone address always available.** Administrators allowed to see device secrets find the phone's provisioning address, with a Copy button and its login when one is needed, in the phone's settings on the desk phones page and in Reveal credentials, for every provisioned phone. Others are offered Regenerate to get a new address.
+- **Desk phones page.** The desk phone time and codec settings and the vendor redirect servers now sit in a collapsed Advanced section, which remembers whether you opened it.
+- **Yealink phones behind NAT.** Provisioned Yealink desk phones and DECT bases now turn on rport, and DECT handsets also send a NAT keep-alive, so calls keep working behind routers.
+
+### Fixed
+
+- **Some desk phones and DECT bases (for example the Yealink W60B) registered but could not place calls.** Calls stayed on "calling" with no sound because the phone did not answer the call sign-in request. These phones now get a sign-in request they understand.
+- **Click-to-call** no longer sends an extra update to your own phone once the other party is connected.
+
+## Earlier releases
+
+### 1.0.0+20261123104026.20d5c26 (2026-11-23)
 
 Much wider desk and DECT phone support with a phone directory, remote management and many new phone features, Twilio-compatible call scripts, custom AI prompts, business locations and a dispatchable location for 911 and 112 calls. **Upgrade note:** the phone directory is now on by default. If your desk phones use it, allow 636/tcp (LDAPS) from the phones' networks to the server.
 
-### New
+#### New
 
 - **Every Yealink desk family and the W-series DECT kits.** Provisioning recognises all current Yealink desk phones (including expansion modules) and the W-series DECT bases and handsets such as the W60B, with the right time zone and daylight saving time and the base's web login.
 - **Every current Grandstream family.** GXP, GRP, GXV, WP, the DP75x DECT bases and the HT analogue adapters are provisioned with time zone, language, codecs, line keys and the phone book.
@@ -28,7 +48,7 @@ Much wider desk and DECT phone support with a phone directory, remote management
 - **Callback order.** Queue callbacks can call the agent first or the customer first; customer first plays a short announcement while the agent is connected.
 - **Push-to-talk on the Keypad.** MonoPhone shows a push-to-talk pill on the Keypad for quick access to your channels.
 
-### Improved
+#### Improved
 
 - **Smart callback:** a "yes" reply on WhatsApp books the callback at any step of the flow.
 - **Click-to-call** keeps the audio path of your device when the call is answered.
@@ -40,17 +60,15 @@ Much wider desk and DECT phone support with a phone directory, remote management
 - **Test builds of MonoPhone** receive calls through their own push channel.
 - **Voice fraud protection** now also e-mails the account owner when voice is stopped.
 
-### Fixed
+#### Fixed
 
 - **Provisioning behind the HTTPS front** no longer refuses phones as plain HTTP.
 - **Apple Watch push-to-talk** wakes correctly for listening, and the call label no longer clips.
 - **Links on the error code pages** open the right pages.
 
-### Security
+#### Security
 
 - Security improvements (medium): each phone has its own web password, phone credentials are shown only after a fresh sign-in check, and queue callbacks have per-number and per-hour limits with alerts.
-
-## Earlier releases
 
 ### 1.0.0+20261121164815.3918fe8 (2026-11-21)
 
@@ -542,14 +560,14 @@ SIP tracing in the console, chat channels and webhooks, a MonoPhone admin sectio
 
 ---
 
-Latest build: `1.0.0+20261123104026.20d5c26` (commit `20d5c26`), published 2026-11-23T11:44:02Z.
+Latest build: `1.0.0+20261123195331.d6234b4` (commit `d6234b4`), published 2026-11-23T21:41:50Z.
 
 Images (by digest):
 
-- MPBX_IMAGE=ghcr.io/ilinaya/monopbx@sha256:1e3f7963717c73fba726494fc8bf12807e749c09c4a40f4b9c2ea87c4061afc3
-- MPBX_RTPENGINE_IMAGE=ghcr.io/ilinaya/monopbx-rtpengine@sha256:3a18014b6c81c19adaead7f10c7c4f4a253bdcc647616d2018af293e84b5339e
-- MPBX_MEDIA_IMAGE=ghcr.io/ilinaya/monopbx-media@sha256:a1865499e98f3aa6c4c4f0f2750fc4c1c018aa7dc74e6c80318a27c05500c44e
-- MPBX_UPDATER_IMAGE=ghcr.io/ilinaya/monopbx-updater@sha256:226e720d504c4165cc702f7cef7ba72a3e7c38fdfb7a33f5e002140de46d65de
-- MPBX_OPENVPN_IMAGE=ghcr.io/ilinaya/monopbx-openvpn@sha256:b0566464f9e7488d429866dfc6e43eb139a9a8dadc84183aa7b741378a6d335e
+- MPBX_IMAGE=ghcr.io/ilinaya/monopbx@sha256:cde22c846fff647de16a1c0dbf3f803aef5d5ee5171e4d4465da11069bc6b68c
+- MPBX_RTPENGINE_IMAGE=ghcr.io/ilinaya/monopbx-rtpengine@sha256:38a016de97510bb47d0895ec8b3263ab4b0386be7858c86e9f7cc54b42bb960a
+- MPBX_MEDIA_IMAGE=ghcr.io/ilinaya/monopbx-media@sha256:6275a31eedbf2b3538c1bdea062fff27c68add85b8ea95c47ed94173f1f99ae2
+- MPBX_UPDATER_IMAGE=ghcr.io/ilinaya/monopbx-updater@sha256:8bbe0888891696fb3817e862400ab44c28bf9b62ad7f652de43096c49ed0884f
+- MPBX_OPENVPN_IMAGE=ghcr.io/ilinaya/monopbx-openvpn@sha256:9d9c566912a6bb74f471e6a61420b3022d8cd7ab0762e4a9f1683ae6fc5cfda4
 
 A build installs over any older build of the same major version. Check for updates in the console (Admin, Updates).
