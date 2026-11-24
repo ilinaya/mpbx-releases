@@ -4,6 +4,55 @@
   "releases": [
     {
       "channel": "nightly",
+      "commit": "6b8033b",
+      "date": "2026-11-23",
+      "locales": {},
+      "release": "2026-11-23-3",
+      "sections": [
+        {
+          "items": [
+            "**Push-to-talk talk notifications.** When someone talks on a channel you belong to but have not joined, MonoPhone shows \"is talking\" with a Join button; Join plays the rest of the live transmission. Notifications are limited to one every two minutes per channel, follow Do not disturb and can be turned off for each channel.",
+            "**Every device hears push-to-talk.** All devices of the same extension now hear live push-to-talk audio and get its notifications; only the device that is talking is left out.",
+            "**Quick push-to-talk channels.** Switch channels from the push-to-talk pill on the Keypad, keep up to three favourite channels as chips, and start a private channel with one or more colleagues from People. Favourites come first in the iPhone widget channel picker and on Apple Watch.",
+            "**Online members in push-to-talk.** The channel page and the Keypad pill show who is online.",
+            "**Starter examples for new companies.** A new company can start with ready-made examples: four extensions, a sales ring group, a support queue, office hours with a holiday, a main menu and call flows, all marked \"(example)\". Choose it in the setup wizard or when you create a company; existing companies add them from System, Setup guide. Examples use no licence seats and never touch your trunks or numbers.",
+            "**AI and GIF steps in the setup wizard.** Optional steps set up an AI provider from a list of presets (with where to get a key and a key test) and GIF search with a GIPHY key. Admin, AI, Add provider offers the same presets, and Test key now works for every provider kind, including speech services.",
+            "**Stickers in team chat.** A sticker button in the MonoPhone message field opens a panel with GIFs and Stickers tabs: favourites, recently sent stickers, your own stickers made from photos, and GIPHY stickers when GIF search is on. Favourites and your own stickers follow you on every device. Stickers show without a bubble, and the web chat now shows GIFs and stickers too.",
+            "**Find desk phones (administrators).** Administrators can use MonoPhone on a phone, tablet or computer to find desk phones on the local network and provision one to a new or existing extension in one step. Discovered phones also appear in the console (Admin, Devices) with Provision to extension.",
+            "**Company phone directory on DECT bases.** Yealink W-series and Gigaset N670/N870 bases now receive the company phone directory (LDAP), so handsets can search colleagues.",
+            "**RSA certificate for older phones.** Next to each automatic (Let's Encrypt) certificate the PBX now also obtains an RSA certificate of the same name and gives it to older phones that cannot use the modern certificate, for the web, secure SIP and the phone directory. Admin, Certificates shows both."
+          ],
+          "kind": "new"
+        },
+        {
+          "items": [
+            "**Media encryption is optional on every desk phone.** Provisioned phones of all vendors offer encrypted media (SRTP) but still accept calls without it, on every transport; only the restricted-network profile requires it.",
+            "**Phone directory on every model.** Every desk phone model with a directory setting receives the company phone directory when it is on, and DECT bases such as the Yealink W52P get the right server names on every account.",
+            "**Phone directory diagnostics.** Failed secure directory (LDAPS) connections and sign-ins now appear in the phone's provisioning log and in the TLS failures view, with a hint about what the phone could not accept.",
+            "**Key rotation** now also re-encrypts the TR-069 and phone directory passwords.",
+            "**Live location** tells MonoPhone how long to wait when updates are sent too fast.",
+            "**Live captions in MonoPhone** have a new card: the newest words on top and always visible above the call controls, phrases grouped by speaker, adjustable text size, and Copy, Summarise and Key points in one menu.",
+            "**MonoPhone call readiness** follows the line, so \"Calls can't reach this phone\" no longer stays on screen after the line is ready."
+          ],
+          "kind": "improved"
+        },
+        {
+          "items": [
+            "**Yealink desk phones and DECT handsets (for example the W60B) ended calls with \"Error (Media)\".** The provisioning file now writes codec settings in the form current Yealink firmware expects. Htek, Fanvil and Cisco codec and encryption settings were corrected too, and Grandstream, Snom, Poly and the other vendors were checked.",
+            "**Voicemail (`*86`) could fail because prompts were missing.** The voice prompts now ship with the media service, are checked at start and fall back to English when a language is missing.",
+            "**Push-to-talk on iPhone and Mac.** Your voice now reaches the channel, and iPhone receives and plays transmissions. The priority mark is no longer shown as a warning.",
+            "**Live location** keeps updating on iPhone when you stand still and keeps sending on Android.",
+            "**Live captions** now hide when you turn them off, and on-device captions no longer show \"Reconnecting\"."
+          ],
+          "kind": "fixed"
+        }
+      ],
+      "security": null,
+      "summary": "Desk phones and DECT bases that place calls with sound, the company phone directory on more phones, voicemail prompts that always play, faster push-to-talk, stickers in team chat and a quicker start for new companies.",
+      "version": "1.0.0+20261124034337.6b8033b"
+    },
+    {
+      "channel": "nightly",
       "commit": "d6234b4",
       "date": "2026-11-23",
       "locales": {},

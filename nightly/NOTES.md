@@ -1,10 +1,47 @@
 # MonoPbx nightly channel: what's new
 
-## 1.0.0+20261123195331.d6234b4 (2026-11-23)
+## 1.0.0+20261124034337.6b8033b (2026-11-23)
+
+Desk phones and DECT bases that place calls with sound, the company phone directory on more phones, voicemail prompts that always play, faster push-to-talk, stickers in team chat and a quicker start for new companies.
+
+### New
+
+- **Push-to-talk talk notifications.** When someone talks on a channel you belong to but have not joined, MonoPhone shows "is talking" with a Join button; Join plays the rest of the live transmission. Notifications are limited to one every two minutes per channel, follow Do not disturb and can be turned off for each channel.
+- **Every device hears push-to-talk.** All devices of the same extension now hear live push-to-talk audio and get its notifications; only the device that is talking is left out.
+- **Quick push-to-talk channels.** Switch channels from the push-to-talk pill on the Keypad, keep up to three favourite channels as chips, and start a private channel with one or more colleagues from People. Favourites come first in the iPhone widget channel picker and on Apple Watch.
+- **Online members in push-to-talk.** The channel page and the Keypad pill show who is online.
+- **Starter examples for new companies.** A new company can start with ready-made examples: four extensions, a sales ring group, a support queue, office hours with a holiday, a main menu and call flows, all marked "(example)". Choose it in the setup wizard or when you create a company; existing companies add them from System, Setup guide. Examples use no licence seats and never touch your trunks or numbers.
+- **AI and GIF steps in the setup wizard.** Optional steps set up an AI provider from a list of presets (with where to get a key and a key test) and GIF search with a GIPHY key. Admin, AI, Add provider offers the same presets, and Test key now works for every provider kind, including speech services.
+- **Stickers in team chat.** A sticker button in the MonoPhone message field opens a panel with GIFs and Stickers tabs: favourites, recently sent stickers, your own stickers made from photos, and GIPHY stickers when GIF search is on. Favourites and your own stickers follow you on every device. Stickers show without a bubble, and the web chat now shows GIFs and stickers too.
+- **Find desk phones (administrators).** Administrators can use MonoPhone on a phone, tablet or computer to find desk phones on the local network and provision one to a new or existing extension in one step. Discovered phones also appear in the console (Admin, Devices) with Provision to extension.
+- **Company phone directory on DECT bases.** Yealink W-series and Gigaset N670/N870 bases now receive the company phone directory (LDAP), so handsets can search colleagues.
+- **RSA certificate for older phones.** Next to each automatic (Let's Encrypt) certificate the PBX now also obtains an RSA certificate of the same name and gives it to older phones that cannot use the modern certificate, for the web, secure SIP and the phone directory. Admin, Certificates shows both.
+
+### Improved
+
+- **Media encryption is optional on every desk phone.** Provisioned phones of all vendors offer encrypted media (SRTP) but still accept calls without it, on every transport; only the restricted-network profile requires it.
+- **Phone directory on every model.** Every desk phone model with a directory setting receives the company phone directory when it is on, and DECT bases such as the Yealink W52P get the right server names on every account.
+- **Phone directory diagnostics.** Failed secure directory (LDAPS) connections and sign-ins now appear in the phone's provisioning log and in the TLS failures view, with a hint about what the phone could not accept.
+- **Key rotation** now also re-encrypts the TR-069 and phone directory passwords.
+- **Live location** tells MonoPhone how long to wait when updates are sent too fast.
+- **Live captions in MonoPhone** have a new card: the newest words on top and always visible above the call controls, phrases grouped by speaker, adjustable text size, and Copy, Summarise and Key points in one menu.
+- **MonoPhone call readiness** follows the line, so "Calls can't reach this phone" no longer stays on screen after the line is ready.
+
+### Fixed
+
+- **Yealink desk phones and DECT handsets (for example the W60B) ended calls with "Error (Media)".** The provisioning file now writes codec settings in the form current Yealink firmware expects. Htek, Fanvil and Cisco codec and encryption settings were corrected too, and Grandstream, Snom, Poly and the other vendors were checked.
+- **Voicemail (`*86`) could fail because prompts were missing.** The voice prompts now ship with the media service, are checked at start and fall back to English when a language is missing.
+- **Push-to-talk on iPhone and Mac.** Your voice now reaches the channel, and iPhone receives and plays transmissions. The priority mark is no longer shown as a warning.
+- **Live location** keeps updating on iPhone when you stand still and keeps sending on Android.
+- **Live captions** now hide when you turn them off, and on-device captions no longer show "Reconnecting".
+
+## Earlier releases
+
+### 1.0.0+20261123195331.d6234b4 (2026-11-23)
 
 Calls from DECT bases such as the Yealink W60B, an easier push-to-talk pill in MonoPhone and a tidier desk phones page.
 
-### Improved
+#### Improved
 
 - **Leave push-to-talk from the Keypad.** When you are in a push-to-talk channel, the pill on the MonoPhone Keypad has a Leave button next to the channel name.
 - **Quieter push-to-talk channel page.** Past voice messages are hidden by default; Show recent messages opens them, and MonoPhone remembers your choice for each channel.
@@ -13,12 +50,10 @@ Calls from DECT bases such as the Yealink W60B, an easier push-to-talk pill in M
 - **Desk phones page.** The desk phone time and codec settings and the vendor redirect servers now sit in a collapsed Advanced section, which remembers whether you opened it.
 - **Yealink phones behind NAT.** Provisioned Yealink desk phones and DECT bases now turn on rport, and DECT handsets also send a NAT keep-alive, so calls keep working behind routers.
 
-### Fixed
+#### Fixed
 
 - **Some desk phones and DECT bases (for example the Yealink W60B) registered but could not place calls.** Calls stayed on "calling" with no sound because the phone did not answer the call sign-in request. These phones now get a sign-in request they understand.
 - **Click-to-call** no longer sends an extra update to your own phone once the other party is connected.
-
-## Earlier releases
 
 ### 1.0.0+20261123104026.20d5c26 (2026-11-23)
 
@@ -560,14 +595,14 @@ SIP tracing in the console, chat channels and webhooks, a MonoPhone admin sectio
 
 ---
 
-Latest build: `1.0.0+20261123195331.d6234b4` (commit `d6234b4`), published 2026-11-23T21:41:50Z.
+Latest build: `1.0.0+20261124034337.6b8033b` (commit `6b8033b`), published 2026-11-24T04:44:23Z.
 
 Images (by digest):
 
-- MPBX_IMAGE=ghcr.io/ilinaya/monopbx@sha256:cde22c846fff647de16a1c0dbf3f803aef5d5ee5171e4d4465da11069bc6b68c
-- MPBX_RTPENGINE_IMAGE=ghcr.io/ilinaya/monopbx-rtpengine@sha256:38a016de97510bb47d0895ec8b3263ab4b0386be7858c86e9f7cc54b42bb960a
-- MPBX_MEDIA_IMAGE=ghcr.io/ilinaya/monopbx-media@sha256:6275a31eedbf2b3538c1bdea062fff27c68add85b8ea95c47ed94173f1f99ae2
-- MPBX_UPDATER_IMAGE=ghcr.io/ilinaya/monopbx-updater@sha256:8bbe0888891696fb3817e862400ab44c28bf9b62ad7f652de43096c49ed0884f
-- MPBX_OPENVPN_IMAGE=ghcr.io/ilinaya/monopbx-openvpn@sha256:9d9c566912a6bb74f471e6a61420b3022d8cd7ab0762e4a9f1683ae6fc5cfda4
+- MPBX_IMAGE=ghcr.io/ilinaya/monopbx@sha256:1c9c4184811c5be25b772fe5141966b681d779f64d756e1f2b0af8159b3e3be7
+- MPBX_RTPENGINE_IMAGE=ghcr.io/ilinaya/monopbx-rtpengine@sha256:ef8f41d6d5d804c144a6c7e5dd02192e1c857475666203941158dcb0d5ac1de0
+- MPBX_MEDIA_IMAGE=ghcr.io/ilinaya/monopbx-media@sha256:085b622963994007b12cc0fcc505f7da338dd42590dc095e2b1b7460f17ba5fa
+- MPBX_UPDATER_IMAGE=ghcr.io/ilinaya/monopbx-updater@sha256:73d5b6644e14889e3cedc18ad821902919637545857aa83a0a561f69b70f0d0f
+- MPBX_OPENVPN_IMAGE=ghcr.io/ilinaya/monopbx-openvpn@sha256:9559c980b864b763df7370645cdc1a4038a808b17b1500637a128e4e5d808a2e
 
 A build installs over any older build of the same major version. Check for updates in the console (Admin, Updates).
