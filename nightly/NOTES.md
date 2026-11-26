@@ -1,10 +1,83 @@
 # MonoPbx nightly channel: what's new
 
-## 1.0.0+20261124034337.6b8033b (2026-11-23)
+## 1.0.0+20261126065147.d935d5c (2026-11-25)
+
+A big update across calling, messaging, integrations, and help documentation.
+
+### New
+
+- **Screen sharing in calls.** Share your screen during a call on desktop (macOS, Windows) and Android.
+- **Microsoft Teams notifications.** Get chat notifications posted into Microsoft Teams channels (Admin, Integrations).
+- **Salesforce and HubSpot calling panels.** Make and manage calls directly inside Salesforce (Open CTI) or HubSpot (Calling Extensions), with the matching contact shown alongside the call.
+- **Zapier and n8n automation.** Connect MonoPbx to thousands of other apps from a new Automation section (Admin, Integrations).
+- **PayPal and Mercado Pago payment alerts.** Get notified automatically when a payment is approved, refunded, or charged back (Admin, Integrations).
+- **Compliance export for legal holds.** Export the recordings covered by a legal hold, with a full chain-of-custody record (Admin, Compliance).
+- **Push-to-talk home-screen widget (Android).** Start talking on a channel right from your home screen.
+- **Help documentation in nine languages.** The help center is now available in German, English, Spanish, French, Italian, Japanese, Portuguese, Russian, and Chinese.
+- **Deploy on Microsoft Azure.** MonoPbx can now be set up from the Azure Marketplace.
+- **App lock.** Require Face ID, Touch ID, a fingerprint, or Windows Hello to open the MonoPhone app, with an admin-configurable company-wide policy (Admin, Security). Calls and push-to-talk keep working while the app is locked.
+- **Visual IVR.** A caller navigating a voice menu can get a text with a tappable version of the same menu, so they can choose an option by touch instead of pressing keys (Admin, Call Flows).
+- **On-hold promotional messages.** Play targeted messages between hold-music tracks instead of just music, with rules for which caller hears which message (Admin, Media).
+- **Branded calling.** Show your business name, logo, and the reason for the call on the recipient's phone, built on top of STIR/SHAKEN caller-ID verification (Admin, Numbers).
+- **Agent scheduling and shift management.** Build shift templates, set up rotations, and manage the team calendar with drag-and-drop (Admin, Workforce).
+- **Public and guest video meeting rooms.** Share a link so anyone can join a video meeting without an account, with a waiting room the host admits people from.
+- **Live sentiment badge for supervisors.** See how a captioned call is going in real time on the supervisor's call-monitoring view.
+- **Automatic caption language detection.** Live captions now detect the language being spoken instead of requiring it to be set by hand.
+- **Number lookup (MNP/ENUM).** Look up a number's current carrier before dialing out, and use it to route calls (Admin, Call Flows).
+- **AI reply drafts in your own style.** Turn on a personal writing style so AI-drafted chat replies sound like you; the style is built only from your own sent messages, and you can view, edit, or delete it at any time (off by default; your administrator can allow it).
+- **Follow-up reminders.** When an agent promises a follow-up on a call ("I'll call you back Friday"), they get a reminder when it is due and a nudge if it goes overdue; the promise also shows on the customer's timeline.
+- **Multi-party video calls.** Everyone in a merged call can turn their camera on and be seen by the whole group, not just two people at a time.
+- **Saved credentials.** Save each provider's key, service account or login once and pick it wherever it is needed, with "+ Create new" right in the form (Admin, Saved credentials): AI, storage, backups, integrations and CRMs, SMS and messaging channels, SIP trunks, e-mail, single sign-on, Duo, LDAP, Jira, door phones and more. A credential in use cannot be deleted, and "Used by" shows where it is used.
+
+### Improved
+
+- Video calls show an improved ongoing-call banner, and merging two calls together works more reliably.
+- A third person can now join an already-merged call instead of only ever starting a new two-party one.
+- On a tablet or large foldable screen, the app now shows a list and its details side by side instead of stretching the phone layout.
+- The app shows a preview card before an outbound campaign call connects, so the agent sees who they are about to talk to.
+- AI provider setup: Google's Gemini can now sign in with a service account, and "Test connection" shows exactly what was sent and received.
+- Integration setup forms show clearer field descriptions and no longer prompt your browser to autofill saved passwords into settings fields.
+- Failing integrations are now checked automatically and raise an alert instead of failing silently.
+- Sending photos, videos, camera shots and voice notes inline now works the same way over SMS as it already does in team chat.
+- A failed integration install now cleans up after itself properly instead of leaving stray leftovers behind.
+- Swipe left/right or long-press a row in Calls or People for quick actions, instead of only opening the row.
+- People working away from the office can set their own 911 address in the app, so a 911 call made from home sends the right location.
+- AI assistants connected to MonoPbx over MCP can now read a customer's full timeline in one step: calls with summaries, messages, open promises and the AI memory.
+- When the other person turns their camera on during a call, you are asked whether to turn yours on too, and while someone's camera is off you see their photo or initials and name instead of a black square.
+- Adding a user in the admin console now suggests the next free extension number and can create the user and their extension in one step.
+- The call-flow builder now supports arithmetic, a "once per caller" throttle, waiting until a flow is open, dedicated error paths, triggering a flow from an integration event, and a node that can call any connected integration's own action.
+
+### Fixed
+
+- Fixed a bug where recovering from a weak connection could leave the "can't reach this phone" banner stuck even after the line had recovered.
+- Fixed company-directory lookups (LDAP) when the directory server sits behind a certificate-checking proxy.
+- Fixed broken home-screen widgets on Android.
+- Fixed several Push-to-Talk and Apple Watch issues: talking after a call ends, Wi-Fi and ringing glitches, and watch navigation.
+- Fixed a crash that could happen when hanging up a video call.
+- Fixed CRM connections sometimes reporting a permanent failure for what was really a temporary one.
+- Fixed Apple Watch message conversations that could not be opened.
+- Fixed calls not actually ringing a phone that was asleep when it was pulled to, or transferred to it.
+- Fixed a backup-restore issue and verified the restore process end to end on a fresh server.
+- Fixed a bug where receiving a long text message split into several parts could end up garbled.
+- Notifications for photos, videos, voice messages, files, locations and GIFs now show a clear label such as "Photo" or "Location" instead of raw message data or a map link (iPhone, Android and Apple Watch), and the Messages list shows the same labels for the last message.
+- Fixed a silenced sender's SMS reply still reaching the shared inbox.
+- Fixed the trunk-approval page in the admin console, which had no way to actually approve an allow-list entry.
+- Fixed a layout bug in the Google Meet and Google Chat marketplace setup forms, and a field that could get the admin's own email address autofilled into it by mistake.
+- Fixed 4 call-routing bugs: a dead-end instead of an office-hours fallback, an unpublished call flow still answering calls, a queue-overflow edge case, and calls from click-to-call being double-counted against the toll guard.
+
+### Security
+
+- Security fixes (critical): a private-network component could accept connections from untrusted sources. Update soon.
+- Security fixes (high): under specific conditions, one company's eSIM activation details could be read by another company. Update soon.
+- Security fixes (medium): the AI provider connection test could show a sensitive token in its diagnostic output. Update soon.
+
+## Earlier releases
+
+### 1.0.0+20261124034337.6b8033b (2026-11-23)
 
 Desk phones and DECT bases that place calls with sound, the company phone directory on more phones, voicemail prompts that always play, faster push-to-talk, stickers in team chat and a quicker start for new companies.
 
-### New
+#### New
 
 - **Push-to-talk talk notifications.** When someone talks on a channel you belong to but have not joined, MonoPhone shows "is talking" with a Join button; Join plays the rest of the live transmission. Notifications are limited to one every two minutes per channel, follow Do not disturb and can be turned off for each channel.
 - **Every device hears push-to-talk.** All devices of the same extension now hear live push-to-talk audio and get its notifications; only the device that is talking is left out.
@@ -17,7 +90,7 @@ Desk phones and DECT bases that place calls with sound, the company phone direct
 - **Company phone directory on DECT bases.** Yealink W-series and Gigaset N670/N870 bases now receive the company phone directory (LDAP), so handsets can search colleagues.
 - **RSA certificate for older phones.** Next to each automatic (Let's Encrypt) certificate the PBX now also obtains an RSA certificate of the same name and gives it to older phones that cannot use the modern certificate, for the web, secure SIP and the phone directory. Admin, Certificates shows both.
 
-### Improved
+#### Improved
 
 - **Media encryption is optional on every desk phone.** Provisioned phones of all vendors offer encrypted media (SRTP) but still accept calls without it, on every transport; only the restricted-network profile requires it.
 - **Phone directory on every model.** Every desk phone model with a directory setting receives the company phone directory when it is on, and DECT bases such as the Yealink W52P get the right server names on every account.
@@ -27,15 +100,13 @@ Desk phones and DECT bases that place calls with sound, the company phone direct
 - **Live captions in MonoPhone** have a new card: the newest words on top and always visible above the call controls, phrases grouped by speaker, adjustable text size, and Copy, Summarise and Key points in one menu.
 - **MonoPhone call readiness** follows the line, so "Calls can't reach this phone" no longer stays on screen after the line is ready.
 
-### Fixed
+#### Fixed
 
 - **Yealink desk phones and DECT handsets (for example the W60B) ended calls with "Error (Media)".** The provisioning file now writes codec settings in the form current Yealink firmware expects. Htek, Fanvil and Cisco codec and encryption settings were corrected too, and Grandstream, Snom, Poly and the other vendors were checked.
 - **Voicemail (`*86`) could fail because prompts were missing.** The voice prompts now ship with the media service, are checked at start and fall back to English when a language is missing.
 - **Push-to-talk on iPhone and Mac.** Your voice now reaches the channel, and iPhone receives and plays transmissions. The priority mark is no longer shown as a warning.
 - **Live location** keeps updating on iPhone when you stand still and keeps sending on Android.
 - **Live captions** now hide when you turn them off, and on-device captions no longer show "Reconnecting".
-
-## Earlier releases
 
 ### 1.0.0+20261123195331.d6234b4 (2026-11-23)
 
@@ -595,14 +666,14 @@ SIP tracing in the console, chat channels and webhooks, a MonoPhone admin sectio
 
 ---
 
-Latest build: `1.0.0+20261124034337.6b8033b` (commit `6b8033b`), published 2026-11-24T04:44:23Z.
+Latest build: `1.0.0+20261126065147.d935d5c` (commit `d935d5c`), published 2026-11-26T07:46:37Z.
 
 Images (by digest):
 
-- MPBX_IMAGE=ghcr.io/ilinaya/monopbx@sha256:1c9c4184811c5be25b772fe5141966b681d779f64d756e1f2b0af8159b3e3be7
-- MPBX_RTPENGINE_IMAGE=ghcr.io/ilinaya/monopbx-rtpengine@sha256:ef8f41d6d5d804c144a6c7e5dd02192e1c857475666203941158dcb0d5ac1de0
-- MPBX_MEDIA_IMAGE=ghcr.io/ilinaya/monopbx-media@sha256:085b622963994007b12cc0fcc505f7da338dd42590dc095e2b1b7460f17ba5fa
-- MPBX_UPDATER_IMAGE=ghcr.io/ilinaya/monopbx-updater@sha256:73d5b6644e14889e3cedc18ad821902919637545857aa83a0a561f69b70f0d0f
-- MPBX_OPENVPN_IMAGE=ghcr.io/ilinaya/monopbx-openvpn@sha256:9559c980b864b763df7370645cdc1a4038a808b17b1500637a128e4e5d808a2e
+- MPBX_IMAGE=ghcr.io/ilinaya/monopbx@sha256:e28ec020310dd715280ffdcef4897c8db577e1333fdd904e8f4f377a27d4b99d
+- MPBX_RTPENGINE_IMAGE=ghcr.io/ilinaya/monopbx-rtpengine@sha256:0a38a6ae3b659b927300e9f47e11bbbaeabbc7d74242c661c9bf9c432e1ba1e5
+- MPBX_MEDIA_IMAGE=ghcr.io/ilinaya/monopbx-media@sha256:dbac39d50d01f1d0ba56cd0e849b88e5602b3ba058e2cdcfbf53e56ae74c9abc
+- MPBX_UPDATER_IMAGE=ghcr.io/ilinaya/monopbx-updater@sha256:3ee1f392a0486eaa03c0e3f56b2370117a013d3c7fa56d2ea28d24c69e75534b
+- MPBX_OPENVPN_IMAGE=ghcr.io/ilinaya/monopbx-openvpn@sha256:58e8073ec9a6eff42b66b4822638f62a53f585befc10644c15555ea7222c1eed
 
 A build installs over any older build of the same major version. Check for updates in the console (Admin, Updates).

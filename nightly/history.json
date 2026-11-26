@@ -4,6 +4,93 @@
   "releases": [
     {
       "channel": "nightly",
+      "commit": "d935d5c",
+      "date": "2026-11-25",
+      "locales": {},
+      "release": "2026-11-25",
+      "sections": [
+        {
+          "items": [
+            "**Screen sharing in calls.** Share your screen during a call on desktop (macOS, Windows) and Android.",
+            "**Microsoft Teams notifications.** Get chat notifications posted into Microsoft Teams channels (Admin, Integrations).",
+            "**Salesforce and HubSpot calling panels.** Make and manage calls directly inside Salesforce (Open CTI) or HubSpot (Calling Extensions), with the matching contact shown alongside the call.",
+            "**Zapier and n8n automation.** Connect MonoPbx to thousands of other apps from a new Automation section (Admin, Integrations).",
+            "**PayPal and Mercado Pago payment alerts.** Get notified automatically when a payment is approved, refunded, or charged back (Admin, Integrations).",
+            "**Compliance export for legal holds.** Export the recordings covered by a legal hold, with a full chain-of-custody record (Admin, Compliance).",
+            "**Push-to-talk home-screen widget (Android).** Start talking on a channel right from your home screen.",
+            "**Help documentation in nine languages.** The help center is now available in German, English, Spanish, French, Italian, Japanese, Portuguese, Russian, and Chinese.",
+            "**Deploy on Microsoft Azure.** MonoPbx can now be set up from the Azure Marketplace.",
+            "**App lock.** Require Face ID, Touch ID, a fingerprint, or Windows Hello to open the MonoPhone app, with an admin-configurable company-wide policy (Admin, Security). Calls and push-to-talk keep working while the app is locked.",
+            "**Visual IVR.** A caller navigating a voice menu can get a text with a tappable version of the same menu, so they can choose an option by touch instead of pressing keys (Admin, Call Flows).",
+            "**On-hold promotional messages.** Play targeted messages between hold-music tracks instead of just music, with rules for which caller hears which message (Admin, Media).",
+            "**Branded calling.** Show your business name, logo, and the reason for the call on the recipient's phone, built on top of STIR/SHAKEN caller-ID verification (Admin, Numbers).",
+            "**Agent scheduling and shift management.** Build shift templates, set up rotations, and manage the team calendar with drag-and-drop (Admin, Workforce).",
+            "**Public and guest video meeting rooms.** Share a link so anyone can join a video meeting without an account, with a waiting room the host admits people from.",
+            "**Live sentiment badge for supervisors.** See how a captioned call is going in real time on the supervisor's call-monitoring view.",
+            "**Automatic caption language detection.** Live captions now detect the language being spoken instead of requiring it to be set by hand.",
+            "**Number lookup (MNP/ENUM).** Look up a number's current carrier before dialing out, and use it to route calls (Admin, Call Flows).",
+            "**AI reply drafts in your own style.** Turn on a personal writing style so AI-drafted chat replies sound like you; the style is built only from your own sent messages, and you can view, edit, or delete it at any time (off by default; your administrator can allow it).",
+            "**Follow-up reminders.** When an agent promises a follow-up on a call (\"I'll call you back Friday\"), they get a reminder when it is due and a nudge if it goes overdue; the promise also shows on the customer's timeline.",
+            "**Multi-party video calls.** Everyone in a merged call can turn their camera on and be seen by the whole group, not just two people at a time.",
+            "**Saved credentials.** Save each provider's key, service account or login once and pick it wherever it is needed, with \"+ Create new\" right in the form (Admin, Saved credentials): AI, storage, backups, integrations and CRMs, SMS and messaging channels, SIP trunks, e-mail, single sign-on, Duo, LDAP, Jira, door phones and more. A credential in use cannot be deleted, and \"Used by\" shows where it is used."
+          ],
+          "kind": "new"
+        },
+        {
+          "items": [
+            "Video calls show an improved ongoing-call banner, and merging two calls together works more reliably.",
+            "A third person can now join an already-merged call instead of only ever starting a new two-party one.",
+            "On a tablet or large foldable screen, the app now shows a list and its details side by side instead of stretching the phone layout.",
+            "The app shows a preview card before an outbound campaign call connects, so the agent sees who they are about to talk to.",
+            "AI provider setup: Google's Gemini can now sign in with a service account, and \"Test connection\" shows exactly what was sent and received.",
+            "Integration setup forms show clearer field descriptions and no longer prompt your browser to autofill saved passwords into settings fields.",
+            "Failing integrations are now checked automatically and raise an alert instead of failing silently.",
+            "Sending photos, videos, camera shots and voice notes inline now works the same way over SMS as it already does in team chat.",
+            "A failed integration install now cleans up after itself properly instead of leaving stray leftovers behind.",
+            "Swipe left/right or long-press a row in Calls or People for quick actions, instead of only opening the row.",
+            "People working away from the office can set their own 911 address in the app, so a 911 call made from home sends the right location.",
+            "AI assistants connected to MonoPbx over MCP can now read a customer's full timeline in one step: calls with summaries, messages, open promises and the AI memory.",
+            "When the other person turns their camera on during a call, you are asked whether to turn yours on too, and while someone's camera is off you see their photo or initials and name instead of a black square.",
+            "Adding a user in the admin console now suggests the next free extension number and can create the user and their extension in one step.",
+            "The call-flow builder now supports arithmetic, a \"once per caller\" throttle, waiting until a flow is open, dedicated error paths, triggering a flow from an integration event, and a node that can call any connected integration's own action."
+          ],
+          "kind": "improved"
+        },
+        {
+          "items": [
+            "Fixed a bug where recovering from a weak connection could leave the \"can't reach this phone\" banner stuck even after the line had recovered.",
+            "Fixed company-directory lookups (LDAP) when the directory server sits behind a certificate-checking proxy.",
+            "Fixed broken home-screen widgets on Android.",
+            "Fixed several Push-to-Talk and Apple Watch issues: talking after a call ends, Wi-Fi and ringing glitches, and watch navigation.",
+            "Fixed a crash that could happen when hanging up a video call.",
+            "Fixed CRM connections sometimes reporting a permanent failure for what was really a temporary one.",
+            "Fixed Apple Watch message conversations that could not be opened.",
+            "Fixed calls not actually ringing a phone that was asleep when it was pulled to, or transferred to it.",
+            "Fixed a backup-restore issue and verified the restore process end to end on a fresh server.",
+            "Fixed a bug where receiving a long text message split into several parts could end up garbled.",
+            "Notifications for photos, videos, voice messages, files, locations and GIFs now show a clear label such as \"Photo\" or \"Location\" instead of raw message data or a map link (iPhone, Android and Apple Watch), and the Messages list shows the same labels for the last message.",
+            "Fixed a silenced sender's SMS reply still reaching the shared inbox.",
+            "Fixed the trunk-approval page in the admin console, which had no way to actually approve an allow-list entry.",
+            "Fixed a layout bug in the Google Meet and Google Chat marketplace setup forms, and a field that could get the admin's own email address autofilled into it by mistake.",
+            "Fixed 4 call-routing bugs: a dead-end instead of an office-hours fallback, an unpublished call flow still answering calls, a queue-overflow edge case, and calls from click-to-call being double-counted against the toll guard."
+          ],
+          "kind": "fixed"
+        },
+        {
+          "items": [
+            "Security fixes (critical): a private-network component could accept connections from untrusted sources. Update soon.",
+            "Security fixes (high): under specific conditions, one company's eSIM activation details could be read by another company. Update soon.",
+            "Security fixes (medium): the AI provider connection test could show a sensitive token in its diagnostic output. Update soon."
+          ],
+          "kind": "security"
+        }
+      ],
+      "security": "critical",
+      "summary": "A big update across calling, messaging, integrations, and help documentation.",
+      "version": "1.0.0+20261126065147.d935d5c"
+    },
+    {
+      "channel": "nightly",
       "commit": "6b8033b",
       "date": "2026-11-23",
       "locales": {},
