@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>MonoPhone for macOS</title>
+        <description>MonoPhone for macOS update feed.</description>
+        <language>en</language>
+        <item>
+            <title>MonoPhone 0.1.38</title>
+            <sparkle:version>6112604</sparkle:version>
+            <sparkle:shortVersionString>0.1.38</sparkle:shortVersionString>
+            <description>&lt;h2&gt;What&amp;#x27;s new in MonoPhone for Mac&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;The app can now update itself: Check for Updates… in the app menu and in Settings, with daily background checks on by default (an administrator can turn them off). If an update can&amp;#x27;t install automatically, MonoPhone offers to open our website so you can download it directly.&lt;/li&gt;&lt;/ul&gt;</description>
+            <pubDate>Fri, 27 Nov 2026 00:24:29 +0000</pubDate>
+            <enclosure url="https://raw.githubusercontent.com/ilinaya/mpbx-releases/main/apps/monophone/macos/v0.1.38/MonoPhone-0.1.38.dmg" sparkle:edSignature="hB1agtRSo/qRUVgu4w5h45gsKO72Vmlk23iZilv2FVUevWc8LdW20uDSzY1mfHmkkiHmoB/Mll3jFqv79vnUBw==" length="51248940" type="application/octet-stream" />
+            <sparkle:minimumSystemVersion>13.0.0</sparkle:minimumSystemVersion>
+        </item>
+    </channel>
+</rss>
