@@ -1,6 +1,14 @@
 {
   "history": [
     {
+      "dmg": "MonoPhone-0.1.39.dmg",
+      "notarized": true,
+      "published": "2026-11-27T21:20:27Z",
+      "sha256": "8963929bfe38391b664a465fb4647f5983b83596eea780c53420292cbaea7800",
+      "signed": true,
+      "version": "0.1.39"
+    },
+    {
       "dmg": "MonoPhone-0.1.38.dmg",
       "notarized": true,
       "published": "2026-11-27T00:24:29Z",
@@ -34,11 +42,11 @@
     }
   ],
   "latest": {
-    "dmg": "MonoPhone-0.1.38.dmg",
+    "dmg": "MonoPhone-0.1.39.dmg",
     "notarized": true,
-    "published": "2026-11-27T00:24:29Z",
-    "sha256": "d0160ba0e90d3ff20b57108e461112f9a218813b941c7dc836ab06eeb0e61931",
+    "published": "2026-11-27T21:20:27Z",
+    "sha256": "8963929bfe38391b664a465fb4647f5983b83596eea780c53420292cbaea7800",
     "signed": true,
-    "version": "0.1.38"
+    "version": "0.1.39"
   }
 }

@@ -5,6 +5,15 @@
         <description>MonoPhone for macOS update feed.</description>
         <language>en</language>
         <item>
+            <title>MonoPhone 0.1.39</title>
+            <sparkle:version>6112608</sparkle:version>
+            <sparkle:shortVersionString>0.1.39</sparkle:shortVersionString>
+            <description>&lt;h2&gt;What&amp;#x27;s new in MonoPhone for Mac&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;Chat works again with company phone systems that have not been updated yet: sending a message no longer fails there.&lt;/li&gt;&lt;li&gt;Messages: typing and online / last seen, photo albums, shared contacts, a video call button in one-to-one chats, drafts that keep the reply and mentions, every emoji for reactions, search in message text, and clearer sent and read ticks.&lt;/li&gt;&lt;li&gt;End-to-end encrypted chats keep their keys after a restart and can be verified by QR code.&lt;/li&gt;&lt;li&gt;Video rooms and screen sharing are steadier, and a shared screen gets the large tile.&lt;/li&gt;&lt;li&gt;&amp;quot;Forgot password?&amp;quot; on the sign-in screen, and a clear explanation when you have too many devices signed in.&lt;/li&gt;&lt;/ul&gt;</description>
+            <pubDate>Fri, 27 Nov 2026 21:20:27 +0000</pubDate>
+            <enclosure url="https://raw.githubusercontent.com/ilinaya/mpbx-releases/main/apps/monophone/macos/v0.1.39/MonoPhone-0.1.39.dmg" sparkle:edSignature="KTqFcsj2jVXVdWm1G9VBN02tSQXqvVttY4kfE1/D3MU7V5oDfFvkvBe0d2L6YWPy+lSeKUVQbQFEy0ICVK7YCA==" length="52492892" type="application/octet-stream" />
+            <sparkle:minimumSystemVersion>13.0.0</sparkle:minimumSystemVersion>
+        </item>
+        <item>
             <title>MonoPhone 0.1.38</title>
             <sparkle:version>6112604</sparkle:version>
             <sparkle:shortVersionString>0.1.38</sparkle:shortVersionString>
