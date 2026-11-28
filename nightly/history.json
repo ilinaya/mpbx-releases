@@ -4,6 +4,43 @@
   "releases": [
     {
       "channel": "nightly",
+      "commit": "1f8e1f2",
+      "date": "2026-11-28",
+      "locales": {},
+      "release": "2026-11-28",
+      "sections": [
+        {
+          "items": [
+            "**One Flows area, any trigger.** When you create a flow you now choose what starts it: an incoming call, an incoming text message, a webhook, a schedule, a run by hand or another flow, among others. The same choice is on the Flow tab of every flow, and the list shows a new Starts when column with a filter. Call flows and automations are now simply called Flows (Admin, Call handling, Flows).",
+            "**Contacts tab in Add participant.** On a call in MonoPhone, Add participant now has a Contacts tab next to Colleagues: the company phonebook, your own contacts and, if you already allowed it, the phone's address book. Pick people from both tabs and ring them all with one Add (iPhone, Android, Mac, Windows)."
+          ],
+          "kind": "new"
+        },
+        {
+          "items": [
+            "**Camera button responds at once.** In a video call the camera button changes immediately and shows a progress ring while the video starts or stops. The other side sees \"Turning camera on…\" while the picture is on its way, and \"Video paused, reconnecting…\" instead of a frozen picture when video stops arriving; the picture then recovers by itself (iPhone, Android, Mac, Windows).",
+            "**Push-to-talk presence is live.** The number of people online in a push-to-talk channel, and who is online, now update at once on every phone, also after the app comes back from the background.",
+            "**Flow designer explains what is available.** The step palette says how many steps the chosen trigger cannot use, and offers Try again when the list of steps could not be loaded.",
+            "**Please note: video and screen sharing only with colleagues.** On calls to ordinary phone numbers the Video and Share screen buttons are dimmed, with a short explanation, in MonoPhone and in the web console phone. Video conferences that include a phone caller keep working; that caller takes part with audio only.",
+            "**Please note: a live flow keeps its kind.** A published flow that answers calls cannot be switched to a non-call trigger (or the other way round), because numbers and menus route calls to it. Create a new flow for the other trigger instead."
+          ],
+          "kind": "improved"
+        },
+        {
+          "items": [
+            "**Talking from the iPhone lock screen or Dynamic Island.** Push-to-talk from the system controls, a headset or a Bluetooth push-to-talk button sent no audio when MonoPhone had been in the background. It now works like the Talk button in the app.",
+            "**Camera problems in video calls.** Tapping the camera button several times, switching apps during a video call, or turning the camera on while the call was being held or resumed could leave the camera off or out of step with the button. The other person's camera could also show as off for several seconds after they turned it on.",
+            "**Automations listed as call flows.** An automation that had never been published was shown as a call flow in the list."
+          ],
+          "kind": "fixed"
+        }
+      ],
+      "security": null,
+      "summary": "A follow-up to 1.1: one place for every flow and what starts it, smoother video calls, and live push-to-talk presence.",
+      "version": "1.0.0+20261128101240.1f8e1f2"
+    },
+    {
+      "channel": "nightly",
       "commit": "0b851dd",
       "date": "2026-11-27",
       "locales": {},

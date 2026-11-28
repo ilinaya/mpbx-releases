@@ -1,10 +1,35 @@
 # MonoPbx nightly channel: what's new
 
-## 1.0.0+20261128052117.0b851dd (2026-11-27)
+## 1.0.0+20261128101240.1f8e1f2 (2026-11-28)
+
+A follow-up to 1.1: one place for every flow and what starts it, smoother video calls, and live push-to-talk presence.
+
+### New
+
+- **One Flows area, any trigger.** When you create a flow you now choose what starts it: an incoming call, an incoming text message, a webhook, a schedule, a run by hand or another flow, among others. The same choice is on the Flow tab of every flow, and the list shows a new Starts when column with a filter. Call flows and automations are now simply called Flows (Admin, Call handling, Flows).
+- **Contacts tab in Add participant.** On a call in MonoPhone, Add participant now has a Contacts tab next to Colleagues: the company phonebook, your own contacts and, if you already allowed it, the phone's address book. Pick people from both tabs and ring them all with one Add (iPhone, Android, Mac, Windows).
+
+### Improved
+
+- **Camera button responds at once.** In a video call the camera button changes immediately and shows a progress ring while the video starts or stops. The other side sees "Turning camera on…" while the picture is on its way, and "Video paused, reconnecting…" instead of a frozen picture when video stops arriving; the picture then recovers by itself (iPhone, Android, Mac, Windows).
+- **Push-to-talk presence is live.** The number of people online in a push-to-talk channel, and who is online, now update at once on every phone, also after the app comes back from the background.
+- **Flow designer explains what is available.** The step palette says how many steps the chosen trigger cannot use, and offers Try again when the list of steps could not be loaded.
+- **Please note: video and screen sharing only with colleagues.** On calls to ordinary phone numbers the Video and Share screen buttons are dimmed, with a short explanation, in MonoPhone and in the web console phone. Video conferences that include a phone caller keep working; that caller takes part with audio only.
+- **Please note: a live flow keeps its kind.** A published flow that answers calls cannot be switched to a non-call trigger (or the other way round), because numbers and menus route calls to it. Create a new flow for the other trigger instead.
+
+### Fixed
+
+- **Talking from the iPhone lock screen or Dynamic Island.** Push-to-talk from the system controls, a headset or a Bluetooth push-to-talk button sent no audio when MonoPhone had been in the background. It now works like the Talk button in the app.
+- **Camera problems in video calls.** Tapping the camera button several times, switching apps during a video call, or turning the camera on while the call was being held or resumed could leave the camera off or out of step with the button. The other person's camera could also show as off for several seconds after they turned it on.
+- **Automations listed as call flows.** An automation that had never been published was shown as a call flow in the list.
+
+## Earlier releases
+
+### 1.0.0+20261128052117.0b851dd (2026-11-27)
 
 Release 1.1: messaging on a par with the best chat apps, group video rooms with screen sharing on every device, sign-in on as many devices as you like, self-service password reset, a rebuilt push-to-talk, and new tools for automations, managed-service providers and AI oversight.
 
-### New
+#### New
 
 - **Messaging, rebuilt.** Chat in MonoPhone now works the way people expect from their favourite messenger. You see when the other person is typing and when they were last online, in the chat header and in the Messages list. Ticks show sent, delivered and read; in a group a message counts as read only when everyone has read it, and Info on your own message lists when each member received and read it. Search finds message text, not only chat names. The web console chat shows typing, last seen and message info too (iPhone, Android, web console).
 - **Albums, offline media and a richer composer.** Photos and videos sent together appear as one album. Photos, videos, voice notes and files wait on the phone while you are offline and send themselves when you are back, never twice. Replies in a one-to-one chat appear as quotes in the conversation, Edit is one tap away, and the reaction bar opens every emoji, with categories, search in nine languages and your recent emoji. Share a contact, start a video call from a one-to-one chat, and keep a draft's reply and mentions (iPhone, Android).
@@ -48,7 +73,7 @@ Release 1.1: messaging on a par with the best chat apps, group video rooms with 
 - **Browser extension for Firefox.** Click-to-dial, the caller card and the phone panel (in the sidebar) now work in Firefox 140 or later, matching Chrome and Edge. Firefox for Android is not supported (Firefox).
 - **Message from your iPhone contacts.** On iPhone, Message on a contact card now offers MonoPhone, and you can ask Siri to send a message with MonoPhone (iPhone).
 
-### Improved
+#### Improved
 
 - **Please note: sign-in limit.** When a user reaches the maximum number of signed-in devices, a new sign-in is now refused with a clear message instead of silently signing out their oldest device. The default limit is now 100 devices per user, and only devices used recently count. Users can sign out old devices from My devices.
 - **Please note: update the PBX for the newest app features.** Typing and last seen, per-member message info times, encrypted-chat quotes, the improved video rooms and Forgot password need this PBX release. Newer MonoPhone apps keep working for calls and chat with an older PBX.
@@ -86,7 +111,7 @@ Release 1.1: messaging on a par with the best chat apps, group video rooms with 
 - German texts on Apple Watch and Wear OS now use the formal address like the rest of MonoPhone, and Spanish (Mexico) and Italian texts in the console, MonoPhone and the help documentation consistently use the informal address.
 - The integration status page now also lists HubSpot, Pipedrive, Salesforce, Numverify and Twilio Lookup, and eight help pages that could only be reached by a link now appear in the documentation menu.
 
-### Fixed
+#### Fixed
 
 - Fixed attended transfer in MonoPhone: Transfer to your other call now works, and the transferred caller keeps their audio.
 - Fixed calling back from Recents or a contact card on iPhone, which did not place the call (iPhone).
@@ -112,11 +137,9 @@ Release 1.1: messaging on a par with the best chat apps, group video rooms with 
 - Fixed the password-reset e-mail sent through the MonoPbx mail relay containing only the link: it now includes the eight-digit code too.
 - Fixed the `[auth]` section of the server configuration not being read, so the signed-in device limit can now be raised with `max_sessions_per_user` as documented.
 
-### Security
+#### Security
 
 - Security fixes (low): a regular user could trigger the application of a change set that the admin Copilot had proposed for an administrator. It is now refused before anything runs and the proposal stays available to the administrator.
-
-## Earlier releases
 
 ### 1.0.0+20261126065147.d935d5c (2026-11-25)
 
@@ -782,14 +805,14 @@ SIP tracing in the console, chat channels and webhooks, a MonoPhone admin sectio
 
 ---
 
-Latest build: `1.0.0+20261128052117.0b851dd` (commit `0b851dd`), published 2026-11-28T07:03:24Z.
+Latest build: `1.0.0+20261128101240.1f8e1f2` (commit `1f8e1f2`), published 2026-11-28T11:35:12Z.
 
 Images (by digest):
 
-- MPBX_IMAGE=ghcr.io/ilinaya/monopbx@sha256:bc4283fe93071271942427ce6a2836d849cda6ae7c04bba43c3e45b64c1d2e9b
-- MPBX_RTPENGINE_IMAGE=ghcr.io/ilinaya/monopbx-rtpengine@sha256:f3666510e1b150af8e1e38d99c9e8a1b1f1a36bee3c776664196113f7d676888
-- MPBX_MEDIA_IMAGE=ghcr.io/ilinaya/monopbx-media@sha256:4d1fb36a815177cd87cd47416f88d011b0e7c3542bbf701fb0fe66e697e380e8
-- MPBX_UPDATER_IMAGE=ghcr.io/ilinaya/monopbx-updater@sha256:8844b08542f7a03c34bb14b8871aee0b884716950f5ab6c221168a092348ae2f
-- MPBX_OPENVPN_IMAGE=ghcr.io/ilinaya/monopbx-openvpn@sha256:50560f82515e71e88c7ae1c6be2d96a877f4820a0e25c694544ab0009619fe4c
+- MPBX_IMAGE=ghcr.io/ilinaya/monopbx@sha256:d319b60d2b12beb852eaff513a6011f01bb22f8075795597563b680ba1d527ba
+- MPBX_RTPENGINE_IMAGE=ghcr.io/ilinaya/monopbx-rtpengine@sha256:810a8775d43e35d0ca417d9147a443a6d62a379cb6e24f1cf1affe66929cbe81
+- MPBX_MEDIA_IMAGE=ghcr.io/ilinaya/monopbx-media@sha256:72ddff3d56aaa8f7815be156bf44a6df615ae9a156d3d374650ed156745a00e5
+- MPBX_UPDATER_IMAGE=ghcr.io/ilinaya/monopbx-updater@sha256:33a17590a0a167346d29c05c89c9fff1cb9c077b87f9dbb87142c503d0300739
+- MPBX_OPENVPN_IMAGE=ghcr.io/ilinaya/monopbx-openvpn@sha256:55523295fc48f4160b98a8827aab3f24c13c22dc332bfb94daf8479130fe4548
 
 A build installs over any older build of the same major version. Check for updates in the console (Admin, Updates).
