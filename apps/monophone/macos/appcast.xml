@@ -5,6 +5,15 @@
         <description>MonoPhone for macOS update feed.</description>
         <language>en</language>
         <item>
+            <title>MonoPhone 0.1.41</title>
+            <sparkle:version>6112610</sparkle:version>
+            <sparkle:shortVersionString>0.1.41</sparkle:shortVersionString>
+            <description>&lt;h2&gt;What&amp;#x27;s new in MonoPhone for Mac&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;The camera button in a video call responds at once and shows when the video is starting. You see &amp;quot;Turning camera on…&amp;quot; while the other person&amp;#x27;s picture is on its way, and &amp;quot;Video paused, reconnecting…&amp;quot; instead of a frozen picture; it recovers by itself.&lt;/li&gt;&lt;li&gt;Add participant has a Contacts tab: pick people from the company phonebook and your own contacts next to your colleagues.&lt;/li&gt;&lt;li&gt;Push-to-talk channels show who is online at once.&lt;/li&gt;&lt;li&gt;Video and screen sharing are offered on calls with colleagues; on calls to phone numbers the buttons are dimmed with a short explanation.&lt;/li&gt;&lt;/ul&gt;</description>
+            <pubDate>Sat, 28 Nov 2026 10:36:07 +0000</pubDate>
+            <enclosure url="https://raw.githubusercontent.com/ilinaya/mpbx-releases/main/apps/monophone/macos/v0.1.41/MonoPhone-0.1.41.dmg" sparkle:edSignature="C0dQMbLLkf4PONJ2o4vFg+oXTOp2TJOCNMicpbAWI47rktwgnAZDef5WhxgAQ/ZbxoDjVdOfNFF9TrAsnckCAg==" length="52543706" type="application/octet-stream" />
+            <sparkle:minimumSystemVersion>13.0.0</sparkle:minimumSystemVersion>
+        </item>
+        <item>
             <title>MonoPhone 0.1.40</title>
             <sparkle:version>6112609</sparkle:version>
             <sparkle:shortVersionString>0.1.40</sparkle:shortVersionString>
